@@ -1,0 +1,112 @@
+{
+  "name":"Zokou-2.0",
+  "description":"bot whatsapp développé par djalega++",
+  "keywords":["bot","node","baileys","whatsapp"],
+  "logo":"https://raw.githubusercontent.com/djalega8000/Zokou-2.0/main/Zokou.jpg",
+  "repository":"https://github.com/djalega8000/Zokou-2.0",
+  "succes_url":"/",
+  "stack":"container",
+  "env":{
+    "PREFIXE":
+    {
+      "description":"choose your prefix of bot",
+      "value":"#",
+      "required":true
+    },
+    "LECTURE_AUTO_STATUS":
+    {
+      "description":"Your contact status will be read automatically(type 'oui' to active or 'non' to deactive  ; don't write in capital letter)",
+      "value":"oui",
+      "required":false
+    }, "TELECHARGER_AUTO_STATUS":
+    {
+      "description":"Your contact status will be download automatically(type 'oui' to active or 'non' to deactive ; don't write in capital letter)",
+      "value":"oui",
+      "required":false
+    }
+    ,
+     "PM_PERMIT" :
+     {
+      "description":"Other user can't use your bot in pm (type 'oui' to active or 'non' to deactive ; don't write in capital letter)",
+      "value":"non",
+      "required":false
+    }
+    ,
+    "NOM_BOT" : {
+       
+      "description":"A name for your bot",
+      "value":"Zokou-MD",
+      "required":false
+
+    } ,
+     "LIENS_MENU" : {
+    
+      "description":"add one or many link for your bot menu  ; eg : url1,url2,url3.....",
+      "value":"Zokou-MD",
+      "required":false
+       
+     },
+    "MODE_PUBLIC":
+    {
+      "description":"type 'oui' to put your bot on public mode or 'non' to put it on private mod",
+      "value":"oui",
+      "required":false
+    }
+	,
+    "HEROKU_APY_KEY": {
+    "description": "insert your heroku api-key (this is optionnal)",
+     "required" :false
+    },
+  "HEROKU_APP_NAME": {
+    "description": "insert your heroku APP NAME (this is optionnal)",
+     "required" :false
+    }  
+	  ,
+    "APILOLHUMAIN":
+    {
+      "description":"put your api key of website api.lolhuman.xyz(this is optionnal ,if you don't have)",
+      "value":"9d05ccc5f58e1cf30937",
+      "required":false
+    },
+    "SESSION_ID":
+    {
+      "description":"put your session ID , the code you receive after scanning Qr code",   
+      "value":"",
+      "required":true
+      
+    },
+    "NOM_OWNER":
+    {
+    
+    "desc": "Your Name",
+    "required": false,
+    "value": "Djalega++"
+  },
+    "NUMERO_OWNER":
+  {
+    
+    "desc": "Your number , dont put '+' and put you area code(exemple of togo '228')",
+    "required":false,
+    "value": "22891733300"
+  },
+    "WARN_COUNT":
+  {
+    "desc": "this is the limit of warn for warning commandes",
+    "required": false,
+    "value": "3"
+  }
+  },
+
+  "formation": {
+		"worker": {
+			"quantity": 1,
+			"size": "basic"
+		}
+	},
+
+  "addons":[
+    {
+      "plan":"heroku-postgresql"
+    }
+  ]
+}
