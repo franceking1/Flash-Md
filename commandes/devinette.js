@@ -105,7 +105,7 @@ zokou({ nomCom: "devinette", categorie: "Fun" }, async (dest, zk, commandeOption
   await zk.sendMessage(
     dest,
     {
-      text: `Riddle: ${riddle.question} . \n you have 30 seconds to think.`,
+      text: `Riddle: ${devinette.question} . \n you have 30 seconds to think about.`,
     },
     { quoted: ms }
   );
