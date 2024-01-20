@@ -285,10 +285,10 @@ zokou({ nomCom: "del", categorie: 'Group',reaction:"🧹" }, async (dest, zk, co
   const { ms, repondre, verifGroupe,auteurMsgRepondu,idBot, msgRepondu, verifAdmin, superUser, auteurMessage ,verifZokouAdmin} = commandeOptions;
   
   if (!msgRepondu) {
-    repondre("Please mention the Message to be deleted");
+    repondre("Please mention the message to delete.");
     return;
   }
-  if(superUser)
+  if(superUser && auteurMsgRepondu==idBot )
   {
     
        if(auteurMsgRepondu==idBot)
@@ -299,40 +299,33 @@ zokou({ nomCom: "del", categorie: 'Group',reaction:"🧹" }, async (dest, zk, co
       id: ms.message.extendedTextMessage.contextInfo.stanzaId,
          }
          await zk.sendMessage(dest,{delete:key});return;
-       }
-      else if(auteurMsgRepondu!=idBot && !verifGroupe)
-       {
-             try{
-                        
-            const key={
-            remoteJid:dest,
-      fromMe: false,
-      id: ms.message.extendedTextMessage.contextInfo.stanzaId,
-         }
-         await zk.sendMessage(dest,{delete:key});return;
-             }catch(erreur){repondre("an error while deleting the mess "+e)}
-       }
+       } 
   }
 
           if(verifGroupe)
           {
                if(verifAdmin || superUser)
                {
-                    if(verifZokouAdmin)
-                    {
+                    
                          try{
-                        
-            const key={
-            remoteJid:dest,
-      fromMe: false,
-      id: ms.message.extendedTextMessage.contextInfo.stanzaId,
-         }
+                
+      
+            const key=   {
+               remoteJid : dest,
+               id : ms.message.extendedTextMessage.contextInfo.stanzaId ,
+               fromMe : false,
+               participant : ms.message.extendedTextMessage.contextInfo.participant
+
+            }        
+         
          await zk.sendMessage(dest,{delete:key});return;
-             }catch(erreur){repondre("an error while deleting the mess "+e)}
-                    }
+
+             }catch(e){repondre( "I need admin rights.")}
+                    
                       
-               }else{repondre("Sorry I'm not an administrator of the group.")}
+               }else{repondre("Sorry, you are not an administrator of the group.")}
           }
+
 });
 
 zokou({ nomCom: "info", categorie: 'Group' }, async (dest, zk, commandeOptions) => {
@@ -584,94 +577,106 @@ zokou({ nomCom: "gpp", categorie: 'Group' }, async (dest, zk, commandeOptions) =
 /////////////
 zokou({nomCom:"hidetag",categorie:'Group',reaction:"🎤"},async(dest,zk,commandeOptions)=>{
 
+  const {ms,repondre,msgRepondu,verifGroupe,prefixe, arg ,verifAdmin , superUser}=commandeOptions;
 
-const {ms,repondre,msgRepondu,verifGroupe,prefixe,arg}=commandeOptions;
+  if(!verifGroupe)  { repondre('This command is only allowed in groups.')} ;
+  if (verifAdmin || superUser) { 
+
+  let metadata = await zk.groupMetadata(dest) ;
+
+  //console.log(metadata.participants)
+ let tag = [] ;
+  for (const participant of metadata.participants ) {
+
+      tag.push(participant.id) ;
+  }
+  //console.log(tag)
+
+    if(msgRepondu) {
+      console.log(msgRepondu)
+      let msg ;
+
+      if (msgRepondu.imageMessage) {
+
+        
+
+     let media  = await zk.downloadAndSaveMediaMessage(msgRepondu.imageMessage) ;
+     // console.log(msgRepondu) ;
+     msg = {
+
+       image : { url : media } ,
+       caption : msgRepondu.imageMessage.caption,
+       mentions :  tag
+       
+     }
+    
+
+      } else if (msgRepondu.videoMessage) {
+
+        let media  = await zk.downloadAndSaveMediaMessage(msgRepondu.videoMessage) ;
+
+        msg = {
+
+          video : { url : media } ,
+          caption : msgRepondu.videoMessage.caption,
+          mentions :  tag
+          
+        }
+
+      } else if (msgRepondu.audioMessage) {
+    
+        let media  = await zk.downloadAndSaveMediaMessage(msgRepondu.audioMessage) ;
+       
+        msg = {
+   
+          audio : { url : media } ,
+          mimetype:'audio/mp4',
+          mentions :  tag
+           }     
+        
+      } else if (msgRepondu.stickerMessage) {
+
+    
+        let media  = await zk.downloadAndSaveMediaMessage(msgRepondu.stickerMessage)
+
+        let stickerMess = new Sticker(media, {
+          pack: 'Zokou-tag',
+          type: StickerTypes.CROPPED,
+          categories: ["🤩", "🎉"],
+          id: "12345",
+          quality: 70,
+          background: "transparent",
+        });
+        const stickerBuffer2 = await stickerMess.toBuffer();
+       
+        msg = { sticker: stickerBuffer2 , mentions : tag}
 
 
-if(!verifGroupe){return repondre("for groups only ⛔️");}
+      }  else {
+          msg = {
+             text : msgRepondu.conversation,
+             mentions : tag
+          }
+      }
 
-const infoGroupe=verifGroupe?await zk.groupMetadata(dest).catch((e)=>{console.log(e);}):"";
+    zk.sendMessage(dest,msg)
 
+    } else {
 
-const membres =verifGroupe?infoGroupe.participants:{}
+        if(!arg || !arg[0]) { repondre('Enter the text to announce or mention the message to announce');
+        ; return} ;
 
-if(!msgRepondu && !arg.join(" "))
-{
- // return repondre(`${prefixe}annonce Salut comment allez vous ?`);
-  const txt =`${prefixe}annonce Salut comment allez vous ?`
-  await zk.sendMessage(dest,{text:txt})
+      zk.sendMessage(
+         dest,
+         {
+          text : arg.join(' ') ,
+          mentions : tag
+         }     
+      )
+    }
+
+} else {
+  repondre('Command reserved for administrators.')
 }
-
-try{
-
-           /*const isTextRpd=msgRepondu.extendedTextMessage?.text?true:false;
-
-const textRpd =isTextRpd?msgRepondu.extendedTextMessage?.text:"";
-
-const isVideoRpd =msgRepondu.videoMessage?true:false;
-const videoRpd =isVideoRpd?await zk.downloadAndSaveMediaMessage(msgRepondu.videoMessage):null;
-
-
-const titreVid =isVideoRpd?msgRepondu.videoMessage.caption:"";
-
-
-const isImgRpd=msgRepondu.imageMessage?true:false;
-
-const imgRpd=isImgRpd?await zk.downloadAndSaveMediaMessage(msgRepondu.imageMessage):null;
-
-const titreImg=isImgRpd?msgRepondu.imageMessag.caption:"";*/
-
-         if(msgRepondu)
-            {
-
-    /** *********^^^^^^^^^^^^/ *///////////////////////////////////////////
-             
-           const isTextRpd=msgRepondu.extendedTextMessage?.text?true:false;
-
-const textRpd =isTextRpd?msgRepondu.extendedTextMessage?.text:"";
-
-const isVideoRpd =msgRepondu.videoMessage?true:false;
-const videoRpd =isVideoRpd?await zk.downloadAndSaveMediaMessage(msgRepondu.videoMessage):null;
-
-
-const titreVid =isVideoRpd?msgRepondu.videoMessage.caption:"";
-
-
-const isImgRpd=msgRepondu.imageMessage?true:false;
-
-const imgRpd=isImgRpd?await zk.downloadAndSaveMediaMessage(msgRepondu.imageMessage):null;
-
-const titreImg=isImgRpd?msgRepondu.imageMessage.caption:"";
-              
-      ////////////        
-
-              
-
-              
-if(isImgRpd)
-                  { 
-                     await zk.sendMessage(dest,{image:{url:imgRpd},caption:titreImg,mentions:membres.map((i)=>i.id)},{quoted:ms})
-                   }else    if(isVideoRpd)
-{
-     await zk.sendMessage(dest,   {video:  {url:videoRpd},caption:titreVid,mentions:membres.map((i)=>i.id)},{quoted:ms})  
-}else if(isTextRpd)
-{ 
-
-  /*repondre(msgRepondu.extendedTextMessage?.text)*/
-  
-   await zk.sendMessage(dest,{text:textRpd,mentions:membres.map((i)=>i.id)})
-}
-            
-
-
-}else if(arg.join(" "))
-{ 
-    const txt =arg.join(" ")
-      await zk.sendMessage(dest,{text:txt,mentions:membres.map((i)=>i.id)})
-} else { repondre("what should I announce please") }
-
-
-}catch(e){return repondre("oops an error : "+e);}
-
 
 });

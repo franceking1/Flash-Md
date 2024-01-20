@@ -1,35 +1,8 @@
 const { zokou } = require('../framework/zokou');
-const deepai=require("deepai")
-const traduire = require("../framework/traduction")
+const traduire = require("../framework/traduction") ;
+const conf = require('../set');
 
 
-async function ia(requete){
-
-
-  
-deepai.setApiKey("quickstart-QUdJIGlzIGNvbWluZy4uLi4K");
-
-  
-var rep =await deepai.callStandardApi("text-generator",{text:requete});
-  return rep.output;
-};
-
-zokou({nomCom:"zokou",reaction:"📡",categorie:"IA"},async(dest,zk,commandeOptions)=>{
-
-const {repondre,ms,arg}=commandeOptions;
-
-  if(!arg || !arg[0])
-  {return repondre("Please ask your question .")}
-  var quest = arg.join(' ');
-try{
-  let rep= await ia(quest);
- let tex = await traduire(rep , { to: 'en' })
-
-  repondre(tex);
-}catch(e){ repondre("oops an error : "+e)}
-  
-
-});
 
 
 zokou({nomCom:"bot",reaction:"📡",categorie:"IA"},async(dest,zk,commandeOptions)=>{
@@ -68,6 +41,45 @@ fetch(`http://api.brainshop.ai/get?bid=177607&key=NwzhALqeO1kubFVD&uid=[uid]&msg
     
   
   });  
+
+
+  zokou({ nomCom: "gpt", reaction: "📡", categorie: "IA" }, async (dest, zk, commandeOptions) => {
+    const { repondre, arg } = commandeOptions;
   
+    try {
+      if (!arg || arg.length === 0) {
+        return repondre("please ask your question");
+      }
+  
+      const question = arg.join(' ');
+  
+      const response = await fetch("https://api.openai.com/v1/chat/completions", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${conf.GPT}`, 
+        },
+        body: JSON.stringify({
+          model: "gpt-3.5-turbo", 
+          messages: [{ role: "system", content: "You are a helpful assistant." }, { role: "user", content: question }],
+        }),
+      });
+  
+      const reponseData = await response.json();
+      console.log("GPT REPONCE : ",reponseData); 
+      
+      if (!reponseData.choices || reponseData.choices.length === 0) {
+        repondre("OPENAI_API_KEY is invalide, put a new openai api key");
+      } else {
+        repondre(reponseData.choices[0].message.content);
+          }
+      
+    } catch (error) {
+      console.error('Erreur:', error.message || 'Une erreur s\'est produite');
+      repondre("Oups, an error detected");
+    }
+  });
+  
+
 
   

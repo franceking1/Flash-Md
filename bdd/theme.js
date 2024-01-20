@@ -87,7 +87,8 @@ async function getThemeChoice() {
  ;
 
 async function getThemeInfoById(id) {
-  const client = await pool2.connect();
+  try{const client = await pool2.connect();}catch(e){console.log("👿👿 "+e)}
+ // const client = await pool2.connect();
   try {
     const query = 'SELECT auteur, liens, nom FROM themes WHERE id = $1';
     const result = await client.query(query, [id]);
@@ -130,3 +131,4 @@ module.exports = {
     updateThemeValue,
     getAllThemesInfo,
 }
+
