@@ -1,6 +1,6 @@
 const {zokou} = require("../framework/zokou");
 const axios = require('axios');
-const {traduire} = require('../framework/traduction')
+const traduire = require('../framework/traduction')
 
 
 
@@ -135,6 +135,8 @@ Therefore, the game is canceled`, mentions : [auteurMessage, auteurMsgRepondu]})
                 console.error(error);
             }
         }
+    } else {
+        repondre('Chifumi  is an rock-paper-scissors games ; you need a friend too play , mention his/her message when sending chifumi to invite him/her') ;
     }
 });
 

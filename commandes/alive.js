@@ -22,7 +22,7 @@ zokou(
 
 
         var mode = "public";
-        if (s.MODE != "oui") {
+        if ((s.MODE).toLocaleLowerCase() != "oui") {
             mode = "private";
         }
       
@@ -35,7 +35,7 @@ const temps = moment().format('HH:mm:ss');
 const date = moment().format('DD/MM/YYYY');
 
     const alivemsg = `
-*Owner* : ${s.NOM_OWNER}
+*Owner* : ${s.OWNER_NAME}
 *Mode* : ${mode}
 *Date* : ${date}
 *Hours(GMT)* : ${temps}

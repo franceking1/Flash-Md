@@ -11,7 +11,7 @@ zokou(
        const {ms,repondre,superUser , arg} = commandeOptions ;
        
        if(!superUser){repondre('only Mods can use this commande');return};
-       if(!arg[0] || !(arg.join('').split('='))) {repondre('Bad format ; Exemple of using :\nSetvar NOM_OWNER=Fredora');return};
+       if(!arg[0] || !(arg.join('').split('='))) {repondre('Bad format ; Exemple of using :\nSetvar OWNER_NAME=Fredora');return};
      
     const text = arg.join(" ")
      const Heroku = require("heroku-client");

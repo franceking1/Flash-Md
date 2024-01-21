@@ -96,7 +96,7 @@ const devinettes = [
   },
   ];
   
-zokou({ nomCom: "devinette", categorie: "Fun" }, async (dest, zk, commandeOptions) => {
+zokou({ nomCom: "riddle", categorie: "Games" }, async (dest, zk, commandeOptions) => {
   const { ms, repondre } = commandeOptions;
 
   // Choose a random riddle

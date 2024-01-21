@@ -12,7 +12,7 @@ zokou({ nomCom: "menu", categorie: "General" }, async (dest, zk, commandeOptions
     var coms = {};
     var mode = "public";
     
-    if (s.MODE != "oui") {
+    if ((s.MODE).toLocaleLowerCase() != "oui") {
         mode = "private";
     }
 
@@ -34,7 +34,7 @@ const date = moment().format('DD/MM/YYYY');
   let infoMsg =  `
 *╔═════ •✧✧• ════╗*
 ┃   *Préfix* : ${s.PREFIXE}
-┃   *Owner* : ${s.NOM_OWNER}
+┃   *Owner* : ${s.OWNER_NAME}
 ┃   *Mode* : ${mode}
 ┃   *Commands* : ${cm.length}
 ┃   *Date* : ${date}
@@ -77,7 +77,7 @@ for use a command, insert  ${prefixe}"command_name"
 
    if (lien.match(/\.(mp4|gif)$/i)) {
     try {
-        zk.sendMessage(dest, { video: { url: lien }, caption:infoMsg + menuMsg, footer: "Je suis *Zokou-MD*, développé par Djalega++" }, { quoted: ms });
+        zk.sendMessage(dest, { video: { url: lien }, caption:infoMsg + menuMsg, footer: "Je suis *Zokou-MD*, développé par Djalega++" , gifPlayback : true }, { quoted: ms });
     }
     catch (e) {
         console.log("🥵🥵 Menu erreur " + e);

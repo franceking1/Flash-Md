@@ -7,18 +7,18 @@
   "succes_url":"/",
   "stack":"container",
   "env":{
-    "PREFIXE":
+    "PREFIX":
     {
       "description":"choose your prefix of bot",
       "value":"#",
       "required":true
     },
-    "LECTURE_AUTO_STATUS":
+    "AUTO_READ_STATUS":
     {
       "description":"Your contact status will be read automatically(type yes to active or no to deactive  ; don't write in capital letter)",
       "value":"oui",
       "required":false
-    }, "TELECHARGER_AUTO_STATUS":
+    }, "AUTO_DOWNLOAD_STATUS":
     {
       "description":"Your contact status will be download automatically and send to you(type yes to active or no to deactive ; don't write in capital letter)",
       "value":"oui",
@@ -32,14 +32,14 @@
       "required":false
     }
     ,
-    "NOM_BOT" : {
+    "BOT_NAME" : {
        
       "description":"put A name for your bot",
       "value":"Zokou-MD",
       "required":false
 
     } ,
-     "LIENS_MENU" : {
+     "BOT_MENU_LINKS" : {
     
       "description":"add one or many link for your bot menu  ; eg : url1,url2,url3.....",
       "value":"https://i.pinimg.com/736x/0a/70/6f/0a706f90d6a1fb39919aedfbb7fdd8d3.jpg",
@@ -75,7 +75,7 @@
       "required":true
       
     },
-    "NOM_OWNER":
+    "OWNER_NAME":
     {
     
     "desc": "Your Name",

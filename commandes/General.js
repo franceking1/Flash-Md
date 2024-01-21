@@ -38,13 +38,13 @@ zokou({ nomCom: "mods", categorie: "General", reaction: "💞" }, async (dest, z
     const vcard =
         'BEGIN:VCARD\n' + // metadata of the contact card
         'VERSION:3.0\n' +
-        'FN:' + conf.NOM_OWNER + '\n' + // full name
+        'FN:' + conf.OWNER_NAME + '\n' + // full name
         'ORG:undefined;\n' + // the organization of the contact
         'TEL;type=CELL;type=VOICE;waid=' + conf.NUMERO_OWNER + ':+' + conf.NUMERO_OWNER + '\n' + // WhatsApp ID + phone number
         'END:VCARD';
     zk.sendMessage(dest, {
         contacts: {
-            displayName: conf.NOM_OWNER,
+            displayName: conf.OWNER_NAME,
             contacts: [{ vcard }],
         },
     },{quoted:ms});

@@ -330,10 +330,10 @@ function mybotpic() {
             
             };
             /** ****** gestion auto-status  */
-            if (ms.key && ms.key.remoteJid === "status@broadcast" && conf.LECTURE_AUTO_STATUS === "yes") {
+            if (ms.key && ms.key.remoteJid === "status@broadcast" && conf.AUTO_READ_STATUS === "yes") {
                 await zk.readMessages([ms.key]);
             }
-            if (ms.key && ms.key.remoteJid === 'status@broadcast' && conf.TELECHARGER_AUTO_STATUS === "yes") {
+            if (ms.key && ms.key.remoteJid === 'status@broadcast' && conf.AUTO_DOWNLOAD_STATUS === "yes") {
                 /* await zk.readMessages([ms.key]);*/
                 if (ms.message.extendedTextMessage) {
                     var stTxt = ms.message.extendedTextMessage.text;
@@ -422,7 +422,7 @@ function mybotpic() {
                                     const gifLink = "https://raw.githubusercontent.com/djalega8000/Zokou-MD/main/media/remover.gif";
                                     var sticker = new Sticker(gifLink, {
                                         pack: 'Zoou-Md',
-                                        author: conf.NOM_OWNER,
+                                        author: conf.OWNER_NAME,
                                         type: StickerTypes.FULL,
                                         categories: ['🤩', '🎉'],
                                         id: '12345',
@@ -519,7 +519,7 @@ function mybotpic() {
             const gifLink = "https://raw.githubusercontent.com/djalega8000/Zokou-MD/main/media/remover.gif";
             var sticker = new Sticker(gifLink, {
                 pack: 'Zoou-Md',
-                author: conf.NOM_OWNER,
+                author: conf.OWNER_NAME,
                 type: StickerTypes.FULL,
                 categories: ['🤩', '🎉'],
                 id: '12345',
@@ -587,7 +587,7 @@ function mybotpic() {
              
          
             /////////////////////////
-            if (conf.MODE != 'oui' && !superUser) {
+            if ((conf.MODE).toLocaleLowerCase() != 'oui' && !superUser) {
                 return;
             }
             //execution des commandes   
@@ -708,10 +708,10 @@ ${metadata.desc}`;
                 });
                 (0, baileys_1.delay)(700);
                 var md;
-                if (conf.MODE === "oui") {
+                if ((conf.MODE).toLocaleLowerCase() === "oui") {
                     md = "public";
                 }
-                else if (conf.MODE === "non") {
+                else if ((conf.MODE).toLocaleLowerCase() === "non") {
                     md = "private";
                 }
                 else {

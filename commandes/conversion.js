@@ -1,5 +1,6 @@
 const { Sticker, createSticker, StickerTypes } = require('wa-sticker-formatter');
 const { zokou } = require("../framework/zokou");
+const traduire = require("../framework/traduction");
 const { downloadMediaMessage,downloadContentFromMessage } =  require('@whiskeysockets/baileys');
 let fs=require("fs-extra") ;
 const axios = require('axios');  
@@ -334,3 +335,35 @@ zokou({nomCom:"photo",categorie: "Conversion", reaction: "👨🏿‍💻"},asyn
           fs.unlinkSync(ran);
         });
 });
+
+zokou({ nomCom: "trt", categorie: "Conversion", reaction: "👨🏿‍💻" }, async (dest, zk, commandeOptions) => {
+
+  const { msgRepondu, repondre , arg } = commandeOptions;
+
+  
+   if(msgRepondu) {
+     try {
+      
+     
+
+       if(!arg || !arg[0]) { repondre('(eg : trt en)') ; return }
+   
+
+         let texttraduit = await traduire(msgRepondu.conversation , {to : arg[0]}) ;
+
+         repondre(texttraduit)
+
+        } catch (error) {
+          
+          repondre('Mention a texte Message') ;
+      
+        }
+
+   } else {
+     
+     repondre('Mention a texte Message')
+   }
+
+
+
+})
