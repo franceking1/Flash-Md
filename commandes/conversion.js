@@ -2,10 +2,37 @@ const { Sticker, createSticker, StickerTypes } = require('wa-sticker-formatter')
 const { zokou } = require("../framework/zokou");
 const traduire = require("../framework/traduction");
 const { downloadMediaMessage,downloadContentFromMessage } =  require('@whiskeysockets/baileys');
-let fs=require("fs-extra") ;
+const fs =require("fs-extra") ;
 const axios = require('axios');  
 const FormData = require('form-data');
 const { exec } = require("child_process");
+
+
+
+async function uploadToTelegraph(Path) {
+  if (!fs.existsSync(Path)) {
+      throw new Error("Fichier non existant");
+  }
+
+  try {
+      const form = new FormData();
+      form.append("file", fs.createReadStream(Path));
+
+      const { data } = await axios.post("https://telegra.ph/upload", form, {
+          headers: {
+              ...form.getHeaders(),
+          },
+      });
+
+      if (data && data[0] && data[0].src) {
+          return "https://telegra.ph" + data[0].src;
+      } else {
+          throw new Error("Erreur lors de la récupération du lien de la vidéo");
+      }
+  } catch (err) {
+      throw new Error(String(err));
+  }
+}
 
 
 
@@ -246,56 +273,7 @@ zokou({ nomCom: "write", categorie: "Conversion", reaction: "👨🏿‍💻" },
   }
 });
 
-zokou({nomCom:"url",categorie: "Conversion", reaction: "👨🏿‍💻"},async(origineMessage,zk,commandeOptions)=>{
-   const {ms , msgRepondu,arg,repondre,nomAuteurMessage} = commandeOptions ;
 
-  if(!msgRepondu) { repondre( 'make sure to mention the media' ) ; return } ;
- 
-  if (msgRepondu.imageMessage) {
-     mediamsg = msgRepondu.imageMessage
-
-     const image = await zk.downloadAndSaveMediaMessage(mediamsg);
-
-  // Create a FormData object
-  const data = new FormData();
-  data.append('image', fs.createReadStream(image));
-
-  // Configure headers
-  const clientId = 'b40a1820d63cd4e'; // Replace with your Imgur client ID
-  const headers = {
-    'Authorization': `Client-ID ${clientId}`,
-    ...data.getHeaders()
-  };
-
-  //Configure headers
-  const config = {
-    method: 'post',
-    maxBodyLength: Infinity,
-    url: 'https://api.imgur.com/3/image',
-    headers: headers,
-    data: data
-  };
-
-    const response = await axios(config);
-    const imageUrl = response.data.data.link;
-    console.log(imageUrl) ;
-
-       repondre(imageUrl)
-    
-  } else if(msgRepondu.videoMessage) {
-mediamsg = msgRepondu.videoMessage
-     repondre('commande non achever') ; return
-  }  
-  else if (msgRepondu.stickerMessage) {
-    mediamsg = msgRepondu.stickerMessage ;
-    repondre('commande non achever') ; return
-  } else {
-    repondre('Uh media please'); return
-  } ;
-
-
-      
-                  } );
 
 zokou({nomCom:"photo",categorie: "Conversion", reaction: "👨🏿‍💻"},async(dest,zk,commandeOptions)=>{
    const {ms , msgRepondu,arg,repondre,nomAuteurMessage} = commandeOptions ;
@@ -366,4 +344,35 @@ zokou({ nomCom: "trt", categorie: "Conversion", reaction: "👨🏿‍💻" }, a
 
 
 
-})
+}) ;
+
+
+zokou({ nomCom: "url", categorie: "Conversion", reaction: "👨🏿‍💻" }, async (origineMessage, zk, commandeOptions) => {
+  const { msgRepondu, repondre } = commandeOptions;
+
+  if (!msgRepondu) {
+      repondre('mention a image or video');
+      return;
+  }
+
+  let mediaPath;
+
+  if (msgRepondu.videoMessage) {
+      mediaPath = await zk.downloadAndSaveMediaMessage(msgRepondu.videoMessage);
+  } else if (msgRepondu.imageMessage) {
+      mediaPath = await zk.downloadAndSaveMediaMessage(msgRepondu.imageMessage);
+  } else {
+      repondre('mention a image or video');
+      return;
+  }
+
+  try {
+      const telegraphUrl = await uploadToTelegraph(mediaPath);
+      fs.unlinkSync(mediaPath);  // Supprime le fichier après utilisation
+
+      repondre(telegraphUrl);
+  } catch (error) {
+      console.error('Erreur lors de la création du lien Telegraph :', error);
+      repondre('Opps error');
+  }
+});
