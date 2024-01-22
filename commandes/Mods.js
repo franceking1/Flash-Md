@@ -5,62 +5,94 @@ const {isUserBanned , addUserToBanList , removeUserFromBanList} = require("../bd
 const  {addGroupToBanList,isGroupBanned,removeGroupFromBanList} = require("../bdd/banGroup");
 const {isGroupOnlyAdmin,addGroupToOnlyAdminList,removeGroupFromOnlyAdminList} = require("../bdd/onlyAdmin");
 const {removeSudoNumber,addSudoNumber,issudo} = require("../bdd/sudo");
-const conf = require("../set");
-const fs = require('fs');
+//const conf = require("../set");
+//const fs = require('fs');
 const sleep =  (ms) =>{
   return new Promise((resolve) =>{ setTimeout (resolve, ms)})
   
   } ;
 
 
-zokou({ nomCom: "tgs", categorie: "Mods" }, async (dest, zk, commandeOptions) => {
-  const { ms, repondre, arg, nomAuteurMessage, superUser } = commandeOptions;
-
-  if (!superUser) {
-    repondre('Command reserved for bot owner'); return;
-  }
-  const apikey = conf.APILOLHUMAIN
-
-  if (apikey === null || apikey === 'null') { repondre('Make sure to check your apikey or if you don\'t have one, make sure to create an account on api.lolhuman.xyz and get one.'); return; };
-
-  if (!arg[0]) {
-    repondre("please insert a Telegram sticker link");
-    return;
-  }
-
-  let lien = arg.join(' ');
-
-  let api = 'https://api.lolhuman.xyz/api/telestick?apikey=' + apikey + '&url=' + lien;
-
-  try {
-    const response = await axios.get(api);
-    const img = response.data.result.sticker;
-
-    for (let i = 0; i < img.length; i++) {
-      const sticker = new Sticker(img[i], {
-        pack: nomAuteurMessage,
-        author: "Zokou-md",
-        type: StickerTypes.FULL,
-        categories: ['🤩', '🎉'],
-        id: '12345',
-        quality: 50,
-        background: '#000000'
-      });
-
-      const stickerBuffer = await sticker.toBuffer(); //Converts sticker to stamp (Buffer)
-
-      await zk.sendMessage(
-        dest,
-        {
-          sticker: stickerBuffer, // Use the Buffer directly in the message subject
-        },
-        { quoted: ms }
-      );
+  zokou({ nomCom: "tgs", categorie: "Mods" }, async (dest, zk, commandeOptions) => {
+    const { ms, repondre, arg, nomAuteurMessage, superUser } = commandeOptions;
+  
+    if (!superUser) {
+      repondre('Only Mods can use this command'); return;
     }
-  } catch (e) {
-    repondre("your apilolhuman key don't work");
-  }
-});
+    //const apikey = conf.APILOLHUMAIN
+  
+   // if (apikey === null || apikey === 'null') { repondre('Veillez vérifier votre apikey ou si vous en avez pas , veiller crée un compte sur api.lolhuman.xyz et vous en procurer une.'); return; };
+  
+    if (!arg[0]) {
+      repondre("put a telegramme stickers link ");
+      return;
+    }
+  
+    let lien = arg.join(' ');
+  
+    let name = lien.split('/addstickers/')[1] ;
+  
+    let api = 'https://api.telegram.org/bot891038791:AAHWB1dQd-vi0IbH2NjKYUk-hqQ8rQuzPD4/getStickerSet?name=' + encodeURIComponent(name) ;
+  
+    try {
+  
+      let stickers = await axios.get(api) ;
+  
+      let type = null ;
+  
+      if (stickers.data.result.is_animated === true ||stickers.data.result.is_video === true  ) {
+  
+          type = 'animated sticker'
+      } else {
+        type = 'not animated sticker'
+      }
+  
+      let msg = `   Zk-stickers-dl
+      
+  *Name :* ${stickers.data.result.name}
+  *Type :* ${type} 
+  *Length :* ${(stickers.data.result.stickers).length}
+  
+      Downloading...`
+  
+      await  repondre(msg) ;
+  
+       for ( let i = 0 ; i < (stickers.data.result.stickers).length ; i++ ) {
+  
+          let file = await axios.get(`https://api.telegram.org/bot891038791:AAHWB1dQd-vi0IbH2NjKYUk-hqQ8rQuzPD4/getFile?file_id=${stickers.data.result.stickers[i].file_id}`) ;
+  
+          let buffer = await axios({
+            method: 'get',  // Utilisez 'get' pour télécharger le fichier
+            url:`https://api.telegram.org/file/bot891038791:AAHWB1dQd-vi0IbH2NjKYUk-hqQ8rQuzPD4/${file.data.result.file_path}` ,
+            responseType: 'arraybuffer',  // Définissez le type de réponse sur 'stream' pour gérer un flux de données
+          })
+  
+  
+          const sticker = new Sticker(buffer.data, {
+            pack: nomAuteurMessage,
+            author: "Zokou-md",
+            type: StickerTypes.FULL,
+            categories: ['🤩', '🎉'],
+            id: '12345',
+            quality: 50,
+            background: '#000000'
+          });
+    
+          const stickerBuffer = await sticker.toBuffer(); // Convertit l'autocollant en tampon (Buffer)
+    
+          await zk.sendMessage(
+            dest,
+            {
+              sticker: stickerBuffer, // Utilisez le tampon (Buffer) directement dans l'objet de message
+            },
+            { quoted: ms }
+          ); 
+       }
+  
+    } catch (e) {
+      repondre("we got an error \n", e);
+    }
+  });
 
 zokou({ nomCom: "crew", categorie: "Mods" }, async (dest, zk, commandeOptions) => {
   const { ms, repondre, arg, auteurMessage, superUser, auteurMsgRepondu, msgRepondu } = commandeOptions;

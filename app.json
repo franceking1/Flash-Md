@@ -62,12 +62,6 @@
      "required" :false
     }  
 	  ,
-    "APILOLHUMAIN":
-    {
-      "description":"put your api key of website api.lolhuman.xyz(this is optionnal ,if you don't have)",
-      "value":"9d05ccc5f58e1cf30937",
-      "required":false
-    },
     "SESSION_ID":
     {
       "description":"put your session ID , the code you receive after scanning Qr code",   
