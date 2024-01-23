@@ -1,6 +1,6 @@
 const { zokou } = require('../framework/zokou');
 const traduire = require("../framework/traduction") ;
-const conf = require('../set');
+//const conf = require('../set');
 
 
 
@@ -11,7 +11,7 @@ zokou({nomCom:"bot",reaction:"📡",categorie:"IA"},async(dest,zk,commandeOption
   
     if(!arg || !arg[0])
     {return repondre("yes I'm listening to you.")}
-    var quest = arg.join(' ');
+    //var quest = arg.join(' ');
   try{
     
     
@@ -43,43 +43,58 @@ fetch(`http://api.brainshop.ai/get?bid=177607&key=NwzhALqeO1kubFVD&uid=[uid]&msg
   });  
 
 
-  zokou({ nomCom: "gpt", reaction: "📡", categorie: "IA" }, async (dest, zk, commandeOptions) => {
-    const { repondre, arg } = commandeOptions;
+
+  zokou({ nomCom: "dalle", reaction: "📡", categorie: "IA" }, async (dest, zk, commandeOptions) => {
+    const { repondre, arg, ms } = commandeOptions;
   
     try {
       if (!arg || arg.length === 0) {
-        return repondre("please ask your question");
+        return repondre(`Please enter the necessary information to generate the image.`);
       }
   
-      const question = arg.join(' ');
-  
-      const response = await fetch("https://api.openai.com/v1/chat/completions", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${conf.GPT}`, 
-        },
-        body: JSON.stringify({
-          model: "gpt-3.5-turbo", 
-          messages: [{ role: "system", content: "You are a helpful assistant." }, { role: "user", content: question }],
-        }),
-      });
-  
-      const reponseData = await response.json();
-      console.log("GPT REPONCE : ",reponseData); 
+      // Regrouper les arguments en une seule chaîne séparée par "-"
+      const image = arg.join(' ');
+      const response = await axios.get(`https://vihangayt.me/tools/photoleap?q=${image}`);
       
-      if (!reponseData.choices || reponseData.choices.length === 0) {
-        repondre("OPENAI_API_KEY is invalide, put a new openai api key");
+      const data = response.data;
+      let caption = '*powered by ZOKOU-MD*';
+      
+      if (data.status && data.owner && data.data) {
+        // Utiliser les données retournées par le service
+        const imageUrl = data.data;
+        zk.sendMessage(dest, { image: { url: imageUrl }, caption: caption }, { quoted: ms });
       } else {
-        repondre(reponseData.choices[0].message.content);
-          }
-      
+        repondre("Error during image generation.");
+      }
     } catch (error) {
       console.error('Erreur:', error.message || 'Une erreur s\'est produite');
-      repondre("Oups, an error detected");
+      repondre("Oops, an error occurred while processing your request");
     }
   });
   
+  zokou({ nomCom: "gpt", reaction: "📡", categorie: "IA" }, async (dest, zk, commandeOptions) => {
+    const { repondre, arg, ms } = commandeOptions;
+  
+    try {
+      if (!arg || arg.length === 0) {
+        return repondre(`Please ask a question.`);
+      }
+  
+      // Regrouper les arguments en une seule chaîne séparée par "-"
+      const question = arg.join(' ');
+      const response = await axios.get(`https://vihangayt.me/tools/chatgpt4?q=${question}`);
+      
+      const data = response.data;
+      if (data) {
+        repondre(data.data);
+      } else {
+        repondre("Error during response generation.");
+      }
+    } catch (error) {
+      console.error('Erreur:', error.message || 'Une erreur s\'est produite');
+      repondre("Oops, an error occurred while processing your request.");
+    }
+  });
 
 
   

@@ -5,9 +5,11 @@ const { zokou } = require("../framework/zokou")
 const { Sticker, createSticker, StickerTypes } = require('wa-sticker-formatter');
 const {ajouterOuMettreAJourJid,mettreAJourAction,verifierEtatJid} = require("../bdd/antilien")
 const {atbajouterOuMettreAJourJid,atbrecupererActionJid,atbverifierEtatJid,atbmettreAJourAction} = require("../bdd/antibot")
+const { search, download } = require("aptoide-scraper");
 const fs = require("fs-extra");
 const conf = require("../set");
-const { uploadImageToImgur } = require('../framework/imgur');
+//const { uploadImageToImgur } = require('../framework/imgur');
+
 
 
 
@@ -679,4 +681,65 @@ zokou({nomCom:"hidetag",categorie:'Group',reaction:"🎤"},async(dest,zk,command
   repondre('Command reserved for administrators.')
 }
 
+});
+
+
+zokou({ nomCom: "apk", reaction: "✨", categorie: "Recherche" }, async (dest, zk, commandeOptions) => {
+  const { repondre, arg, ms } = commandeOptions;
+
+  try {
+    const appName = arg.join(' ');
+    if (!appName) {
+      return repondre("*Enter the name of the application to search for*");
+    }
+
+    const searchResults = await search(appName);
+
+    if (searchResults.length === 0) {
+      return repondre("*can't find application, please enter another name*");
+    }
+
+    const appData = await download(searchResults[0].id);
+    const fileSize = parseInt(appData.size);
+
+    if (fileSize > 300) {
+      return repondre("The file exceeds 300 MB, unable to download.");
+    }
+
+    const downloadLink = appData.dllink;
+    const captionText =
+      "『 *Zokou-Md App* 』\n\n*Name :* " + appData.name +
+      "\n*Id :* " + appData["package"] +
+      "\n*Last Update :* " + appData.lastup +
+      "\n*Size :* " + appData.size +
+      "\n";
+
+    const apkFileName = (appData?.["name"] || "Downloader") + ".apk";
+    const filePath = apkFileName;
+
+    const response = await axios.get(downloadLink, { 'responseType': "stream" });
+    const fileWriter = fs.createWriteStream(filePath);
+    response.data.pipe(fileWriter);
+
+    await new Promise((resolve, reject) => {
+      fileWriter.on('finish', resolve);
+      fileWriter.on("error", reject);
+    });
+
+    const documentMessage = {
+      'document': fs.readFileSync(filePath),
+      'mimetype': 'application/vnd.android.package-archive',
+      'fileName': apkFileName
+    };
+
+    // Utilisation d'une seule méthode sendMessage pour envoyer l'image et le document
+    zk.sendMessage(dest, { image: { url: appData.icon }, caption: captionText }, { quoted: ms });
+    zk.sendMessage(dest, documentMessage, { quoted: ms });
+
+    // Supprimer le fichier après envoi
+    fs.unlinkSync(filePath);
+  } catch (error) {
+    console.error('Erreur lors du traitement de la commande apk:', error);
+    repondre("*Error during apk command processing*");
+  }
 });

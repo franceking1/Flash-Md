@@ -27,6 +27,7 @@
     "@types/node": "^18.0.6",
     "@whiskeysockets/baileys": "^6.4.0",
     "@xaviabot/fb-downloader": "^1.0.14",
+    "aptoide-scraper": "^1.0.1",
     "async-g-i-s": "^1.5.0",
     "axios": "^1.4.0",
     "cache-manager": "latest",

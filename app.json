@@ -89,12 +89,6 @@
     "required": false,
     "value": "3"
   },
-  "OPENAI_API_KEY":
-  {
-    "description": "put your openai api key",
-    "required": false,
-    "value": ""
-  },
   "STARTING_BOT_MESSAGE":
   {
     "description": "if you don't want startting-bot-message put no else put yes",
