@@ -22,7 +22,7 @@ zokou(
 
 
         var mode = "public";
-        if ((s.MODE).toLocaleLowerCase() != "oui") {
+        if ((s.MODE).toLocaleLowerCase() != "yes") {
             mode = "private";
         }
       

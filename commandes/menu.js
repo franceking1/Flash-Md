@@ -12,7 +12,7 @@ zokou({ nomCom: "menu", categorie: "General" }, async (dest, zk, commandeOptions
     var coms = {};
     var mode = "public";
     
-    if ((s.MODE).toLocaleLowerCase() != "oui") {
+    if ((s.MODE).toLocaleLowerCase() != "yes") {
         mode = "private";
     }
 

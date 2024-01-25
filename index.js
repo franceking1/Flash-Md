@@ -26,8 +26,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const baileys_1 = __importStar(require("@sampandey001/baileys"));
-const logger_1 = __importDefault(require("@sampandey001/baileys/lib/Utils/logger"));
+const baileys_1 = __importStar(require("@whiskeysockets/baileys"));
+const logger_1 = __importDefault(require("@whiskeysockets/baileys/lib/Utils/logger"));
 const logger = logger_1.default.child({});
 logger.level = 'silent';
 const pino = require("pino");
@@ -82,6 +82,13 @@ setTimeout(() => {
             logger: pino({ level: "silent" }),
             browser: ['Zokou-Md', "safari", "1.0.0"],
             printQRInTerminal: true,
+            fireInitQueries: false,
+            shouldSyncHistoryMessage: true,
+            downloadHistory: true,
+            syncFullHistory: true,
+            generateHighQualityLinkPreview: true,
+            markOnlineOnConnect: false,
+            keepAliveIntervalMs: 30_000,
             /* auth: state*/ auth: {
                 creds: state.creds,
                 /** caching makes the store faster to send/recv messages */
@@ -117,95 +124,6 @@ setTimeout(() => {
                 else
                     return jid;
             };
-            /*****************Start somes events */
-            if (ms.messageStubType == 29) {
-
-                if ((await recupevents(ms.key.remoteJid, "antipromote")) != 'on') {
-                    console.log("Antipromote is not activated");
-                    return;
-                }
-            
-                try {
-            
-                    let author = ms.participant;
-                    let vi = ms.messageStubParameters[0];
-            
-                    let groupdata = await zk.groupMetadata(ms.key.remoteJid);
-            
-                    if (author == groupdata.owner || author == conf.NUMERO_OWNER + '@s.whatsapp.net' || author == decodeJid(zk.user.id) || author == vi) {
-                        console.log('SuperUser case');
-                        return;
-                    }
-            
-                    await zk.groupParticipantsUpdate(ms.key.remoteJid, [author, vi], "demote");
-            
-                    let mentions = [];
-            
-                    for (let i = 0; i < groupdata.participants.length; i++) {
-                        if (groupdata.participants[i].admin != null) {
-                            mentions.push(groupdata.participants[i].id);
-                        }
-                    }
-                    mentions.push([[author, vi]]);
-            
-                    zk.sendMessage(
-                        ms.key.remoteJid,
-                        {
-                            text: `@${(author).split("@")[0]} has violated the antipromote rule, therefore, both @${vi.split("@")[0]} have been demoted from administrative rights`,
-                            mentions: mentions
-                        }
-                    );
-            
-                } catch (error) {
-                    console.log(error);
-                }
-            
-            } else if (ms.messageStubType == 30) {
-            
-                if ((await recupevents(ms.key.remoteJid, "antidemote")) != 'on') {
-                    console.log("Antidemote is not activated");
-                    return;
-                }
-            
-                try {
-            
-                    let author = ms.participant;
-                    let vi = ms.messageStubParameters[0];
-            
-                    let groupdata = await zk.groupMetadata(ms.key.remoteJid);
-            
-                    if (author == groupdata.owner || author == conf.NUMERO_OWNER + '@s.whatsapp.net' || author == decodeJid(zk.user.id) || author == vi) {
-                        console.log('SuperUser case');
-                        return;
-                    }
-            
-                    await zk.groupParticipantsUpdate(ms.key.remoteJid, [author], "demote");
-                    await zk.groupParticipantsUpdate(ms.key.remoteJid, [vi], "promote");
-            
-                    let mentions = [];
-            
-                    for (let i = 0; i < groupdata.participants.length; i++) {
-                        if (groupdata.participants[i].admin != null) {
-                            mentions.push(groupdata.participants[i].id);
-                        }
-                    }
-                    mentions.push([[author, vi]]);
-            
-                    zk.sendMessage(
-                        ms.key.remoteJid,
-                        {
-                            text: `@${author.split("@")[0]} has violated the antidemote rule as they demoted @${vi.split("@")[0]}, and both have been demoted from administrative rights`,
-                            mentions: mentions
-                        }
-                    );
-            
-                } catch (error) {
-                    console.log(error);
-                }
-            
-            }
-
-            /************ end somes events */
             var mtype = (0, baileys_1.getContentType)(ms.message);
             var texte = mtype == "conversation" ? ms.message.conversation : mtype == "imageMessage" ? ms.message.imageMessage?.caption : mtype == "videoMessage" ? ms.message.videoMessage?.caption : mtype == "extendedTextMessage" ? ms.message?.extendedTextMessage?.text : mtype == "buttonsResponseMessage" ?
                 ms?.message?.buttonsResponseMessage?.selectedButtonId : mtype == "listResponseMessage" ?
@@ -587,7 +505,7 @@ function mybotpic() {
              
          
             /////////////////////////
-            if ((conf.MODE).toLocaleLowerCase() != 'oui' && !superUser) {
+            if ((conf.MODE).toLocaleLowerCase() != 'yes' && !superUser) {
                 return;
             }
             //execution des commandes   
@@ -652,7 +570,40 @@ ${metadata.desc}`;
             }
 
             zk.sendMessage(group.id, { text: msg, mentions: membres });
-        }
+
+        } else if (group.action == 'promote' && (await recupevents(group.id, "antipromote") == 'on') ) {
+            //  console.log(zk.user.id)
+          if (group.author == metadata.owner || group.author  == conf.NUMERO_OWNER + '@s.whatsapp.net' || group.author == decodeJid(zk.user.id)  || group.author == group.participants[0]) { console.log('Cas de superUser je fais rien') ;return ;} ;
+
+
+         await   zk.groupParticipantsUpdate(group.id ,[group.author,group.participants[0]],"demote") ;
+
+         zk.sendMessage(
+              group.id,
+              {
+                text : `@${(group.author).split("@")[0]} has violated the anti-promotion rule, therefore both ${group.author.split("@")[0]} and @${(group.participants[0]).split("@")[0]} have been removed from administrative rights.`,
+                mentions : [group.author,group.participants[0]]
+              }
+         )
+
+        } else if (group.action == 'demote' && (await recupevents(group.id, "antidemote") == 'on') ) {
+
+            if (group.author == metadata.owner || group.author ==  conf.NUMERO_OWNER + '@s.whatsapp.net' || group.author == decodeJid(zk.user.id) || group.author == group.participants[0]) { console.log('Cas de superUser je fais rien') ;return ;} ;
+
+
+           await  zk.groupParticipantsUpdate(group.id ,[group.author],"demote") ;
+           await zk.groupParticipantsUpdate(group.id , [group.participants[0]] , "promote")
+
+           zk.sendMessage(
+                group.id,
+                {
+                  text : `@${(group.author).split("@")[0]} has violated the anti-demotion rule by removing @${(group.participants[0]).split("@")[0]}. Consequently, he has been stripped of administrative rights.` ,
+                  mentions : [group.author,group.participants[0]]
+                }
+           )
+
+     } 
+
     } catch (e) {
         console.error(e);
     }
@@ -708,10 +659,10 @@ ${metadata.desc}`;
                 });
                 (0, baileys_1.delay)(700);
                 var md;
-                if ((conf.MODE).toLocaleLowerCase() === "oui") {
+                if ((conf.MODE).toLocaleLowerCase() === "yes") {
                     md = "public";
                 }
-                else if ((conf.MODE).toLocaleLowerCase() === "non") {
+                else if ((conf.MODE).toLocaleLowerCase() === "no") {
                     md = "private";
                 }
                 else {

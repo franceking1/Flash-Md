@@ -16,12 +16,12 @@
     "AUTO_READ_STATUS":
     {
       "description":"Your contact status will be read automatically(type yes to active or no to deactive  ; don't write in capital letter)",
-      "value":"oui",
+      "value":"yes",
       "required":false
     }, "AUTO_DOWNLOAD_STATUS":
     {
       "description":"Your contact status will be download automatically and send to you(type yes to active or no to deactive ; don't write in capital letter)",
-      "value":"oui",
+      "value":"yes",
       "required":false
     }
     ,
@@ -46,10 +46,10 @@
       "required":false
        
      },
-    "MODE_PUBLIC":
+    "PUBLIC_MODE":
     {
-      "description":"type 'oui' to put your bot on public mode or 'non' to put it on private mod",
-      "value":"oui",
+      "description":"type yes to put your bot on public mode or no to put it on private mod",
+      "value":"yes",
       "required":false
     }
 	,

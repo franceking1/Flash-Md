@@ -1,5 +1,5 @@
 const {zokou}=require("../framework/zokou")
-const {getContentType}=require("@sampandey001/baileys")
+const {getContentType}=require("@whiskeysockets/baileys")
 
 
 
