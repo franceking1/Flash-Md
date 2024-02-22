@@ -3,7 +3,7 @@ const {getContentType}=require("@whiskeysockets/baileys")
 
 
 
-zokou({nomCom:"vv",categorie:"General",reaction:"🤲🏿"},async(dest,zk,commandeOptions)=>{
+zokou({nomCom:"vv",categorie:"General",reaction:"🤩"},async(dest,zk,commandeOptions)=>{
 
 const {ms,msgRepondu,repondre}=commandeOptions;
 
