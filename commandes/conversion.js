@@ -70,7 +70,7 @@ const alea = (ext) => {
     }
 
     sticker = new Sticker(buffer, {
-      pack:"Zokou-Md" ,
+      pack:"FLASH-MD",
       author: nomAuteurMessage,
       type:
         arg.includes("crop") || arg.includes("c")
@@ -94,7 +94,7 @@ const alea = (ext) => {
     }
 
     sticker = new Sticker(buffer, {
-      pack:"Zokou-Md", // pack stick
+      pack:"FLASH-MD", // pack stick
       author:  nomAuteurMessage, // name of the author of the stick
       type:
         arg.includes("-r") || arg.includes("-c")
@@ -150,7 +150,7 @@ mediamsg = msgRepondu.videoMessage
   var stick = await zk.downloadAndSaveMediaMessage(mediamsg)
 
      let stickerMess = new Sticker(stick, {
-            pack: pack,
+            pack: "FLASH-MD",
             
             type: StickerTypes.CROPPED,
             categories: ["🤩", "🎉"],
@@ -164,6 +164,8 @@ mediamsg = msgRepondu.videoMessage
 });
 
 zokou({nomCom:"take",categorie: "Conversion", reaction: "👨🏿‍💻"},async(origineMessage,zk,commandeOptions)=>{
+  pack : "FLASH-MD",
+  author : "France King, 
    const {ms , msgRepondu,arg,repondre,nomAuteurMessage} = commandeOptions ;
 
   if(!msgRepondu) { repondre( 'make sure to mention the media' ) ; return } ;
@@ -186,7 +188,7 @@ mediamsg = msgRepondu.videoMessage
   var stick = await zk.downloadAndSaveMediaMessage(mediamsg)
 
      let stickerMess = new Sticker(stick, {
-            pack: pack,
+            pack: FLASH-MD ,
             
             type: StickerTypes.FULL,
             categories: ["🤩", "🎉"],
@@ -252,7 +254,7 @@ zokou({ nomCom: "write", categorie: "Conversion", reaction: "👨🏿‍💻" },
     // Create the sticker
     const stickerMess = new Sticker(meme, {
       pack: nomAuteurMessage,
-      author: 'Zokou-Md',
+      author: 'FLASH-MD',
       type: StickerTypes.FULL,
       categories: ["🤩", "🎉"],
       id: "12345",
