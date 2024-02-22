@@ -18,7 +18,7 @@
       "description":"Your contact status will be read automatically(type yes to active or no to deactive  ; don't write in capital letter)",
       "value":"yes",
       "required":false
-    }, "AUTO_SAVE_STATUS":
+    }, "AUTO_DOWNLOAD_STATUS":
     {
       "description":"Your contact status will be download automatically and send to you(type yes to active or no to deactive ; don't write in capital letter)",
       "value":"yes",
@@ -98,12 +98,7 @@
   "PRESENCE":{
     "description":"Mark your presence: 1 to indicate that you are online even if you are not. 2 to indicate that you are currently typing a message. 3 to indicate that you are currently recording an audio. Or leave the field blank to indicate your real state.",
     "value":"",
-    "required":"false" 
-  }, 
-  "OPENAI_API_KEY":{
-    "description":"enter your OPENAI_API_KEY here" 
-	  "value" :"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", 
-	  "required" :"false"
+    "required":"false"
   }
   },
 
