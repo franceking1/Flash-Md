@@ -32,7 +32,7 @@ zokou(
 
 zokou(
     {
-        nomCom : "getallvar",
+        nomCom : "allvar",
         categorie : "heroku"
     }, async (dest , zk , commandeOptions) =>{
 
@@ -75,7 +75,7 @@ str+= '🍁 *'+vr+'* '+'= '+h[vr]+'\n'
             const Heroku = require("heroku-client");
                
             const heroku = new Heroku({
-              token: s.HEROKU_APY_KEY,
+              token: s.HEROKU_API_KEY,
             });
             let baseURI = "/apps/" + s.HEROKU_APP_NAME;
         let h = await heroku.get(baseURI+'/config-vars')
