@@ -35,29 +35,28 @@ zokou({ nomCom: "menu", categorie: "General" }, async (dest, zk, commandeOptions
       
     ╚═════ ▓▓ ࿇ ▓▓ ═════╝*/
     /* menuMsg+=`
-   ╔════ ▓▓ ࿇ ▓▓ ════╗
-   
-   ||
+   ╔════ ▓▓ ࿇FLASH-MD࿇ ▓▓ ════╗
+  
    ||     Préfixe : ${s.prefixe}
    ||      Owner : ${s.OWNER_NAME}
-   ||      Commandes : ${cm.length}
+   ||      Commands : ${cm.length}
    ||      Date : ${date}
-   ||      Heure : ${temps}
-   ||      Mémoire : ${format(os.totalmem()-os.freemem())}/${format(os.totalmem())}                   {Plateforme : ${os.platform()}
-   ||  Développeurs : Djalega++||Luffy
+   ||      Hour : ${temps}
+   ||      Mém: ${format(os.totalmem()-os.freemem())}/${format(os.totalmem())}                   {Plateforme : ${os.platform()}
+   ||  Developer : France King 
    ||
    ╚════ ▓▓ ࿇ ▓▓ ════╝`;*/
     menuMsg += `
-╔════---------
+╔════----*FLASH-MD-----
 ║    Préfixe : ${s.PREFIXE}
 ║    Owner : ${s.OWNER_NAME}    
 ║    Mode : ${mode}
-║    Commandes:${cm.length}
+║    Commands :${cm.length}
 ║    Date : ${date}
-║    Heure : ${temps}
-║    Mémoire : ${format(os.totalmem() - os.freemem())}/${format(os.totalmem())}
-║    Plateforme : ${os.platform()}
-║    Développeurs : Djalega++||Luffy
+║    Hour: ${temps}
+║    Mém : ${format(os.totalmem() - os.freemem())}/${format(os.totalmem())}
+║    Platform : ${os.platform()}
+║    Déveloper : France King
 ╚════--------------- \n\n`;
     for (const cat in coms) {
         if (!emoji[cat]) {
