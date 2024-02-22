@@ -24,7 +24,7 @@ const sleep =  (ms) =>{
    // if (apikey === null || apikey === 'null') { repondre('Veillez vérifier votre apikey ou si vous en avez pas , veiller crée un compte sur api.lolhuman.xyz et vous en procurer une.'); return; };
   
     if (!arg[0]) {
-      repondre("put a telegramme stickers link ");
+      repondre("put a telegram sticker link ");
       return;
     }
   
@@ -47,7 +47,7 @@ const sleep =  (ms) =>{
         type = 'not animated sticker'
       }
   
-      let msg = `   Zk-stickers-dl
+      let msg = `   Flash-stickers-dl
       
   *Name :* ${stickers.data.result.name}
   *Type :* ${type} 
@@ -70,7 +70,7 @@ const sleep =  (ms) =>{
   
           const sticker = new Sticker(buffer.data, {
             pack: nomAuteurMessage,
-            author: "Zokou-md",
+            author: "FLASH-MD",
             type: StickerTypes.FULL,
             categories: ['🤩', '🎉'],
             id: '12345',
@@ -487,7 +487,7 @@ zokou({ nomCom: "save", categorie: "Mods" }, async (dest, zk, commandeOptions) =
           let media  = await zk.downloadAndSaveMediaMessage(msgRepondu.stickerMessage)
   
           let stickerMess = new Sticker(media, {
-            pack: 'Zokou-tag',
+            pack: 'FLASH-MD',
             type: StickerTypes.CROPPED,
             categories: ["🤩", "🎉"],
             id: "12345",
