@@ -32,32 +32,29 @@ const temps = moment().format('HH:mm:ss');
 const date = moment().format('DD/MM/YYYY');
 
   let infoMsg =  `
-*╔═════ •✧✧• ════╗*
+*╔═════•✧FLASH-MD✧•════╗*
 ┃   *Préfix* : ${s.PREFIXE}
 ┃   *Owner* : ${s.OWNER_NAME}
 ┃   *Mode* : ${mode}
 ┃   *Commands* : ${cm.length}
 ┃   *Date* : ${date}
 ┃   *Hour* : ${temps}
-┃   *Mémoire* : ${format(os.totalmem() - os.freemem())}/${format(os.totalmem())}
-┃   *Plateforme* : ${os.platform()}
-┃   *Développer* : Djalega++ 
-┃  & M๏𝓷keℽ D Lบffy
-*╚═════ •✧✧• ════╝* \n\n`;
-    
-let menuMsg = `
-👋 Hello ${nomAuteurMessage} 👋
-I'm *${s.NOM}*, a bot developped by team zokou.
+┃   *Mém* : ${format(os.totalmem() - os.freemem())}/${format(os.totalmem())}
+┃   *Platform* : ${os.platform()}
+┃   *Developer* : France King 
+*╚═════•✧The-GOAT✧•════╝* \n\n`;
+
+  let menuMsg=`  
 
 *List of commands :*
 ◇                             ◇
 `;
 
     for (const cat in coms) {
-        menuMsg += `*╔══✵* *${cat}*  *✵ ══╗*`;
+        menuMsg += `*╔══✵* *${cat}* *✵ ══╗*`;
         for (const cmd of coms[cat]) {
             menuMsg += `
-*✗✪* ${cmd}`;
+*✪* ${cmd}`;
         }
         menuMsg += `
 *╚════ ✵ ✵ ═══╝* \n`
@@ -66,10 +63,10 @@ I'm *${s.NOM}*, a bot developped by team zokou.
     menuMsg += `
 ◇            ◇
 *»»————— ★ —————««*
-for use a command, insert  ${prefixe}"command_name"
+
+ *『The FLASH-MD*
  
- *『ZokouMD*
-                                                
+    *📌✍️Made by France King®🐐*                                         
 *»»————— ★ —————««*
 `;
 
