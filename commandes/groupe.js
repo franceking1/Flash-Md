@@ -31,7 +31,7 @@ zokou({ nomCom: "tagall", categorie: 'Group', reaction: "📣" }, async (dest, z
   var tag = ""; let car = `──────▄▌▐▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▌\n───▄▄██▌█ the Caravan \n▄▄▄▌▐██▌█ of Happiness is coming\n███████▌█▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▌\n▀(⊙)▀▀▀▀▀▀▀(⊙)(⊙)▀▀▀▀▀▀▀▀▀▀(⊙)▀▀`
 
   tag += `========================\n  
-        🌟 *Zokou-Md* 🌟
+        🌟 *FLASH-MD* 🌟
 ========================\n
 👥 Group : ${nomGroupe} 🚀 
 👤 Autor : *${nomAuteurMessage}* 👋 
@@ -62,7 +62,7 @@ zokou({ nomCom: "tagall", categorie: 'Group', reaction: "📣" }, async (dest, z
 });
 
 
-zokou({ nomCom: "link", categorie: 'Group', reaction: "🙋" }, async (dest, zk, commandeOptions) => {
+zokou({ nomCom: "link","invite", categorie: 'Group', reaction: "🙋" }, async (dest, zk, commandeOptions) => {
   const { repondre, nomGroupe, nomAuteurMessage, verifGroupe } = commandeOptions;
   if (!verifGroupe) { repondre("wait bro , you want the link to my dm?"); return; };
 
@@ -206,7 +206,7 @@ zokou({ nomCom: "demote", categorie: 'Group', reaction: "👨🏿‍💼" }, asy
 
 /** ***fin démettre****  **/
 /** **retirer** */
-zokou({ nomCom: "remove", categorie: 'Group', reaction: "👨🏿‍💼" }, async (dest, zk, commandeOptions) => {
+zokou({ nomCom: "remove","kick", categorie: 'Group', reaction: "👨🏿‍💼" }, async (dest, zk, commandeOptions) => {
   let { ms, repondre, msgRepondu, infosGroupe, auteurMsgRepondu, verifAdmin, verifZokouAdmin, verifGroupe, utilisateur, mbre, nomAuteurMessage, auteurMessage, superUser, idBot } = commandeOptions;
   let membresGroupe = verifGroupe ? await infosGroupe.participants : ""
   if (!verifGroupe) { return repondre("for groups only"); }
@@ -251,7 +251,7 @@ zokou({ nomCom: "remove", categorie: 'Group', reaction: "👨🏿‍💼" }, asy
             if (admin == false) {
               const gifLink = "https://raw.githubusercontent.com/djalega8000/Zokou-MD/main/media/remover.gif"
               var sticker = new Sticker(gifLink, {
-                pack: 'Zokou-Md', // The pack name
+                pack: 'FLASH-MD', // The pack name
                 author: nomAuteurMessage, // The author name
                 type: StickerTypes.FULL, // The sticker type
                 categories: ['🤩', '🎉'], // The sticker category
@@ -343,7 +343,7 @@ zokou({ nomCom: "info", categorie: 'Group' }, async (dest, zk, commandeOptions) 
 
     let mess = {
       image: { url: ppgroup },
-      caption:  `*━━━━『Info du groupe』━━━━*\n\n*🎐Name:* ${info.subject}\n\n*🔩Group's ID:* ${dest}\n\n*🔍Desc:* \n\n${info.desc}`
+      caption:  `*━━━━『GROUP INFO』━━━━*\n\n*🎐Name:* ${info.subject}\n\n*🔩Group's ID:* ${dest}\n\n*🔍Desc:* \n\n${info.desc}`
     }
 
 
@@ -397,7 +397,7 @@ zokou({ nomCom: "info", categorie: 'Group' }, async (dest, zk, commandeOptions) 
                repondre(`the action of the antilink has been updated on ${arg.join('').split("/")[1]}`);
             
 
-            } else repondre('Here is an explanation of how zokou\'s antilink works:\nTo activate the antilink, add after the command "on" or "off" To modify the action of the antilink, type after the command action/"your-action " ; the different actions are *delete* , *warn* and *remove*')
+            } else repondre('Here is an explanation of how FLASH-MD\'s antilink works:\nTo activate the antilink, add after the command "on" or "off" To modify the action of the antilink, type after the command action/"your-action " ; the different actions are *delete* , *warn* and *remove*')
 
       
     } catch (error) {
@@ -428,7 +428,7 @@ zokou({ nomCom: "info", categorie: 'Group' }, async (dest, zk, commandeOptions) 
   if( superUser || verifAdmin) {
     const enetatoui = await atbverifierEtatJid(dest)
     try {
-      if (!arg || !arg[0] || arg === ' ') { repondre('Here is an explanation of how the zokou antibot works:\nTo activate the antibot, add *on* or *off* after the command;\nTo modify the action of the antibot, type after the command action/"your-action" ; the different actions are deleted; warn and remove') ; return};
+      if (!arg || !arg[0] || arg === ' ') { repondre('Here is an explanation of how the FLASH-MD antibot works:\nTo activate the antibot, add *on* or *off* after the command;\nTo modify the action of the antibot, type after the command action/"your-action" ; the different actions are deleted; warn and remove') ; return};
      
       if(arg[0] === 'on') {
 
@@ -456,7 +456,7 @@ zokou({ nomCom: "info", categorie: 'Group' }, async (dest, zk, commandeOptions) 
                repondre(`the action of the antibot has been updated on ${arg.join('').split("/")[1]}`);
             
 
-            } else repondre('Here is an explanation of how the zokou antibot works:\nTo activate the antibot, add "yes" or "no" after the command;\nTo modify the action of the antibot, type after the command action/"your-action" ; the different actions are deleted; warn and remove')
+            } else repondre('Here is an explanation of how the FLASH-MD antibot works:\nTo activate the antibot, add "yes" or "no" after the command;\nTo modify the action of the antibot, type after the command action/"your-action" ; the different actions are deleted; warn and remove')
 
       
     } catch (error) {
@@ -642,7 +642,7 @@ zokou({nomCom:"hidetag",categorie:'Group',reaction:"🎤"},async(dest,zk,command
         let media  = await zk.downloadAndSaveMediaMessage(msgRepondu.stickerMessage)
 
         let stickerMess = new Sticker(media, {
-          pack: 'Zokou-tag',
+          pack: 'FLASH-MD',
           type: StickerTypes.CROPPED,
           categories: ["🤩", "🎉"],
           id: "12345",
@@ -708,7 +708,7 @@ zokou({ nomCom: "apk", reaction: "✨", categorie: "Recherche" }, async (dest, z
 
     const downloadLink = appData.dllink;
     const captionText =
-      "『 *Zokou-Md App* 』\n\n*Name :* " + appData.name +
+      "『 *FLASH-MD App* 』\n\n*Name :* " + appData.name +
       "\n*Id :* " + appData["package"] +
       "\n*Last Update :* " + appData.lastup +
       "\n*Size :* " + appData.size +
