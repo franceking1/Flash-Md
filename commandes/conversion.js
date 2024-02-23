@@ -347,7 +347,7 @@ zokou({ nomCom: "trt", categorie: "Conversion", reaction: "👨🏿‍💻" }, a
 }) ;
 
 
-zokou({ nomCom: "url", categorie: "Conversion", reaction: "👨🏿‍💻" }, async (origineMessage, zk, commandeOptions) => {
+zokou({ nomCom: "url", categorie: "General", reaction: "👨🏿‍💻" }, async (origineMessage, zk, commandeOptions) => {
   const { msgRepondu, repondre } = commandeOptions;
 
   if (!msgRepondu) {
