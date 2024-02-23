@@ -32,7 +32,7 @@ const temps = moment().format('HH:mm:ss');
 const date = moment().format('DD/MM/YYYY');
 
   let infoMsg =  `
-╭────✧*FLASH-MD*✧───◆
+╭────✧𝐅𝐋𝐀𝐒𝐇-𝐌𝐃✧────◆
 │ *Préfix* : ${s.PREFIXE}
 │ *Owner* : ${s.OWNER_NAME}
 │ *Mode* : ${mode}
@@ -54,7 +54,7 @@ const date = moment().format('DD/MM/YYYY');
         menuMsg += `*╭────❏* *${cat}* *❏*`;
         for (const cmd of coms[cat]) {
             menuMsg += `
-*|* ${cmd}`;
+*│* ${cmd}`;
         }
         menuMsg += `
 *╰═════════════⊷* \n`
