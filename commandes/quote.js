@@ -20,7 +20,7 @@ zokou({ nomCom: 'quote', categorie: 'Fun' }, async (dest, zk, commandeOptions) =
 👤 Character: ${quote.character}
 💬 Quote: ${quote.quote}
 
-Powered by Zokou-MD`);
+Powered by *France King*`);
         });
     } catch (e) {
       repondre('Erreur lors de la génération de la citation : ' + e.message);
