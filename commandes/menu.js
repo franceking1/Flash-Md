@@ -25,24 +25,23 @@ zokou({ nomCom: "menu", categorie: "General" }, async (dest, zk, commandeOptions
         coms[com.categorie].push(com.nomCom);
     });
 
-    moment.tz.setDefault('Etc/GMT');
+    moment.tz.setDefault('EAT');
 
-// Créer une date et une heure en GMT
+// Créer une date et une heure en EAT
 const temps = moment().format('HH:mm:ss');
 const date = moment().format('DD/MM/YYYY');
 
   let infoMsg =  `
-*╔═════•✧FLASH-MD✧•════╗*
-┃   *Préfix* : ${s.PREFIXE}
-┃   *Owner* : ${s.OWNER_NAME}
-┃   *Mode* : ${mode}
-┃   *Commands* : ${cm.length}
-┃   *Date* : ${date}
-┃   *Hour* : ${temps}
-┃   *Mém* : ${format(os.totalmem() - os.freemem())}/${format(os.totalmem())}
-┃   *Platform* : ${os.platform()}
-┃   *Developer* : France King 
-*╚═════•✧The-GOAT✧•════╝* \n\n`;
+╭─────✧FLASH-MD✧─────◆
+│ *Préfix* : ${s.PREFIXE}
+│ *Owner* : ${s.OWNER_NAME}
+│ *Mode* : ${mode}
+│ *Commands* : ${cm.length} │ *Date* : ${date}
+│ *Time* : ${temps} 
+│ *Mém* : ${format(os.totalmem() - os.freemem())}/${format(os.totalmem())}
+│ *Platform* : ${os.platform()}
+│ *Developer* : France King 
+╰─────✧The-GOAT✧─────◆* \n\n`;
 
   let menuMsg=`  
 
@@ -51,23 +50,21 @@ const date = moment().format('DD/MM/YYYY');
 `;
 
     for (const cat in coms) {
-        menuMsg += `*╔══✵* *${cat}* *✵ ══╗*`;
+        menuMsg += `*╭────❏* *${cat}* *❏*`;
         for (const cmd of coms[cat]) {
             menuMsg += `
 *✪* ${cmd}`;
         }
         menuMsg += `
-*╚════ ✵ ✵ ═══╝* \n`
+*╰═════════════⊷* \n`
     }
 
     menuMsg += `
 ◇            ◇
-*»»————— ★ —————««*
+*————— ★ —————*
 
- *『The FLASH-MD*
- 
-    *📌✍️Made by France King®🐐*                                         
-*»»————— ★ —————««*
+  *📌Made by France King®🐐*                                         
+*╰═════════════⊷*
 `;
 
    var lien = mybotpic();
@@ -84,7 +81,7 @@ const date = moment().format('DD/MM/YYYY');
 // Vérification pour .jpeg ou .png
 else if (lien.match(/\.(jpeg|png|jpg)$/i)) {
     try {
-        zk.sendMessage(dest, { image: { url: lien }, caption:infoMsg + menuMsg, footer: "Je suis *Zokou-MD*, développé par Djalega++" }, { quoted: ms });
+        zk.sendMessage(dest, { image: { url: lien }, caption:infoMsg + menuMsg, footer: "*📌France King*" }, { quoted: ms });
     }
     catch (e) {
         console.log("🥵🥵 Menu erreur " + e);
