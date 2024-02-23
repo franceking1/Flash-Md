@@ -10,7 +10,7 @@ zokou({nomCom : "igdl" , categorie : "Download"},async (dest , zk , commandeOpti
 
   let link = arg.join(' ')
 
-  if (!arg[0]) { repondre('Where is the instagram video link');return}; 
+  if (!arg[0]) { repondre('Where is the instagram video link?');return}; 
 
   try {
      const response = await mumaker.instagram(link)
