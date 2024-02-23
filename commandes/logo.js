@@ -94,7 +94,7 @@ zokou({ nomCom: "didong", categorie: "Logo", reaction: "📱" }, async (dest, zk
      var titre = "\t *Logo by FLASH-MD*";
       var lien = "https://ephoto360.com/tao-anh-che-vui-tu-choi-cuoc-goi-voi-ten-cua-ban-930.html";
         if (!arg || arg == "") {
-           repondre(`*exemple :* ${prefixe}didong Zokou`)
+           repondre(`*exemple :* ${prefixe}didong France King`)
             return ;
         }
      
@@ -118,7 +118,7 @@ zokou({nomCom : "wall",categorie : "Logo",reaction : "👍"} , async (dest,zk,co
    let text = arg.join(" ")
    mumaker.textpro("https://textpro.me/break-wall-text-effect-871.html", text)
 .then((data) =>{
- zk.sendMessage(dest,{image : { url : data.image},caption : 'Logo by'},{quoted:ms})
+ zk.sendMessage(dest,{image : { url : data.image},caption : 'Logo by *France King*'},{quoted:ms})
 }) 
 .catch(console.log)
 })
