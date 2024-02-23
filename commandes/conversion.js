@@ -150,7 +150,7 @@ mediamsg = msgRepondu.videoMessage
   var stick = await zk.downloadAndSaveMediaMessage(mediamsg)
 
      let stickerMess = new Sticker(stick, {
-            pack: "FLASH-MD",
+            pack: FLASH-MD,
             
             type: StickerTypes.CROPPED,
             categories: ["🤩", "🎉"],
@@ -164,8 +164,6 @@ mediamsg = msgRepondu.videoMessage
 });
 
 zokou({nomCom:"take",categorie: "Conversion", reaction: "👨🏿‍💻"},async(origineMessage,zk,commandeOptions)=>{
-  pack : "FLASH-MD",
-  author : "France King, 
    const {ms , msgRepondu,arg,repondre,nomAuteurMessage} = commandeOptions ;
 
   if(!msgRepondu) { repondre( 'make sure to mention the media' ) ; return } ;
@@ -188,7 +186,7 @@ mediamsg = msgRepondu.videoMessage
   var stick = await zk.downloadAndSaveMediaMessage(mediamsg)
 
      let stickerMess = new Sticker(stick, {
-            pack: FLASH-MD ,
+            pack: FLASH-MD,
             
             type: StickerTypes.FULL,
             categories: ["🤩", "🎉"],
