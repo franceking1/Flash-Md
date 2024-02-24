@@ -76,7 +76,7 @@
     "required": false,
     "value": "France King"
   },
-    "NUMERO_OWNER":
+    "OWNER_NUMBER":
   {
     
     "desc": "Your number , dont put '+' and put you area code(exemple of togo '228')",
@@ -99,6 +99,11 @@
     "description":"Mark your presence: 1 to indicate that you are online even if you are not. 2 to indicate that you are currently typing a message. 3 to indicate that you are currently recording an audio. Or leave the field blank to indicate your real state.",
     "value":"",
     "required":"false"
+  }, 
+ "ANTI_DELETE_MESSAGE" : {
+   "description": "if you want to enable anti delete message put yes else put no"
+    "value": "yes" 
+    "required": "false" 
   }
   },
 
