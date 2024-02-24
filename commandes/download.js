@@ -1,27 +1,27 @@
 const {zokou} = require('../framework/zokou');
 const fs = require('fs');
-const { fetchVideo } = require('@prevter/tiktok-scraper');
- const { writeFileSync } = require('fs');
-const mumaker = require("mumaker");
 const getFBInfo = require("@xaviabot/fb-downloader");
+const { default: axios } = require('axios');
 
 zokou({nomCom : "igdl" , categorie : "Download"},async (dest , zk , commandeOptions)=>{
   const {ms,repondre,arg} = commandeOptions ;
 
   let link = arg.join(' ')
 
-  if (!arg[0]) { repondre('Where is the instagram video link?');return}; 
+  if (!arg[0]) { repondre('Veillez insérer un lien video instagramme');return}; 
 
   try {
-     const response = await mumaker.instagram(link)
+     
+    let igvid = await axios('https://vihangayt.me/download/instagram?url='+link)
+
+    if (igvid.data.data.data[0].type == 'video') {
+    zk.sendMessage(dest,{video : {url : igvid.data.data.data[0].url},caption : "ig video downloader powered by *FLASH-MD*",gifPlayback : false },{quoted : ms}) 
+    }
+    else {
+        zk.sendMessage(dest,{image : {url : igvid.data.data.data[0].url},caption : "ig image downloader powered by *FLASH-MD*"})
+    }
   
-  let choix = response[0]
-
-    zk.sendMessage(dest,{video : {url : choix},caption : "Here is your desired Instagram video. powered by *FLASH-MD*",gifPlayback : false },{quoted : ms}) 
-  } catch (e) {repondre("error on downloading media \n " + e)}
-
-  
-
+  } catch (e) {repondre("erreur survenue lors du téléchargement \n " + e)}
   
 });
 
@@ -49,7 +49,7 @@ async (dest, zk, commandeOptions) => {
         Lien: ${result.url}
       `;
        zk.sendMessage(dest,{image : { url : result.thumbnail}, caption : caption},{quoted : ms}) ;
-       zk.sendMessage(dest, { video: { url: result.hd  }, caption: 'Here is your desired FB video. powered by *FLASH-MD*' }, { quoted: ms });
+       zk.sendMessage(dest, { video: { url: result.hd  }, caption: 'facebook video downloader powered by *FLASH-MD*' }, { quoted: ms });
       
     })
     .catch((error) => {console.log("Error:", error)
@@ -68,45 +68,26 @@ async (dest, zk, commandeOptions) => {
 zokou({ nomCom: "tiktok", categorie: "Download", reaction: "🎵" }, async (dest, zk, commandeOptions) => {
   const { arg, ms, prefixe,repondre } = commandeOptions;
   if (!arg[0]) {
-    repondre(`See how to use this command:\n ${prefixe}tiktok tiktok_video_link`);
+    repondre(`how to use this command:\n ${prefixe}tiktok tiktok_video_link`);
     return;
   }
 
   const videoUrl = arg.join(" ");
-  mumaker.tiktok(videoUrl)
-    .then((data) => {
-      const thumbnail = data.thumbnail;
-      const author = data.author;
-      const description = data.description;
-      const media = Array.isArray(data.media) ? data.media.join(", ") : data.media;
-      const music = data.music;
-      const like = data.like;
-      const comment = data.comment;
-      const share = data.share;
+
+ let data = await axios.get('https://vihangayt.me/download/tiktok?url='+ videoUrl) ;
+
+  let tik = data.data.data
 
       // Envoi du message avec le thumbnail de la vidéo
       const caption = `
-        Auteur: ${author}
-        Description: ${description}
-        Média: ${media}
-        Musique: ${music}
-        J'aime: ${like}
-        Commentaire: ${comment}
-        Partages: ${share}
+Author: ${tik.author}
+Description: ${tik.desc}
       `;
 
-      
-      zk.sendMessage(dest, { image: { url: thumbnail }, caption: caption},{quoted : ms});
+         
+      zk.sendMessage(dest, { video: { url: tik.links[0].a} , caption : caption },{quoted : ms});    
 
-      // Envoi de la vidéo sans commentaire
-      zk.sendMessage(dest, { video: { url: data.media } });
-
-      // Envoi des autres informations
-      
-    })
-    .catch((err) => {
-      console.error("Une erreur s'est produite :", err);
-    });
+  
 });
 
 zokou({
