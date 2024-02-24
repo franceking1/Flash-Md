@@ -1,8 +1,8 @@
 {
-  "name":"Flash-Md",
+  "name":"FLASH-MD",
   "description":"bot whatsapp développé par France King",
   "keywords":["bot","node","baileys","whatsapp"],
-  "logo":"https://telegra.ph/file/13d63c21c1a665bfd8324.jpg",
+  "logo":"https://telegra.ph/file/dfccbf12397757c321ac4.jpg",
   "repository":"https://github.com/franceking1/Flash-Md",
   "succes_url":"/",
   "stack":"container",
@@ -42,7 +42,7 @@
      "BOT_MENU_LINKS" : {
     
       "description":"add one or many link for your bot menu  ; eg : url1,url2,url3.....",
-      "value":"https://telegra.ph/file/7e15506a379cf6abfda11.jpg",
+      "value":"https://telegra.ph/file/dfccbf12397757c321ac4.jpg",
       "required":false
        
      },
@@ -98,11 +98,11 @@
   "PRESENCE":{
     "description":"Mark your presence: 1 to indicate that you are online even if you are not. 2 to indicate that you are currently typing a message. 3 to indicate that you are currently recording an audio. Or leave the field blank to indicate your real state.",
     "value":"",
-    "required":"false"
-  }, 
- "ANTI_DELETE_MESSAGE" : {
-   "description": "if you want to enable anti delete message put yes else put no"
-    "value": "yes", 
+    "required": false
+  },
+  "ANTI_DELETE_MESSAGE" : {
+    "description": "if you want to enable anti delete message put yes else put no",
+    "value": "no",
     "required": false
   }
   },
