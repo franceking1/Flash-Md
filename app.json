@@ -76,7 +76,7 @@
     "required": false,
     "value": "France King"
   },
-    "OWNER_NUMBER":
+    "NUMERO_OWNER":
   {
     
     "desc": "Your number , dont put '+' and put you area code(exemple of togo '228')",
