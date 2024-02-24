@@ -4,7 +4,7 @@ const { zokou } = require("../framework/zokou");
 zokou({ nomCom: "test", reaction: "😌", nomFichier: __filename }, async (dest, zk, commandeOptions) => {
     console.log("Commande saisie !!!s");
     let z = 'Hello This is  *FLASH-MD* \n\n ' + "I am a whatsapp bot multi-device";
-    let d = 'Created by *France King*, Here is the Creator contact https://wa.me/254751284190';
+    let d = ' Created by *France King*, Here is the Creator contact https://wa.me/254751284190';
     let varmess = z + d;
     var img = 'https://telegra.ph/file/13d63c21c1a665bfd8324.jpg';
     await zk.sendMessage(dest, { image: { url: img }, caption: varmess });
