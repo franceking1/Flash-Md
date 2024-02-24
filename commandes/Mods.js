@@ -110,7 +110,7 @@ zokou({ nomCom: "crew", categorie: "Mods" }, async (dest, zk, commandeOptions) =
 
 });
 
-zokou({ nomCom: "leave", categorie: "Mods" }, async (dest, zk, commandeOptions) => {
+zokou({ nomCom: "left", categorie: "Mods" }, async (dest, zk, commandeOptions) => {
 
   const { ms, repondre, verifGroupe, msgRepondu, verifAdmin, superUser, auteurMessage } = commandeOptions;
   if (!verifGroupe) { repondre("group only"); return };
@@ -516,3 +516,87 @@ zokou({ nomCom: "save", categorie: "Mods" }, async (dest, zk, commandeOptions) =
 
   })
 ;
+
+
+zokou({
+  nomCom : 'mention',
+  categorie : 'Mods',
+} , async (dest,zk,commandeOptions) => {
+
+ const {ms , repondre ,superUser , arg} = commandeOptions ;
+
+ if (!superUser) {repondre('you do not have the rights for this command') ; return}
+
+ const mbdd = require('../bdd/mention') ;
+
+ let alldata = await  mbdd.recupererToutesLesValeurs() ;
+  data = alldata[0] ;
+    
+
+ if(!arg || arg.length < 1) { 
+
+  let etat ;
+
+  if (alldata.length === 0 ) { repondre(`To activate or modify the mention; follow this syntax: mention link type message
+  The different types are audio, video, image, and sticker.
+  Example: mention https://static.animecorner.me/2023/08/op2.jpg image Hi, my name is Luffy`) ; return}
+
+      if(data.status == 'non') {
+          etat = 'Desactived'
+      } else {
+        etat = 'Actived' ;
+      }
+      
+      mtype = data.type || 'no data' ;
+
+      url = data.url || 'no data' ;
+
+
+      let msg = `Status: ${etat}
+Type: ${mtype}
+Link: ${url}
+
+*Instructions:*
+
+To activate or modify the mention, follow this syntax: mention link type message
+The different types are audio, video, image, and sticker.
+Example: mention https://static.animecorner.me/2023/08/op2.jpg image Hi, my name is France King 
+
+To stop the mention, use mention stop`;
+
+    repondre(msg) ;
+
+    return ;
+          }
+
+ if(arg.length >= 2) {
+   
+      if(arg[0].startsWith('http') && (arg[1] == 'image' || arg[1] == 'audio' || arg[1] == 'video' || arg[1] == 'sticker')) {
+
+            let args = [] ;
+              for (i = 2 ; i < arg.length ; i++) {
+                  args.push(arg[i]) ;
+              }
+          let message = args.join(' ') || '' ;
+
+              await mbdd.addOrUpdateDataInMention(arg[0],arg[1],message);
+              await mbdd.modifierStatusId1('oui')
+              .then(() =>{
+                  repondre('mention updated') ;
+              })
+        } else {
+          repondre(`*Instructions:*
+          To activate or modify the mention, follow this syntax: mention link type message. The different types are audio, video, image, and sticker.`)
+     } 
+    
+    } else if ( arg.length === 1 && arg[0] == 'stop') {
+
+        await mbdd.modifierStatusId1('non')
+        .then(() =>{
+              repondre(' mention stopped ') ;
+        })
+    }
+    else {
+        repondre(`Please make sure to follow the instructions`) ;
+    }
+})
