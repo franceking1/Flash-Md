@@ -150,7 +150,7 @@ mediamsg = msgRepondu.videoMessage
   var stick = await zk.downloadAndSaveMediaMessage(mediamsg)
 
      let stickerMess = new Sticker(stick, {
-            pack: pack,
+            pack: Flash-Md,
             
             type: StickerTypes.CROPPED,
             categories: ["🤩", "🎉"],
