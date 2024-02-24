@@ -102,7 +102,7 @@
   }, 
  "ANTI_DELETE_MESSAGE" : {
    "description": "if you want to enable anti delete message put yes else put no"
-    "value": "yes" 
+    "value": "yes", 
     "required": "false" 
   }
   },
