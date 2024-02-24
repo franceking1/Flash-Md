@@ -1,5 +1,6 @@
 const { zokou } = require('../framework/zokou');
 const traduire = require("../framework/traduction") ;
+const { default: axios } = require('axios');
 //const conf = require('../set');
 
 
@@ -57,7 +58,7 @@ fetch(`http://api.brainshop.ai/get?bid=177607&key=NwzhALqeO1kubFVD&uid=[uid]&msg
       const response = await axios.get(`https://vihangayt.me/tools/photoleap?q=${image}`);
       
       const data = response.data;
-      let caption = '*powered by FLASH-MD*';
+      let caption = '*powered by ZOKOU-MD*';
       
       if (data.status && data.owner && data.data) {
         // Utiliser les données retournées par le service
