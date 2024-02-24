@@ -10,7 +10,7 @@
     "PREFIX":
     {
       "description":"choose your prefix of bot",
-      "value":"#",
+      "value":".",
       "required":true
     },
     "AUTO_READ_STATUS":
@@ -42,7 +42,7 @@
      "BOT_MENU_LINKS" : {
     
       "description":"add one or many link for your bot menu  ; eg : url1,url2,url3.....",
-      "value":"https://telegra.ph/file/13d63c21c1a665bfd8324.jpg",
+      "value":"https://telegra.ph/file/7e15506a379cf6abfda11.jpg",
       "required":false
        
      },
