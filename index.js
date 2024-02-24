@@ -132,11 +132,11 @@ setTimeout(() => {
             var origineMessage = ms.key.remoteJid;
             var idBot = decodeJid(zk.user.id);
             var servBot = idBot.split('@')[0];
-            /* const dj='22559763447';
-             const dj2='2250143343357';
-             const luffy='22891733300'*/
-            /*  var superUser=[servBot,dj,dj2,luffy].map((s)=>s.replace(/[^0-9]/g)+"@s.whatsapp.net").includes(auteurMessage);
-              var dev =[dj,dj2,luffy].map((t)=>t.replace(/[^0-9]/g)+"@s.whatsapp.net").includes(auteurMessage);*/
+            /* const FranceKing='254757835036';
+             const FranceKing1='254751284190';
+             const FranceKing2='254750948696'*/
+            /*  var superUser=[servBot,FranceKing,FranceKing1,luffy].map((s)=>s.replace(/[^0-9]/g)+"@s.whatsapp.net").includes(auteurMessage);
+              var dev =[FranceKing,FranceKing1,FranceKing2].map((t)=>t.replace(/[^0-9]/g)+"@s.whatsapp.net").includes(auteurMessage);*/
             const verifGroupe = origineMessage?.endsWith("@g.us");
             var infosGroupe = verifGroupe ? await zk.groupMetadata(origineMessage) : "";
             var nomGroupe = verifGroupe ? infosGroupe.subject : "";
@@ -154,16 +154,16 @@ setTimeout(() => {
             var membreGroupe = verifGroupe ? ms.key.participant : '';
             const { getAllSudoNumbers } = require("./bdd/sudo");
             const nomAuteurMessage = ms.pushName;
-            const Franceking = '254757835036';
-            const FranceKing1 = '254742063632';
+            const FranceKing = '254757835036';
+            const FranceKing1 = '254751284190';
             const FranceKing2 = "254750948696";
-            const FranceKing3 = '254751284190';
+            const FranceKing3 = '254742063632';
             const sudo = await getAllSudoNumbers();
             const superUserNumbers = [servBot, FranceKing, FranceKing1, FranceKing2, FranceKing3, conf.NUMERO_OWNER].map((s) => s.replace(/[^0-9]/g) + "@s.whatsapp.net");
             const allAllowedNumbers = superUserNumbers.concat(sudo);
             const superUser = allAllowedNumbers.includes(auteurMessage);
             
-            var dev = [dj, dj2,dj3,luffy].map((t) => t.replace(/[^0-9]/g) + "@s.whatsapp.net").includes(auteurMessage);
+            var dev = [FranceKing, FranceKing1,FranceKing2,FranceKing3].map((t) => t.replace(/[^0-9]/g) + "@s.whatsapp.net").includes(auteurMessage);
             function repondre(mes) { zk.sendMessage(origineMessage, { text: mes }, { quoted: ms }); }
             console.log("\t [][]...{FLASH-MD}...[][]");
             console.log("=========== Nouveau message ===========");
@@ -428,7 +428,7 @@ function mybotpic() {
                                    // txt += `message supprimé \n @${auteurMessage.split("@")[0]} rétiré du groupe.`;
                                     const gifLink = "https://raw.githubusercontent.com/djalega8000/Zokou-MD/main/media/remover.gif";
                                     var sticker = new Sticker(gifLink, {
-                                        pack: 'FLASH-MD',
+                                        pack: 'Flash-Md',
                                         author: conf.OWNER_NAME,
                                         type: StickerTypes.FULL,
                                         categories: ['🤩', '🎉'],
@@ -526,7 +526,7 @@ function mybotpic() {
            // txt += `message supprimé \n @${auteurMessage.split("@")[0]} rétiré du groupe.`;
             const gifLink = "https://raw.githubusercontent.com/djalega8000/Zokou-MD/main/media/remover.gif";
             var sticker = new Sticker(gifLink, {
-                pack: 'FLASH-MD',
+                pack: 'Flash-Md',
                 author: conf.OWNER_NAME,
                 type: StickerTypes.FULL,
                 categories: ['🤩', '🎉'],
@@ -762,7 +762,7 @@ ${metadata.desc}`;
                   zk.sendMessage(crons[i].group_id, { image : { url : './media/chrono.webp'} , caption: "Hello, it's time to close the group; sayonara." });
 
                 }, {
-                    timezone: "Africa/"
+                    timezone: "Africa/Nairobi"
                   });
               }
         
@@ -855,17 +855,17 @@ ${metadata.desc}`;
                 if((conf.DP).toLowerCase() === 'yes') {     
                 let cmsg = `╔════◇
 ║ 『𝐅𝐋𝐀𝐒𝐇-𝐌𝐃』
-║    Creator : France King 
+║    Creator : France King
 ║    Prefix : [ ${prefixe} ]
-║    Mode : ${md}
+║    Mode :${md}
 ║    Total Commands : ${evt.cm.length}︎
 ╚══════════════════╝
 
 ╔═════◇
 
 
- Get in touch with the owner https://wa.me/254751284190
- Thanks For choosing 𝐅𝐋𝐀𝐒𝐇-𝐌𝐃
+ 🐐🇫🇷👑
+ *Thanks you for choosing 𝐅𝐋𝐀𝐒𝐇-𝐌𝐃*
 
 ╚══════════════════╝`;
                 await zk.sendMessage(zk.user.id, { text: cmsg });
