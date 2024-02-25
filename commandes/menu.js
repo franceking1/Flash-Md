@@ -25,7 +25,7 @@ zokou({ nomCom: "menu", categorie: "General" }, async (dest, zk, commandeOptions
         coms[com.categorie].push(com.nomCom);
     });
 
-    moment.tz.setDefault('Eat/GMT');
+    moment.tz.setDefault('Etc/EAT');
 
 // Créer une date et une heure en Eat/GMT
 const temps = moment().format('HH:mm:ss');
