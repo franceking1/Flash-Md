@@ -10,7 +10,7 @@
 
 1. Click on **[Fork](https://github.com/franceking1/Flash-Md/fork)** to copy the repo to your GitHub account. Make sure to add a star 🌟 to encourage the developers.
 
-# 2. Obtain a bot session: 
+# 2. Get Session ID: 
 
    [Session](https://zokouscan.onrender.com)
 
