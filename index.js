@@ -853,21 +853,20 @@ ${metadata.desc}`;
                 await activateCrons();
                 
                 if((conf.DP).toLowerCase() === 'yes') {     
-                let cmsg = `╔════◇
+                let cmsg = `╭───◇
 ║ 『𝐅𝐋𝐀𝐒𝐇-𝐌𝐃』
-║    Creator : France King
+║    _Creator_ : *France King*
 ║    Prefix : [ ${prefixe} ]
 ║    Mode :${md}
 ║    Total Commands : ${evt.cm.length}︎
-╚══════════════════╝
+╰═════════════════⊷
 
-╔═════◇
+╭───◇
 
 
- 🐐🇫🇷👑
+ 
  *Thanks you for choosing 𝐅𝐋𝐀𝐒𝐇-𝐌𝐃*
-
-╚══════════════════╝`;
+╰═════════════════⊷`;
                 await zk.sendMessage(zk.user.id, { text: cmsg });
                 }
             }
