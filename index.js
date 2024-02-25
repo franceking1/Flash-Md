@@ -862,10 +862,11 @@ ${metadata.desc}`;
 ╰═════════════════⊷
 
 ╭───◇
-  You can get in touch with the owner https://wa.me/254751284190 
-
+   
  
  *Thank you for choosing 𝐅𝐋𝐀𝐒𝐇-𝐌𝐃*
+ 
+ Join The OFFICIAL GROUP https://chat.whatsapp.com/CtBGmUkwXiA6kGYAyU5MaX
 ╰═════════════════⊷`;
                 await zk.sendMessage(zk.user.id, { text: cmsg });
                 }
