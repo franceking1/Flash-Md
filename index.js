@@ -862,10 +862,10 @@ ${metadata.desc}`;
 ╰═════════════════⊷
 
 ╭───◇
-
+  You can get in touch with the owner https://wa.me/254751284190 
 
  
- *Thanks you for choosing 𝐅𝐋𝐀𝐒𝐇-𝐌𝐃*
+ *Thank you for choosing 𝐅𝐋𝐀𝐒𝐇-𝐌𝐃*
 ╰═════════════════⊷`;
                 await zk.sendMessage(zk.user.id, { text: cmsg });
                 }
