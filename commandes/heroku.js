@@ -11,7 +11,7 @@ zokou(
        const {ms,repondre,superUser , arg} = commandeOptions ;
        
        if(!superUser){repondre('only Mods can use this commande');return};
-       if(!arg[0] || !(arg.join('').split('='))) {repondre('Bad format ; Exemple of using :\nSetvar OWNER_NAME=Fredora');return};
+       if(!arg[0] || !(arg.join('').split('='))) {repondre('Bad format ; Exemple of using :\nSetvar OWNER_NAME=France King');return};
      
     const text = arg.join(" ")
      const Heroku = require("heroku-client");
@@ -26,7 +26,7 @@ zokou(
                   [text.split('=')[0]]: text.split('=')[1],
           },
         });
-        await repondre('Heroku var changes , rebootings....')
+        await repondre('That Heroku var is changing,The bot is rebooting....')
     }
 );
 
@@ -50,7 +50,7 @@ zokou(
             let h = await heroku.get(baseURI+'/config-vars')
 let str = '*Heroku Vars list *\n\n'
 for (vr in h) {
-str+= '🍁 *'+vr+'* '+'= '+h[vr]+'\n'
+str+= '⚡ *'+vr+'* '+'= '+h[vr]+'\n'
 }
  repondre(str)
 
