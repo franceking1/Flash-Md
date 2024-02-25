@@ -6,14 +6,15 @@
 <img src="https://telegra.ph/file/3f985014b51b3cf335bfe.jpg" width="600" height="300"/>
 
 
-## Get Flash-Md
+### Get Flash-Md
 
-1. Click on **[Fork](https://github.com/franceking1/Flash-Md/fork)** to copy the repo to your GitHub account. Make sure to add a star 🌟 to encourage the developers.
+## 1. Click on **[Fork](https://github.com/franceking1/Flash-Md/fork)** to copy the repo to your GitHub account. Make sure to add a star 🌟 to encourage the developers.
 
-# 2. Get Session ID: 
-- **[Session]**(https://zokouscan.onrender.com)
+## 2. Get Session ID: 
+-
+**[Session]**(https://zokouscan.onrender.com)
 
-## 3. Deploy
+## 3. Deploy FLASH-MD 
    - **Heroku Deployment:**
      1. If you don't have a **Heroku** account, click [**here**](https://id.heroku.com/login) to create one.
      2. Click [**HERE**](https://dashboard.heroku.com/new?template=https://github.com/franceking1/Flash-Md) to deploy the bot on **Heroku**.
