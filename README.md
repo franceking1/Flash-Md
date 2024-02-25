@@ -30,7 +30,7 @@
 
    [Session](https://zokouscan.onrender.com)
 
-3. Deploy
+## 3. Deploy
    - **Heroku Deployment:**
      1. If you don't have a **Heroku** account, click [**here**](https://id.heroku.com/login) to create one.
      2. Click [**HERE**](https://dashboard.heroku.com/new?template=https://github.com/franceking1/Flash-Md) to deploy the bot on **Heroku**.
