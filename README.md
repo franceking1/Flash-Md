@@ -11,12 +11,12 @@
 ## 1. Click on **[Fork](https://github.com/franceking1/Flash-Md/fork)** to copy the repo to your GitHub account. Make sure to add a star 🌟 to encourage the developers.
 
 ## 2. Get Session ID:      
-**[Session]**(https://zokouscan.onrender.com)
+(https://zokouscan.onrender.com)
 
 
 ## 3. Deploy FLASH-MD 
    - **Heroku Deployment:**
-     1. Click [**here**](https://id.heroku.com/login) to create Heroku account.
+     1. Click [**here**](https://id.heroku.com/login) to create **Heroku** account.
      2. Click [**HERE**](https://dashboard.heroku.com/new?template=https://github.com/franceking1/Flash-Md) to deploy the bot on **Heroku**.
 
 ## Contributions
