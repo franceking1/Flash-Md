@@ -6,22 +6,6 @@
 <img src="https://telegra.ph/file/3f985014b51b3cf335bfe.jpg" width="600" height="300"/>
 
 
-## Key Features
-
-- **File Download:** Flash Md can download audio and video files from links you send, making it easy to share them with your contacts.
-
-- **Sticker Export:** You can export stickers from Telegram and use them in your WhatsApp conversations by simply sending them to Flash-Md. You need the api key from api.lolhuman.xyz; an API key is provided in case you don't have one: `9d05ccc5f58e1cf30937`
-
-- **Group Management:** Flash-Md offers group management features, such as adding or removing members, configuring rules, and other settings.
-
-- **Text to Img:** The best logos have been selected for your convenience.
-
-## Fun Features
-
-- **Jokes and Riddles:** Flash-Md comes with a collection of jokes and riddles to liven up your conversations.
-
-- **Inspiring Quotes:** Receive inspiring quotes to motivate you daily.
-
 ## Get Flash-Md
 
 1. Click on **[Fork](https://github.com/franceking1/Flash-Md/fork)** to copy the repo to your GitHub account. Make sure to add a star 🌟 to encourage the developers.
