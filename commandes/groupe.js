@@ -70,9 +70,9 @@ zokou({ nomCom: "invite", categorie: 'Group', reaction: "🙋" }, async (dest, z
   var link = await zk.groupInviteCode(dest)
   var lien = `https://chat.whatsapp.com/${link}`;
 
-  let mess = `hello ${nomAuteurMessage} , here is the group link ${nomGroupe} \n
+  let mess = `Hello ${nomAuteurMessage} , here is the group link of ${nomGroupe} \n
 
-Lien :${lien}`
+Click Here :${lien}`
   repondre(mess)
 
 
