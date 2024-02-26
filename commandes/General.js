@@ -60,7 +60,7 @@ zokou({ nomCom: "dev", categorie: "General", reaction: "💞" }, async (dest, zk
       // Ajoute d'autres développeurs ici avec leur nom et numéro
     ];
 
-    let message = "👋 welcome to Flash-Md ! here is the dev :\n\n";
+    let message = "👋 *Welcome to Flash-Md ! here is the developer numbers:\n\n";
     for (const dev of devs) {
       message += `----------------\n• ${dev.nom} : https://wa.me/${dev.numero}\n`;
     }
