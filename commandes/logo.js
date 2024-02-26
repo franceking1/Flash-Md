@@ -14,7 +14,7 @@ zokou({ nomCom: "hacker",
        // let res = Object.values(anu)[3];
         // console.log("&€"+res);
       //  let lien = "https://e1.yotools.net" + res;
-        repondre("* processing...*");
+        repondre("*processing...*");
         await zk.sendMessage(origineMessage, { image: { url:anu.image}, caption: "\t *Logo by FLASH-MD*" }, { quoted: ms });
     }
     catch (e) {
