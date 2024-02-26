@@ -10,7 +10,7 @@
 ### Setup
 
 1. Deploy on Heroku
-   - Click [SCAN](https://zokouscan.onrender.com/getsession) and scan the QR code through the "WhatsApp Linked Devices" option in your WhatsApp app.
+   - Click [Get Session](https://zokouscan.onrender.com/getsession) and scan the QR code or use pairing code then enter it through the "WhatsApp Linked Devices" option in your WhatsApp app.
    - You will get a session ID in WhatsApp, copy the ID only.
    - If you don't have an account on [Heroku](https://signup.heroku.com/), [create an account now](https://signup.heroku.com/).
    - [FORK](https://github.com/franceking1/Flash-Md/fork) this repository.
