@@ -853,8 +853,8 @@ ${metadata.desc}`;
                 await activateCrons();
                 
                 if((conf.DP).toLowerCase() === 'yes') {     
-                let cmsg = `╭───◇
-║ 『𝐅𝐋𝐀𝐒𝐇-𝐌𝐃』is *CONNECTED*
+                let cmsg = `╭════⊷
+║ *『𝐅𝐋𝐀𝐒𝐇-𝐌𝐃 is CONNECTED』*
 ║    Creator: *France King*
 ║    Prefix : [ ${prefixe} ]
 ║    Mode :${md}
@@ -862,11 +862,11 @@ ${metadata.desc}`;
 ╰═════════════════⊷
 
 ╭───◇
-   
- 
- *Thank you for choosing 𝐅𝐋𝐀𝐒𝐇-𝐌𝐃*
- 
- Join The Official Group https://chat.whatsapp.com/CtBGmUkwXiA6kGYAyU5MaX
+┃   
+┃
+┃ *Thank you for choosing 𝐅𝐋𝐀𝐒𝐇-𝐌𝐃*
+┃
+┃ Join The Official WhatsApp Group https://chat.whatsapp.com/CtBGmUkwXiA6kGYAyU5MaX
 ╰═════════════════⊷`;
                 await zk.sendMessage(zk.user.id, { text: cmsg });
                 }
