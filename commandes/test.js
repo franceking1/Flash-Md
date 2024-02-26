@@ -3,8 +3,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const { zokou } = require("../framework/zokou");
 zokou({ nomCom: "repo", reaction: "😌", nomFichier: __filename }, async (dest, zk, commandeOptions) => {
     console.log("Commande saisie !!!s");
-    let z = 'Hello This is  *FLASH-MD* \n\n ' + "The Follow is *FLASH-MD Repo.*";
-    let d = 'https://github.com/franceking1/Flash-Md';
+    let z = 'Hello This is  *FLASH-MD* \n\n ' + "The Following is *FLASH-MD Repo.*";
+    let d = ' https://github.com/franceking1/Flash-Md';
     let varmess = z + d;
     var img = 'https://telegra.ph/file/f1f2303ff4e39b0a3b6b3.jpg';
     await zk.sendMessage(dest, { image: { url: img }, caption: varmess });
