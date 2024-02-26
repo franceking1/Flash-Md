@@ -8,16 +8,15 @@
 
 ### Get Flash-Md
 
-## 1. Click on **[Fork](https://github.com/franceking1/Flash-Md/fork)** to copy the repo to your GitHub account. Make sure to add a star 🌟 to encourage the developers.
+## Setup
 
-## 2. Get Session ID:      
-[**Session**](https://zokouscan.onrender.com)
+1. Deploy on Heroku
+   - Click [SCAN](https://zokouscan.onrender.com/getsession) and scan the QR code through the "WhatsApp Linked Devices" option in your WhatsApp app.
+   - You will get a session ID in WhatsApp, copy the ID only.
+   - If you don't have an account on [Heroku](https://signup.heroku.com/), [create an account now](https://signup.heroku.com/).
+   - [FORK](https://github.com/franceking1/Flash-Md/fork) this repository.
+   - Now [DEPLOY](https://dashboard.heroku.com/new?template=https://github.com/franceking1/Flash-Md).
 
-
-## 3. Deploy FLASH-MD 
-   - **Heroku Deployment:**
-     1. Click [**here**](https://id.heroku.com/login) to create **Heroku** account.
-     2. Click [**HERE**](https://dashboard.heroku.com/new?template=https://github.com/franceking1/Flash-Md) to deploy the bot on **Heroku**.
 
 ## Contributions
 
