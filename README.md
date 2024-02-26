@@ -10,11 +10,12 @@
 ### Setup
 
 1. Deploy on Heroku
-   - [FORK](https://github.com/franceking1/Flash-Md/fork) this repository.
-   - Click [Get Session](https://zokouscan.onrender.com/getsession) and scan the QR code or use pairing code then enter it through the "WhatsApp Linked Devices" option in your WhatsApp app.
+   -
+   - ***Click [`FORK`](https://github.com/franceking1/Flash-Md/fork) and `Star ⭐ Repository` for Courage.***
+   - ***Click [Get Session](https://zokouscan.onrender.com/getsession) and scan the QR code or use pairing code then enter it through the "WhatsApp Linked Devices" option in your WhatsApp app.***
    - You will get a session ID in WhatsApp, copy the ID only.
-   - If you don't have an account on [Heroku](https://signup.heroku.com/), [create an account now](https://signup.heroku.com/).
-   - Now [DEPLOY](https://dashboard.heroku.com/new?template=https://github.com/franceking1/Flash-Md).
+   - **If you don't have an account on [Heroku](https://signup.heroku.com/), [create an account now]**(https://signup.heroku.com/).
+   - ***Now [DEPLOY](https://dashboard.heroku.com/new?template=https://github.com/franceking1/Flash-Md).***
 
 
 ## Contributions
