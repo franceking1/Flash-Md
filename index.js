@@ -854,8 +854,8 @@ ${metadata.desc}`;
                 
                 if((conf.DP).toLowerCase() === 'yes') {     
                 let cmsg = `╭───◇
-║ 『𝐅𝐋𝐀𝐒𝐇-𝐌𝐃』
-║    _Creator_ : *France King*
+║ 『𝐅𝐋𝐀𝐒𝐇-𝐌𝐃』is *CONNECTED*
+║    Creator: *France King*
 ║    Prefix : [ ${prefixe} ]
 ║    Mode :${md}
 ║    Total Commands : ${evt.cm.length}︎
@@ -866,7 +866,7 @@ ${metadata.desc}`;
  
  *Thank you for choosing 𝐅𝐋𝐀𝐒𝐇-𝐌𝐃*
  
- Join The OFFICIAL GROUP https://chat.whatsapp.com/CtBGmUkwXiA6kGYAyU5MaX
+ Join The Official Group https://chat.whatsapp.com/CtBGmUkwXiA6kGYAyU5MaX
 ╰═════════════════⊷`;
                 await zk.sendMessage(zk.user.id, { text: cmsg });
                 }
