@@ -862,9 +862,12 @@ ${metadata.desc}`;
 ╰═════════════════⊷
 
 ╭───◇
-┃   
+┃ 
+┃
 ┃
 ┃ *Thank you for choosing 𝐅𝐋𝐀𝐒𝐇-𝐌𝐃*
+┃
+┃
 ┃
 ┃ Join The Official WhatsApp Group https://chat.whatsapp.com/CtBGmUkwXiA6kGYAyU5MaX
 ╰═════════════════⊷`;
