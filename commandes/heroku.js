@@ -48,7 +48,7 @@ zokou(
 			let baseURI = "/apps/" + s.HEROKU_APP_NAME;
 
             let h = await heroku.get(baseURI+'/config-vars')
-let str = '*Heroku Vars List*\n\n'
+let str = '*All my HEROKU Vars*\n\n'
 for (vr in h) {
 str+= '⚡ *'+vr+'* '+'= '+h[vr]+'\n'
 }
