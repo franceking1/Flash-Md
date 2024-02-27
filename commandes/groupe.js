@@ -34,7 +34,7 @@ zokou({ nomCom: "tagall", categorie: 'Group', reaction: "📣" }, async (dest, z
         🌟 *FLASH-MD* 🌟
 ========================\n
 👥 Group : ${nomGroupe} 🚀 
-👤 Autor : *${nomAuteurMessage}* 👋 
+👤 Author : *${nomAuteurMessage}* 👋 
 📜 Message : *${mess}* 📝
 ========================\n
 \n
@@ -72,7 +72,7 @@ zokou({ nomCom: "invite", categorie: 'Group', reaction: "🙋" }, async (dest, z
 
   let mess = `Hello ${nomAuteurMessage} , here is the group link of ${nomGroupe} \n
 
-Click Here :${lien}`
+Click Here To Join :${lien}`
   repondre(mess)
 
 
@@ -121,7 +121,7 @@ zokou({ nomCom: "promote", categorie: 'Group', reaction: "👨🏿‍💼" }, as
         if (zkad) {
           if (membre) {
             if (admin == false) {
-              var txt = `🎊🎊🎊  @${auteurMsgRepondu.split("@")[0]} Has been promoted as a group Admin.`
+              var txt = `🎊🍾  @${auteurMsgRepondu.split("@")[0]} Has been promoted as a group Admin.`
               await zk.groupParticipantsUpdate(dest, [auteurMsgRepondu], "promote");
               zk.sendMessage(dest, { text: txt, mentions: [auteurMsgRepondu] })
             } else { return repondre("This member is already an administrator of the group.") }
