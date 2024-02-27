@@ -678,7 +678,7 @@ zk.ev.on('group-participants.update', async (group) => {
                 msg += `║ Hello @${membre.split("@")[0]}\n`;
             }
 
-            msg += `║ _You MAY read the group description for more info and Avoid getting removed_
+            msg += `║ _Welcome 🤗.You MAY read the group description for more info and Avoid getting removed_
             
      
  ╰═══◇France-King◇═══⊷
