@@ -18,8 +18,7 @@ zokou({ nomCom: "menu", categorie: "General" }, async (dest, zk, commandeOptions
 
 
     
-
-    cm.map(async (com, index) => {
+ cm.map(async (com, index) => {
         if (!coms[com.categorie])
             coms[com.categorie] = [];
         coms[com.categorie].push(com.nomCom);
@@ -27,7 +26,7 @@ zokou({ nomCom: "menu", categorie: "General" }, async (dest, zk, commandeOptions
 
     moment.tz.setDefault('EAT/GMT');
 
-// Créer une date et une heure en EAT/GMT
+// Créer une date et une heure en EAT
 const temps = moment().format('HH:mm:ss');
 const date = moment().format('DD/MM/YYYY');
 
