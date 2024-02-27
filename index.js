@@ -670,20 +670,20 @@ zk.ev.on('group-participants.update', async (group) => {
         const metadata = await zk.groupMetadata(group.id);
 
         if (group.action == 'add' && (await recupevents(group.id, "welcome") == 'on')) {
-            let msg = `╭═══◇◇◇═══⊷
-║ *_New Members Are always welcome_*
-║ Hello 
+            let msg = `═══◇FLASH-MD◇═══⊷
+║ *New Members Are always welcome*
+║ 
 `;
 
             let membres = group.participants;
             for (let membre of membres) {
-                msg += `║ @${membre.split("@")[0]}\n`;
+                msg += `║ Hello @${membre.split("@")[0]}\n`;
             }
 
             msg += `║ _You MAY read the group description for more info and Avoid getting removed_
             
-                             *Powered by *FLASH-MD*
-╰═══◇◇◇═══⊷
+                         📌Powered by *FLASH-MD*
+═══◇Powered by France King◇═══⊷
 ◇ *GROUP DESCRIPTION*  ◇
 
 ${metadata.desc}`;
