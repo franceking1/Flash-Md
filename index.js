@@ -670,7 +670,7 @@ zk.ev.on('group-participants.update', async (group) => {
         const metadata = await zk.groupMetadata(group.id);
 
         if (group.action == 'add' && (await recupevents(group.id, "welcome") == 'on')) {
-            let msg = `╔════◇◇◇═════╗
+            let msg = `╭═══◇◇◇═══⊷
 ║ welcome to new(s) member(s)
 ║ *New(s) Member(s) :*
 `;
@@ -681,7 +681,7 @@ zk.ev.on('group-participants.update', async (group) => {
             }
 
             msg += `║
-╚════◇◇◇═════╝
+╰═══◇◇◇═══⊷
 ◇ *Descriptioon*   ◇
 
 ${metadata.desc}`;
@@ -864,9 +864,7 @@ ${metadata.desc}`;
 ╭───◇
 ┃ 
 ┃
-┃
 ┃ *Thank you for choosing 𝐅𝐋𝐀𝐒𝐇-𝐌𝐃*
-┃
 ┃
 ┃
 ┃ Join The Official WhatsApp Group https://chat.whatsapp.com/CtBGmUkwXiA6kGYAyU5MaX
