@@ -32,15 +32,15 @@ const date = moment().format('DD/MM/YYYY');
 
   let infoMsg =  `
 ╭────✧𝐅𝐋𝐀𝐒𝐇-𝐌𝐃✧────◆
-│ *Préfix* : ${s.PREFIXE}
-│ *Owner* : ${s.OWNER_NAME}
-│ *Mode* : ${mode}
-│ *Commands* : ${cm.length} 
-│ *Date* : ${date}
-│ *Time* : ${temps} 
-│ *Mém* : ${format(os.totalmem() - os.freemem())}/${format(os.totalmem())}
-│ *Platform* : ${os.platform()}
-│ *Developer* : France King 
+│༄ *Préfix* : ${s.PREFIXE}
+│༄ *Owner* : ${s.OWNER_NAME}
+│༄ *Mode* : ${mode}
+│༄ *Commands* : ${cm.length} 
+│༄ *Date* : ${date}
+│༄ *Time* : ${temps} 
+│༄ *Mém* : ${format(os.totalmem() - os.freemem())}/${format(os.totalmem())}
+│༄ *Platform* : ${os.platform()}
+│༄ *Developer* : France King 
 ╰─────✧The-GOAT✧─────◆ \n\n`;
 
   let menuMsg=`  
@@ -53,7 +53,7 @@ const date = moment().format('DD/MM/YYYY');
         menuMsg += `*╭────❏* *${cat}* *❏*`;
         for (const cmd of coms[cat]) {
             menuMsg += `
-*|⬡|* ${cmd}`;
+*|༄* ${cmd}`;
         }
         menuMsg += `
 *╰═════════════⊷* \n`
