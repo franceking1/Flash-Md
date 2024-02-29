@@ -41,7 +41,7 @@ const date = moment().format('DD/MM/YYYY');
 │༄ *Ram* : ${format(os.totalmem() - os.freemem())}/${format(os.totalmem())}
 │༄ *Platform* : ${os.platform()}
 │༄ *Developer* : France King
-│༄ *Uptime* : ${runtime(process.uptime())}
+│༄ *Version* : v7.50.2
 ╰─────✧The-GOAT✧─────◆ \n\n`;
 
   let menuMsg=`  
