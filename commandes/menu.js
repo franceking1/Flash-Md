@@ -33,24 +33,26 @@ const date = moment().format('DD/MM/YYYY');
   let infoMsg =  `
 ╭────✧𝐅𝐋𝐀𝐒𝐇-𝐌𝐃✧────◆
 │༄ *Préfix* : ${s.PREFIXE}
-│༄ *Owner* : ${s.OWNER_NAME}
+│༄ *User* : ${s.OWNER_NAME}
 │༄ *Mode* : ${mode}
 │༄ *Commands* : ${cm.length} 
 │༄ *Date* : ${date}
 │༄ *Time* : ${temps} 
-│༄ *Mém* : ${format(os.totalmem() - os.freemem())}/${format(os.totalmem())}
+│༄ *Ram* : ${format(os.totalmem() - os.freemem())}/${format(os.totalmem())}
 │༄ *Platform* : ${os.platform()}
-│༄ *Developer* : France King 
+│༄ *Developer* : France King
+│༄ *Uptime* : ${runtime(process.uptime())}
+│༄ *Version* : ${version} 
 ╰─────✧The-GOAT✧─────◆ \n\n`;
 
   let menuMsg=`  
 
-*List of commands :*
+*FLASH-MD COMMANDS :*
 ◇                             ◇
 `;
 
     for (const cat in coms) {
-        menuMsg += `*╭────❏* *${cat}* *❏*`;
+        menuMsg += `*╭────❏* *${cat}* *❏⊷*`;
         for (const cmd of coms[cat]) {
             menuMsg += `
 *|༄* ${cmd}`;
