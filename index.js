@@ -168,7 +168,7 @@ setTimeout(() => {
             console.log("\t [][]...{FLASH-MD}...[][]");
             console.log("=========== New message ===========");
             if (verifGroupe) {
-                console.log("message provenant du groupe : " + nomGroupe);
+                console.log("message from the group : " + nomGroupe);
             }
             console.log("message sent By : " + "[" + nomAuteurMessage + " : " + auteurMessage.split("@s.whatsapp.net")[0] + " ]");
             console.log("message type : " + mtype);
@@ -678,12 +678,12 @@ zk.ev.on('group-participants.update', async (group) => {
                 msg += `║ Hello @${membre.split("@")[0]}\n`;
             }
 
-            msg += `║ _Welcome to ${nomGroupe} .You MAY read the group description for more info and Avoid getting removed_
+            msg += `║ _Welcome to @${nomGroupe.split("@")[0]}\n`; .You MAY read the group description for more info and Avoid getting removed_
             
      
  ╰═══◇France-King◇═══⊷
- 
-◇ *GROUP DESCRIPTION*  ◇
+            
+ ◇ *GROUP DESCRIPTION*  ◇
 
 ${metadata.desc}`;
 
