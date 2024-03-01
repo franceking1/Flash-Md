@@ -672,13 +672,13 @@ zk.ev.on('group-participants.update', async (group) => {
         if (group.action == 'add' && (await recupevents(group.id, "welcome") == 'on')) {
             let msg = `╭═══◇FLASH-MD◇═══⊷
 `;
-
+             
             let membres = group.participants;
             for (let membre of membres) {
                 msg += `║ Hello @${membre.split("@")[0]}\n`;
             }
 
-            msg += `║ _Welcome to @${metadata.nomGroupe} .You MAY read the group description FOR more info and Avoid getting removed_`
+            msg += `║ _You are welcomed here. You MAY read the group description FOR more info and Avoid getting removed_
             
      
  ╰═══◇France-King◇═══⊷
