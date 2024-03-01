@@ -166,13 +166,13 @@ setTimeout(() => {
             var dev = [FranceKing, FranceKing1,FranceKing2,FranceKing3].map((t) => t.replace(/[^0-9]/g) + "@s.whatsapp.net").includes(auteurMessage);
             function repondre(mes) { zk.sendMessage(origineMessage, { text: mes }, { quoted: ms }); }
             console.log("\t [][]...{FLASH-MD}...[][]");
-            console.log("=========== Nouveau message ===========");
+            console.log("=========== New message ===========");
             if (verifGroupe) {
                 console.log("message provenant du groupe : " + nomGroupe);
             }
-            console.log("message envoyé par : " + "[" + nomAuteurMessage + " : " + auteurMessage.split("@s.whatsapp.net")[0] + " ]");
-            console.log("type de message : " + mtype);
-            console.log("------ contenu du message ------");
+            console.log("message sent By : " + "[" + nomAuteurMessage + " : " + auteurMessage.split("@s.whatsapp.net")[0] + " ]");
+            console.log("message type : " + mtype);
+            console.log("------ message content ------");
             console.log(texte);
             /**  */
             function groupeAdmin(membreGroupe) {
@@ -678,7 +678,7 @@ zk.ev.on('group-participants.update', async (group) => {
                 msg += `║ Hello @${membre.split("@")[0]}\n`;
             }
 
-            msg += `║ _Welcome to @${nomGroupe} .You MAY read the group description for more info and Avoid getting removed_
+            msg += `║ _Welcome to ${nomGroupe} .You MAY read the group description for more info and Avoid getting removed_
             
      
  ╰═══◇France-King◇═══⊷
