@@ -457,7 +457,7 @@ function mybotpic() {
                                     await fs.unlink("st1.webp"); } 
                                         
                                        else if (action === 'delete') {
-                                        txt += `message deleted \n @${auteurMessage.split("@")[0]} avoid sending link.`;
+                                        txt += `Goodbye \n @${auteurMessage.split("@")[0]} Sending other group links here is prohibited!.`;
                                         // await zk.sendMessage(origineMessage, { sticker: fs.readFileSync("st1.webp") }, { quoted: ms });
                                        await zk.sendMessage(origineMessage, { text: txt, mentions: [auteurMessage] }, { quoted: ms });
                                        await zk.sendMessage(origineMessage, { delete: key });
@@ -678,10 +678,11 @@ zk.ev.on('group-participants.update', async (group) => {
                 msg += `║ Hello @${membre.split("@")[0]}\n`;
             }
 
-            msg += `║ _Welcome 🤗.You MAY read the group description for more info and Avoid getting removed_
+            msg += `║ _Welcome to @${nomGroupe} .You MAY read the group description for more info and Avoid getting removed_
             
      
  ╰═══◇France-King◇═══⊷
+ 
 ◇ *GROUP DESCRIPTION*  ◇
 
 ${metadata.desc}`;
