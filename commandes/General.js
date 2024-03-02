@@ -2,14 +2,14 @@ const { zokou } = require("../framework/zokou");
 const {getAllSudoNumbers,isSudoTableNotEmpty} = require("../bdd/sudo")
 const conf = require("../set");
 
-zokou({ nomCom: "mods", categorie: "General", reaction: "💞" }, async (dest, zk, commandeOptions) => {
+zokou({ nomCom: "owner", categorie: "General", reaction: "💞" }, async (dest, zk, commandeOptions) => {
     const { ms , mybotpic } = commandeOptions;
     
   const thsudo = await isSudoTableNotEmpty()
 
   if (thsudo) {
      let msg = `*My Super-User*\n
-     *Owner Number\n* :
+     *Owner Number*\n :
 - 🌟 @${conf.NUMERO_OWNER}
 
 ------ *other sudos* -----\n`
