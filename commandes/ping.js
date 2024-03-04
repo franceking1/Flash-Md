@@ -5,7 +5,11 @@ const s = require(__dirname + "/../set");
 
 zokou({ nomCom: 'ping',
     desc: 'To check ping',
-    Categorie: 'Misc',
+    Categorie: 'General',
+    reaction: '🚨', 
+    fromMe: 'true', 
+
+       
   },
   async (dest, zk, commandeOptions) => {
     const { ms, arg, repondre} = commandeOptions;
