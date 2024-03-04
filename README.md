@@ -1,11 +1,11 @@
  <h1 align="center"> FLASH-MD </h1>
-<p align="center"> FLASH-MD, A Simple WhatsApp user BOT, Created by France King.
+<p align="center"> FLASH-MD, A Simple WhatsApp user BOT, Created by KEITH BOT.
 </p>
 
 ### When you Receive your session ID, replace ZOKOU-MD-WHATSAPP-BOT with ***FLASH-MD-WA-BOT***
 
 
-<img src="https://telegra.ph/file/3f985014b51b3cf335bfe.jpg" width="700" height="300"/>
+<img src="(https://telegra.ph/file/841b34bffb627e41534fa.jpg)" width="700" height="300"/>
 
 
 
@@ -16,7 +16,7 @@
    - ***Click [`Get Session`](https://pairing2.onrender.com)and `use pairing code` then enter it through the "WhatsApp Linked Devices" option in your WhatsApp app.***
    - You will get a session ID in WhatsApp, copy the ID only.
    - **If you don't have an account on [Heroku](https://signup.heroku.com/) [create an account now](https://signup.heroku.com/)**
-   - ***Now [DEPLOY](https://dashboard.heroku.com/new?template=https://github.com/franceking1/Flash-Md).***
+   - ***Now [DEPLOY](https://dashboard.heroku.com/new?template=https://github.com/keithkeizzah/Flash-Md).***
 
 
 ## Contributions
@@ -31,6 +31,6 @@ Enjoy the diverse features of the Flash-Md  to enhance your conversations and ma
 
 ## Developer:
 
-- [**France King**](https://instagram.com/france.king1)
-- [**WhatsApp**](https://wa.me/254751284190)
+- [**KEITH-MD**](https://instagram.com/france.king1)
+- [**WhatsApp**](https://wa.me/254748387615)
 
