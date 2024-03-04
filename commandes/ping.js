@@ -3,9 +3,9 @@ const moment = require("moment-timezone");
 const s = require(__dirname + "/../set");
 
 
-zokou({ nomCom: 'ping ?(.*)',
+zokou({ nomCom: 'ping',
     desc: 'To check ping',
-    Categorie: 'General',
+    Categorie: 'Misc',
   },
   async (dest, zk, commandeOptions) => {
     const { ms, arg, repondre} = commandeOptions;
