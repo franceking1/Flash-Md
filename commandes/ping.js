@@ -15,9 +15,9 @@ zokou({ nomCom: 'ping',
   async (dest, zk, commandeOptions) => {
     const { ms, arg, repondre } = commandeOptions;
     const { start} = new Date().getTime()
-    return repondre('```Pinging!!!!```')
+    return repondre('```*pong*\n*_977 ms*_```')
     const { end } = new Date().getTime()
-    const response = await axios.get('*Pong!*\n ```' + (end - start) + '``` *ms*')
+    await zok.sendMessage('*Pong!*\n ```' + (end - start) + '``` *ms*')
   }
 )
 
