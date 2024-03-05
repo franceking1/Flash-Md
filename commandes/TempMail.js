@@ -2,7 +2,6 @@ const { zokou } = require("../framework/zokou");
 
 
 zokou({ nomCom: "tempmail", reaction: "💥", categorie: "General", nomFichier: __filename }, async (dest, zk, commandeOptions) => {
-    console.log("Commande saisie !!!s");
     let z = '*FLASH-MD TempMails*...Powered by *France King* \n\n ' + "*Click The link below to create temporary emails.*";
     let d = ' https://extraclass.ng';
     let varmess = z + d;
