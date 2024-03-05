@@ -1,9 +1,20 @@
 const { zokou } = require("../framework/zokou");
+const moment = require("moment-timezone");
+const { default: axios } = require('axios');
+//const conf = require('../set');
 
 
-zokou({ nomCom: "tempmail", reaction: "💥", categorie: "General", nomFichier: __filename }, async (dest, zk, commandeOptions) => {
-    let z = '*FLASH-MD TempMails*...Powered by *France King* \n\n ' + "*Click The link below to create temporary emails.*";
-    let d = ' https://extraclass.ng';
-    let varmess = z + d;
-    var img = 'https://telegra.ph/file/f1f2303ff4e39b0a3b6b3.jpg';
-    
+zokou({ nomCom: 'tempmail',
+    desc: 'To create temporary emails',
+    Categorie: 'General',
+    reaction: '🚨', 
+    fromMe: 'true', 
+
+       
+  },
+  async (dest, zk, commandeOptions) => {
+    const { ms, arg, repondre } = commandeOptions;
+    const { start} = new Date().getTime()
+    return repondre('*lick The link below to create temporary emails!*\n ```' + (https://extraclass.ng) + '``` *Powered by France King*') 
+  }
+)
