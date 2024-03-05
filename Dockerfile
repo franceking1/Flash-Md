@@ -9,8 +9,8 @@ RUN apt-get update && \
   npm i pm2 -g && \
   rm -rf /var/lib/apt/lists/*
   
-RUN git clone https://github.com/franceking1/Flash-Md  /root/Flash_Md
-WORKDIR /root/Flash_Md/
+RUN git clone https://github.com/Luffy2ndAccount/Zokou-english-v  /root/Zokou_BOt
+WORKDIR /root/Zokou_Bot/
 
 
 COPY package.json .
