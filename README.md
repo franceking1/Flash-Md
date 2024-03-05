@@ -1,5 +1,5 @@
  <h1 align="center"> FLASH-MD </h1>
-<p align="center"> FLASH-MD, A Simple WhatsApp user BOT, Created by France King.
+<p align="center"> FLASH-MD, A Simple WhatsApp user BOT, Created by Keith tech.
 </p>
 
 ### When you Receive your session ID, replace ZOKOU-MD-WHATSAPP-BOT with ***FLASH-MD-WA-BOT***
@@ -31,6 +31,6 @@ Enjoy the diverse features of the Flash-Md  to enhance your conversations and ma
 
 ## Developer:
 
-- [**France King**](https://instagram.com/france.king1)
-- [**WhatsApp**](https://wa.me/254751284190)
+- [**Keith tech**](https://instagram.com/france.king1)
+- [**WhatsApp**](https://wa.me/254748387615)
 
