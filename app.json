@@ -1,6 +1,6 @@
 {
   "name":"FLASH-MD",
-  "description":"bot whatsapp développé par France King",
+  "description":"WhatsApp bot developed by France King",
   "keywords":["bot","node","baileys","whatsapp"],
   "logo":"https://telegra.ph/file/dfccbf12397757c321ac4.jpg",
   "repository":"https://github.com/franceking1/Flash-Md",
@@ -64,7 +64,7 @@
 	  ,
     "SESSION_ID":
     {
-      "description":"put your session ID , the code you receive after scanning Qr code",   
+      "description":"put your session ID , make sure it's starts with FLASH-MD-WA-BOT",   
       "value":"",
       "required":true
       
@@ -76,7 +76,7 @@
     "required": false,
     "value": "France King"
   },
-    "NUMERO_OWNER":
+    "OWNER_NUMBER":
   {
     
     "desc": "Your number , dont put '+' and put you area code(exemple of togo '228')",
