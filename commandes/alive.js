@@ -30,7 +30,7 @@ zokou(
      
     moment.tz.setDefault('EAT');
 
-// Créer une date et une heure en GMT
+// Créer une date et une heure en EAT
 const temps = moment().format('HH:mm:ss');
 const date = moment().format('DD/MM/YYYY');
 
@@ -38,7 +38,7 @@ const date = moment().format('DD/MM/YYYY');
 *Owner* : ${s.OWNER_NAME}
 *Mode* : ${mode}
 *Date* : ${date}
-*Hours(EAT)* : ${temps}
+*Time* : ${temps}
 
  ${message}
  
