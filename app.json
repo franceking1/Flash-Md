@@ -1,6 +1,6 @@
 {
   "name":"FLASH-MD",
-  "description":"WhatsApp bot developed by France King",
+  "description":"An easy and simple WhatsApp bot developed by France King",
   "keywords":["bot","node","baileys","whatsapp"],
   "logo":"https://telegra.ph/file/dfccbf12397757c321ac4.jpg",
   "repository":"https://github.com/franceking1/Flash-Md",
@@ -64,9 +64,9 @@
 	  ,
     "SESSION_ID":
     {
-      "description":"put your session ID , make sure it's starts with FLASH-MD-WA-BOT",   
+      "description":"put your session ID , make sure it starts with FLASH-MD-WA-BOT",   
       "value":"",
-      "required":true
+      "required": true, 
       
     },
     "OWNER_NAME":
