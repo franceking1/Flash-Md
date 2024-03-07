@@ -14,10 +14,7 @@ zokou({ nomCom: 'test',
   },
   async (dest, zk, commandeOptions) => {
     const { ms, arg, repondre } = commandeOptions;
-    const { start} = new Date().getTime()
-    return repondre('*FLASH-MD is Alive!!!!!!!*\n ```' + powered by + '``` *France King*')
-    const { end } = new Date().getTime()
-    await zok.sendMessage('*Pong!*\n ```' + (end - start) + '``` *ms*')
+    return repondre('*FLASH-MD is Alive!!!!!!!*\n ```' + powered by + '``` *France King*```') 
   }
 )
  
