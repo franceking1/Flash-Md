@@ -25,7 +25,7 @@ zokou(
 const temps = moment().format('HH:mm:ss');
 const date = moment().format('DD/MM/YYYY');} 
 
-    const msg = `
+    const testmsg = `
 *Owner* : ${s.OWNER_NAME}
 *Mode* : ${mode}
 *Date* : ${date}
