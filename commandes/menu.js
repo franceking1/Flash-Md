@@ -26,7 +26,7 @@ zokou({ nomCom: "menu", categorie: "General" }, async (dest, zk, commandeOptions
 
     moment.tz.setDefault('EAT');
 
-// Créer une date et une heure en EAT
+// Create a date and time in EAT
 const temps = moment().format('HH:mm:ss');
 const date = moment().format('DD/MM/YYYY');
 
