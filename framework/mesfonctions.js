@@ -9,7 +9,7 @@ const baileys_1 = require("@whiskeysockets/baileys");
 const fs = require('fs-extra');
 const util = require('util');
 let { listall } = require('./stylish-font');
-/*_________by Djalega++
+/*_________by France King
 
 fonction zJson:
 récupère un objet json
@@ -32,7 +32,7 @@ module.exports.genererNomFichier = async (extension) => {
 /** ************ */
 module.exports.stick = async (buffer, author) => {
     var sticker = new Sticker(buffer, {
-        pack: 'Zokou-MD',
+        pack: 'FLASH-MD',
         author: author,
         type: StickerTypes.FULL,
         categories: ['🤩', '🎉'],
