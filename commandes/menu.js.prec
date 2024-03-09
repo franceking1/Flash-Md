@@ -18,8 +18,8 @@ zokou({ nomCom: "menu", categorie: "General" }, async (dest, zk, commandeOptions
     cm.map(async (com, index) => { if (!coms[com.categorie])
         coms[com.categorie] = []; coms[com.categorie].push(com.nomCom); });
     const temps = moment(moment()).format("HH:MM:SS");
-    moment.tz.setDefault('kenya/nairobi').locale("id");
-    const date = moment.tz("kenya/nairobi").format("DD/MM/YYYY");
+    moment.tz.setDefault('africa/nairobi').locale("id");
+    const date = moment.tz("africa/nairobi").format("DD/MM/YYYY");
     console.log("date" + date);
     console.log("temps " + temps);
     let menuMsg = "  ╩═══ * Ƶ𝓞ｋØ𝓊 * ╩═══\n\n";
