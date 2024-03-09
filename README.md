@@ -1,5 +1,5 @@
  <h1 align="center"> FLASH-MD </h1>
-<p align="center"> FLASH-MD, A Simple WhatsApp user BOT, Created by France King.
+<p align="center"> **FLASH-MD, A Simple WhatsApp user BOT, Created by France King.**
 </p>
 
 
