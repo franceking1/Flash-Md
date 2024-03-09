@@ -2,7 +2,6 @@
 <p align="center"> FLASH-MD, A Simple WhatsApp user BOT, Created by France King.
 </p>
 
-### When you Receive your session ID, replace ZOKOU-MD-WHATSAPP-BOT with ***FLASH-MD-WA-BOT***
 
 
 <img src="https://telegra.ph/file/3f985014b51b3cf335bfe.jpg" width="700" height="300"/>
@@ -13,7 +12,7 @@
 
 **📌DEPLOY ON HEROKU**
    - ***Click [`FORK`](https://github.com/franceking1/Flash-Md/fork) and `Star ⭐ Repository` for Courage.***
-   - ***Get `SESSION ID` by [`SCANING QR`]([https://flash-md-qr.onrender.com) Or [`PAIRING CODE`](https://replit.com/@franceking1/Flash-Md-Pairing). Then `Go-to Whatapp>Three dots>Linked Devices`***
+   - ***Click [`Get Session`] by [`SCANING QR`] ([https://flash-md-qr.onrender.com) Or [`PAIRING CODE`](https://replit.com/@franceking1/Flash-Md-Pairing). Then `Go-to Whatapp>Three dots>Linked Devices`***
    - You will get a session ID in WhatsApp, copy the ID only.
    - **If you don't have an account on [Heroku](https://signup.heroku.com/), [create an account now](https://signup.heroku.com/).**
    - ***Now [DEPLOY](https://dashboard.heroku.com/new?template=https://github.com/franceking1/Flash-Md).***
