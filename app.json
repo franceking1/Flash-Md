@@ -64,7 +64,7 @@
 	  ,
     "SESSION_ID":
     {
-      "description":"put your session ID , make sure it starts with FLASH-MD-WA-BOT",   
+      "description":"put your session ID , make sure it starts with eyJub2I...",   
       "value":"",
       "required": true
       
