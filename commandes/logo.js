@@ -518,3 +518,23 @@ zokou({nomCom:"child",categorie:"Logo",reaction:"😇"},async(dest,zk,commandeOp
 })
 
 
+zokou({nomCom:"typo",categorie:"Logo",reaction:"😇"},async(dest,zk,commandeOptions)=>{
+
+
+  let {ms,arg,prefixe,repondre}=commandeOptions;
+  try{
+      if(!arg||arg=="")
+      {
+        repondre(prefixe+"typo Flash-MD");return;
+      }
+
+    var lien="https://en.ephoto360.com/typography-text-effect-on-pavement-online-774.html";
+
+    var img = await mumaker.ephoto(lien,arg.join(' '));
+   repondre("processing ...")
+    await zk.sendMessage(dest,{image:{url:img.image},caption:" *Logo by FLASH-MD*"},{quoted:ms})
+  }catch(e){repondre(e)}
+})
+
+
+
