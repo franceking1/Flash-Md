@@ -10,7 +10,7 @@ zokou({ nomCom: "avenger", categorie: "Logo", reaction: "😎" }, async (dest, z
             return;
         }
         var lienMaker = "https://en.ephoto360.com/logo-3d-style-avengers-online-427.html";
-        var lienMaker2 = "https://en.ephoto360.com/create-logo-3d-style-avengers-style-text-effects-online-427.html";
+        var lienMaker2 = "https://en.ephoto360.com/create-logo-3d-style-avengers-text-effects-online-427.html";
       
        
         const imgInfo = await mumaker.ephoto(lienMaker2, arg.join(' '));
