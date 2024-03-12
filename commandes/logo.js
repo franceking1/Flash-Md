@@ -554,17 +554,17 @@ zokou({nomCom:"light",categorie:"Logo",reaction:"🌠"},async(dest,zk,commandeOp
   }catch(e){repondre(e)}
 })
 
-zokou({nomCom:"marvel",categorie:"Logo",reaction:"🌠"},async(dest,zk,commandeOptions)=>{
+zokou({nomCom:"steel",categorie:"Logo",reaction:"🌠"},async(dest,zk,commandeOptions)=>{
 
 
   let {ms,arg,prefixe,repondre}=commandeOptions;
   try{
       if(!arg||arg=="")
       {
-        repondre(prefixe+"marvel Flash-MD");return;
+        repondre(prefixe+"steel Flash-MD");return;
       }
 
-    var lien="https://en.ephoto360.com/marvel-style-logo-419.html";
+    var lien="https://en.ephoto360.com/dragon-steel-text-effect-online-347.html";
 
     var img = await mumaker.ephoto(lien,arg.join(' '));
    repondre("processing ...")
@@ -573,14 +573,14 @@ zokou({nomCom:"marvel",categorie:"Logo",reaction:"🌠"},async(dest,zk,commandeO
 })
 
 
-zokou({nomCom:"avenger",categorie:"Logo",reaction:"🌠"},async(dest,zk,commandeOptions)=>{
+zokou({nomCom:"sunlight",categorie:"Logo",reaction:"🌠"},async(dest,zk,commandeOptions)=>{
 
 
   let {ms,arg,prefixe,repondre}=commandeOptions;
   try{
       if(!arg||arg=="")
       {
-        repondre(prefixe+"avenger Flash-MD");return;
+        repondre(prefixe+"sunlight Flash-MD");return;
       }
 
     var lien="https://en.ephoto360.com/sunlight-shadow-text-204.html";
