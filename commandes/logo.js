@@ -498,27 +498,22 @@ zokou({nomCom:"incandescent",categorie:"Logo",reaction:"😋"},async(dest,zk,com
   }catch(e){repondre(e)}
 })
 
-zokou({ nomCom: "avenger", categorie: "Logo", reaction: "😎" }, async (dest, zk, commandeOptions) => {
-    let { arg, repondre, prefixe, ms } = commandeOptions;
-    try {
-        const noArgMsg = `*_Example*:  ${prefixe}avenger FranceKing`;
-        //  if(arg=='') {await zok.sendMessage(dest,{text:noArgMsg},{quoted:infoMessage}); return;}
-        if (arg == '' || !arg) {
-            repondre(noArgMsg);
-            return;
-        }
-        var lienMaker = "https://en.ephoto360.com/logo-3d-style-avengers-online-427.html";
-        var lienMaker2 = "https://en.ephoto360.com/create-logo-3d-style-avengers-text-effects-online-427.html";
-      
-       
-        const imgInfo = await mumaker.ephoto(lienMaker2, arg.join(' '));
-       
-        await zk.sendMessage(dest, { text: " *\t Avenging...*" }, { quoted: ms });
-       // var idImg = Object.values(imgInfo)[3];
-       
-        await zk.sendMessage(dest, { image: { url: imgInfo.image }, caption: " \t *Logo by FLASH-MD*" }, { quoted: ms });
-    }
-    catch (e) {
-        repondre("🥵🥵 " + e);
-    }
+
+zokou({nomCom:"child",categorie:"Logo",reaction:"😋"},async(dest,zk,commandeOptions)=>{
+
+
+  let {ms,arg,prefixe,repondre}=commandeOptions;
+  try{
+      if(!arg||arg=="")
+      {
+        repondre(prefixe+"child Flash-MD");return;
+      }
+
+    var lien="https://en.ephoto360.com/write-text-on-wet-glass-online-589.html";
+
+    var img = await mumaker.ephoto(lien,arg.join(' '));
+   repondre("processing ...")
+    await zk.sendMessage(dest,{image:{url:img.image},caption:" *Logo by FLASH-MD*"},{quoted:ms})
+  }catch(e){repondre(e)}
 })
+
