@@ -536,5 +536,21 @@ zokou({nomCom:"typo",categorie:"Logo",reaction:"😇"},async(dest,zk,commandeOpt
   }catch(e){repondre(e)}
 })
 
+zokou({nomCom:"avenger",categorie:"Logo",reaction:"🌠"},async(dest,zk,commandeOptions)=>{
 
+
+  let {ms,arg,prefixe,repondre}=commandeOptions;
+  try{
+      if(!arg||arg=="")
+      {
+        repondre(prefixe+"avenger Flash-MD");return;
+      }
+
+    var lien="https://en.ephoto360.com/logo-3d-style-avengers-online-427.html";
+
+    var img = await mumaker.ephoto(lien,arg.join(' '));
+   repondre("processing ...")
+    await zk.sendMessage(dest,{image:{url:img.image},caption:" *Logo by FLASH-MD*"},{quoted:ms})
+  }catch(e){repondre(e)}
+})
 
