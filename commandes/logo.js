@@ -499,7 +499,7 @@ zokou({nomCom:"incandescent",categorie:"Logo",reaction:"😋"},async(dest,zk,com
 })
 
 
-zokou({nomCom:"child",categorie:"Logo",reaction:"😋"},async(dest,zk,commandeOptions)=>{
+zokou({nomCom:"child",categorie:"Logo",reaction:"😇"},async(dest,zk,commandeOptions)=>{
 
 
   let {ms,arg,prefixe,repondre}=commandeOptions;
@@ -516,4 +516,23 @@ zokou({nomCom:"child",categorie:"Logo",reaction:"😋"},async(dest,zk,commandeOp
     await zk.sendMessage(dest,{image:{url:img.image},caption:" *Logo by FLASH-MD*"},{quoted:ms})
   }catch(e){repondre(e)}
 })
+
+zokou({nomCom:"avenger",categorie:"Logo",reaction:"⚓"},async(dest,zk,commandeOptions)=>{
+
+
+  let {ms,arg,prefixe,repondre}=commandeOptions;
+  try{
+      if(!arg||arg=="")
+      {
+        repondre(prefixe+"avenger Flash-MD");return;
+      }
+
+    var lien="https://en.ephoto360.com/create-logo-3d-style-avengers-online-427.html";
+
+    var img = await mumaker.ephoto(lien,arg.join(' '));
+   repondre("Avenging...")
+    await zk.sendMessage(dest,{image:{url:img.image},caption:" *Logo by FLASH-MD*"},{quoted:ms})
+  }catch(e){repondre(e)}
+})
+
 
