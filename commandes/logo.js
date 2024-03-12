@@ -536,17 +536,17 @@ zokou({nomCom:"typo",categorie:"Logo",reaction:"😇"},async(dest,zk,commandeOpt
   }catch(e){repondre(e)}
 })
 
-zokou({nomCom:"avenger",categorie:"Logo",reaction:"🌠"},async(dest,zk,commandeOptions)=>{
+zokou({nomCom:"light",categorie:"Logo",reaction:"🌠"},async(dest,zk,commandeOptions)=>{
 
 
   let {ms,arg,prefixe,repondre}=commandeOptions;
   try{
       if(!arg||arg=="")
       {
-        repondre(prefixe+"avenger Flash-MD");return;
+        repondre(prefixe+"light Flash-MD");return;
       }
 
-    var lien="https://en.ephoto360.com/create-logo-3d-style-avengers-online-427.html";
+    var lien="https://en.ephoto360.com/light-text-effect-futuristic-technology-style-648.html";
 
     var img = await mumaker.ephoto(lien,arg.join(' '));
    repondre("processing ...")
