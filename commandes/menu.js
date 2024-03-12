@@ -24,7 +24,7 @@ zokou({ nomCom: "menu", categorie: "General" }, async (dest, zk, commandeOptions
         coms[com.categorie].push(com.nomCom);
     });
 
-    moment.tz.setDefault('GMT+3');
+    moment.tz.setDefault('Africa/Nairobi');
 
 // Create a date and time in EAT
 const temps = moment().format('HH:mm:ss');
@@ -32,16 +32,16 @@ const date = moment().format('DD/MM/YYYY');
 
   let infoMsg =  `
 ╭────✧𝐅𝐋𝐀𝐒𝐇-𝐌𝐃✧────◆
-│༄ *Préfix* : ${s.PREFIXE}
-│༄ *User* : ${s.OWNER_NAME}
-│༄ *Mode* : ${mode}
-│༄ *Commands* : ${cm.length} 
-│༄ *Date* : ${date}
-│༄ *Time* : ${temps} 
-│༄ *Ram* : ${format(os.totalmem() - os.freemem())}/${format(os.totalmem())}
-│༄ *Platform* : ${os.platform()}
-│༄ *Developer* : 𝐅𝐫𝐚𝐧𝐜𝐞 𝐊𝐢𝐧𝐠 
-│༄ *Version* : 𝐯7.5.20
+│🌠 *Préfix* : ${s.PREFIXE}
+│🌠 *User* : ${s.OWNER_NAME}
+│🌠 *Mode* : ${mode}
+│🌠 *Commands* : ${cm.length} 
+│🌠 *Date* : ${date}
+│🌠 *Time* : ${temps} 
+│🌠 *Ram* : ${format(os.totalmem() - os.freemem())}/${format(os.totalmem())}
+│🌠 *Platform* : ${os.platform()}
+│🌠 *Developer* : 𝐅𝐫𝐚𝐧𝐜𝐞 𝐊𝐢𝐧𝐠 
+│🌠 *Version* : 𝐯7.5.25
 ╰─────✧The-GOAT✧─────◆ \n\n`;
 
   let menuMsg=`  
