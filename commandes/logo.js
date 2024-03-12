@@ -518,25 +518,3 @@ zokou({nomCom:"child",categorie:"Logo",reaction:"😇"},async(dest,zk,commandeOp
 })
 
 
-zokou({ nomCom: "avenger", categorie: "Logo", reaction: "⚓" }, async (dest, zk, commandeOptions) => {
-    let { ms, arg, repondre, prefixe } = commandeOptions;
-    try {
-        if (!arg || arg == '') {
-            repondre("*_Example : * " + prefixe + "avenger FLASH-MD");
-            return;
-        }
-        var nar = "https://en.ephoto360.com/logo-3d-style-avengers-online-427.html";
-        //let img= await //mumaker.textpro('https://textpro.me/create-logo-3d-style-text-effect-online-427.html',arg);
-        repondre("*avenger...*");
-        var radio2 = "e0723d60-fc0d-421f-bf8f-a9b9b61e4be6";
-        var img = await mumaker.ephoto("https://en.ephoto360.com/logo-3d-style-avengers-online-427.html", arg.join(' '));
-        
-        await zk.sendMessage(dest, { image: { url: img.image }, caption: "\t *Logo by FLASH-MD*" }, { quoted: ms });
-    }
-    catch (e) {
-        repondre("🥵🥵 " + e);
-    }
-});
-
-
-
