@@ -601,7 +601,7 @@ zokou({nomCom:"marvel",categorie:"Logo",reaction:"🌠"},async(dest,zk,commandeO
         repondre(prefixe+"smarvel Flash-MD");return;
       }
 
-    var lien="https://en.ephoto360.com/marvel-logo-style-text-effects-online-419.html";
+    var lien="https://en.ephoto360.com/marvel-style-text-effects-online-419.html";
 
     var img = await mumaker.ephoto(lien,arg.join(' '));
    repondre("processing ...")
@@ -619,7 +619,7 @@ zokou({nomCom:"avenger",categorie:"Logo",reaction:"🌠"},async(dest,zk,commande
         repondre(prefixe+"avenger Flash-MD");return;
       }
 
-    var lien="https://en.ephoto360.com/avengers-logo-style-text-effect-online-427.html";
+    var lien="https://en.ephoto360.com/avengers-style-text-effect-online-427.html";
 
     var img = await mumaker.ephoto(lien,arg.join(' '));
    repondre("Avenging...")
