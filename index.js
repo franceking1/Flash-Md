@@ -859,7 +859,7 @@ ${metadata.desc}`;
 ║    Creator: *France King*
 ║    Prefix : [ ${prefixe} ]
 ║    Mode :${md}
-║    Time : ${temps} 
+║    Time :${temps} 
 ║    Total Commands : ${evt.cm.length}︎
 ╰═════════════════⊷
 
