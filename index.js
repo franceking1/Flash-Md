@@ -679,13 +679,16 @@ zk.ev.on('group-participants.update', async (group) => {
             }
 
             msg += `║ *You are welcomed here.* 
-            _You MAY read the group description FOR more info and Avoid getting removed_
+            
+*You MAY read the group description FOR more info and Avoid getting removed*
             
      
             
  ◇ *GROUP DESCRIPTION*  ◇
 
-${metadata.desc}`;
+${metadata.desc}
+
+📌Powred by *France King®🐐*`;
 
             zk.sendMessage(group.id, { image: { url: ppgroup }, caption: msg, mentions: membres });
         } else if (group.action == 'remove' && (await recupevents(group.id, "goodbye") == 'on')) {
@@ -861,7 +864,7 @@ ${metadata.desc}`;
 ║❒Creator: *France King*
 ║❒Prefix : [ ${prefixe} ]
 ║❒Mode :${md}
-║❒Updated on : *22.2.2024*
+║❒Created on : *22.2.2024*
 ║❒Total Commands : ${evt.cm.length}︎
 
      ▞▚▞▚▞▚▞▚▞▚▞▚▞▚▞▚▞▚▞▚▞▚▞▚▞▚
