@@ -855,25 +855,25 @@ ${metadata.desc}`;
                 
                 if((conf.DP).toLowerCase() === 'yes') {     
                 let cmsg = `
-          *『𝐅𝐋𝐀𝐒𝐇-𝐌𝐃 is CONNECTED』*
+*『𝐅𝐋𝐀𝐒𝐇-𝐌𝐃 is CONNECTED』*
 
      
 ║❒Creator: *France King*
 ║❒Prefix : [ ${prefixe} ]
 ║❒Mode :${md}
-║❒Updated on : 22.2.24
+║❒Updated on : *22.2.2024*
 ║❒Total Commands : ${evt.cm.length}︎
 
      ▞▚▞▚▞▚▞▚▞▚▞▚▞▚▞▚▞▚▞▚▞▚▞▚▞▚
      ▞▚▞▚▞▚▞▚▞▚▞▚▞▚▞▚▞▚▞▚▞▚▞▚▞▚
  
-║❒_Join *FLASH-MD* Channel for Updates_
+║❒ _Join *FLASH-MD* Channel for Updates_
 https://whatsapp.com/channel/0029VaTbb3p84Om9LRX1jg0P
 
-║❒*JOIN OUR WhatsApp Gʀᴏᴜᴘ*
+║❒ *JOIN OUR WhatsApp Gʀᴏᴜᴘ*
 https://chat.whatsapp.com/CtBGmUkwXiA6kGYAyU5MaX
 
-║❒*FOLLOW THE DEVELOPER* 🪄 
+║❒ *FOLLOW THE DEVELOPER* 🪄 
 https://instagram.com/france.king1 
 
 
