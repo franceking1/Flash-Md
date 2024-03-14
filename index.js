@@ -859,12 +859,12 @@ ${metadata.desc}`;
 ║    Creator: *France King*
 ║    Prefix : [ ${prefixe} ]
 ║    Mode :${md}
-║    Time :${temps} 
+║    Updated on : 22.2.20.24
 ║    Total Commands : ${evt.cm.length}︎
 ╰═════════════════⊷
 
 ╭───◇
-┃ *Thanks for choosing FLASH-MD* 
+┃ *Thanks for choosing 𝐅𝐋𝐀𝐒𝐇-𝐌𝐃* 
 ┃
 ┃
 ┃
