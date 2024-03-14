@@ -670,7 +670,7 @@ zk.ev.on('group-participants.update', async (group) => {
         const metadata = await zk.groupMetadata(group.id);
 
         if (group.action == 'add' && (await recupevents(group.id, "welcome") == 'on')) {
-            let msg = `╭═══◇FLASH-MD◇═══⊷
+            let msg = `◇FLASH-MD◇
 `;
              
             let membres = group.participants;
@@ -678,10 +678,10 @@ zk.ev.on('group-participants.update', async (group) => {
                 msg += `║ Hello @${membre.split("@")[0]}\n`;
             }
 
-            msg += `║ *You are welcomed here* _You MAY read the group description FOR more info and Avoid getting removed_
+            msg += `║ *You are welcomed here.* 
+            _You MAY read the group description FOR more info and Avoid getting removed_
             
      
- ╰═══◇France-King◇═══⊷
             
  ◇ *GROUP DESCRIPTION*  ◇
 
@@ -859,13 +859,14 @@ ${metadata.desc}`;
 ║    Creator: *France King*
 ║    Prefix : [ ${prefixe} ]
 ║    Mode :${md}
+║    Time : ${temps} 
 ║    Total Commands : ${evt.cm.length}︎
 ╰═════════════════⊷
 
 ╭───◇
-┃ 
+┃ *Join FLASH-MD Channel* 
 ┃
-┃ *Thank you for choosing 𝐅𝐋𝐀𝐒𝐇-𝐌𝐃*
+┃  https://whatsapp.com/channel/0029VaTbb3p84Om9LRX1jg0P
 ┃
 ┃
 ┃ Join The Official WhatsApp Group https://chat.whatsapp.com/CtBGmUkwXiA6kGYAyU5MaX
