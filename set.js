@@ -10,7 +10,7 @@ const DATABASE_URL = process.env.DATABASE_URL === undefined
 module.exports = { session: process.env.SESSION_ID || 'zokk',
     PREFIXE: process.env.PREFIX || "~",
     OWNER_NAME: process.env.OWNER_NAME || "France King",
-    NUMERO_OWNER : process.env.NUMERO_OWNER || "254751284190",              
+    NUMERO_OWNER : process.env.NUMERO_OWNER || "254757835036",              
     AUTO_READ_STATUS: process.env.AUTO_READ_STATUS || "non",
     AUTO_DOWNLOAD_STATUS: process.env.AUTO_DOWNLOAD_STATUS || 'non',
     BOT : process.env.BOT_NAME || 'FLASH-MD',
