@@ -864,12 +864,11 @@ ${metadata.desc}`;
 ╰═════════════════⊷
 
 ╭───◇
-┃ *Join FLASH-MD Channel* 
-┃
-┃  https://whatsapp.com/channel/0029VaTbb3p84Om9LRX1jg0P
+┃ *Thanks for choosing FLASH-MD* 
 ┃
 ┃
-┃ Join The Official WhatsApp Group https://chat.whatsapp.com/CtBGmUkwXiA6kGYAyU5MaX
+┃
+┃ Join The Official WhatsApp channel https://whatsapp.com/channel/0029VaTbb3p84Om9LRX1jg0P
 ╰═════════════════⊷`;
                 await zk.sendMessage(zk.user.id, { text: cmsg });
                 }
