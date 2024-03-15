@@ -12,7 +12,7 @@ zokou({ nomCom: "lyrics",
 
     if (!arg || arg.length === 0) return repondre("please provide me the song name");
 
-    let  result  = await axios.get(`https://raganork.tk/api/lyrics?q=${arg.join(' ')}`);
+    let  result  = await axios.get(`https://genius.com/songs/lyrics?q=${arg.join(' ')}`);
 
     let lyrics = result.data.data;
 
