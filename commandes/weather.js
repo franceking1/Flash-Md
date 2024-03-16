@@ -22,7 +22,7 @@ if (!text) return zk.reply("Give me location.Baka!!");
             textw += `*Country:-* ${wdata.data.sys.country}\n`;
 
             dest.sendMessage(
-                citel.chat, {
+                zk.chat, {
                     text: textw,
                 }, {
                     quoted: zk,
