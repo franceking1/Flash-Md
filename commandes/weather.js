@@ -1,6 +1,6 @@
-const {zokou} = require('../framework/zokou');
+const axios = require('axios');
 const fs = require('fs');
-const { default: axios } = require('axios');
+const {zokou} = require('../framework/zokou');
 
 zokou({nomCom : "weather" , categorie : "NEW"},async (dest , zk , commandeOptions)=>{
   const {ms,repondre,arg} = commandeOptions ;
