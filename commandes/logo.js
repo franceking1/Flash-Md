@@ -591,3 +591,19 @@ zokou({nomCom:"sunlight",categorie:"Logo",reaction:"🌠"},async(dest,zk,command
   }catch(e){repondre(e)}
 })
 
+zokou({ nomCom: "avenger", categorie: "Logo", reaction: "👺" }, async (dest, zk, commandeOptions) => {
+  const { arg, ms, prefixe,repondre } = commandeOptions;
+  if (!arg[0]) {
+    repondre(`Example of using commande:\n ${prefixe}Avenger France King`);
+    return;
+  }
+
+  const text = arg.join(" ");
+  mumaker.textpro("https://textpro.me/avengers-text-effect-online-974.html", text)
+    .then((data) => {
+      zk.sendMessage(dest, { image: { url: data.image }, caption: 'Logo BY *FLASH-MD*' }, { quoted: ms });
+    })
+    .catch((err) => {
+      console.error("An error has occurred :", err);
+    });
+});
