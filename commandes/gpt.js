@@ -13,8 +13,8 @@ if (!global.temp.openAIHistory)
 
 const { openAIUsing, openAIHistory } = global.temp;
 l
-	config: {
-		name: "gpt",
+	zokou: {
+		nomCom: "q",
 		version: "1.3",
 		author: "France King",
 		countDown: 5,
