@@ -1,10 +1,33 @@
-case 'weather':
+const {zokou} = require('../framework/zokou');
+const fs = require('fs');
+const { default: axios } = require('axios');
 
-        zk.sendMessage(from, { react: { text: "🛰", key: m.key }}) 
-        if (!args[0]) return reply("Enter your location to search weather.")
-        myweather = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${args.join(" ")}&units=metric&appid=e409825a497a0c894d2dd975542234b0&language=tr`)
+zokou({nomCom : "weather" , categorie : "NEW"},async (dest , zk , commandeOptions)=>{
+  const {ms,repondre,arg} = commandeOptions ;
+if (!text) return zk.reply("Give me location.Baka!!");
+            let wdata = await axios.get(
+                `https://api.openweathermap.org/data/2.5/weather?q=${text}&units=metric&appid=060a6bcfa19809c2cd4d97a212b19273&language=en`
+            );
+            let textw = "";
+            textw += `*🌟Weather of  ${text}*\n\n`;
+            textw += `*Weather:-* ${wdata.data.weather[0].main}\n`;
+            textw += `*Description:-* ${wdata.data.weather[0].description}\n`;
+            textw += `*Avg Temp:-* ${wdata.data.main.temp}\n`;
+            textw += `*Feels Like:-* ${wdata.data.main.feels_like}\n`;
+            textw += `*Pressure:-* ${wdata.data.main.pressure}\n`;
+            textw += `*Humidity:-* ${wdata.data.main.humidity}\n`;
+            textw += `*Humidity:-* ${wdata.data.wind.speed}\n`;
+            textw += `*Latitude:-* ${wdata.data.coord.lat}\n`;
+            textw += `*Longitude:-* ${wdata.data.coord.lon}\n`;
+            textw += `*Country:-* ${wdata.data.sys.country}\n`;
 
-        const weathertext = `           🌤 *Weather Report* 🌤  \n\n🔎 *Search Location:* ${myweather.data.name}\n*💮 Country:* ${myweather.data.sys.country}\n🌈 *Weather:* ${myweather.data.weather[0].description}\n🌡️ *Temperature:* ${myweather.data.main.temp}°C\n❄️ *Minimum Temperature:* ${myweather.data.main.temp_min}°C\n📛 *Maximum Temperature:* ${myweather.data.main.temp_max}°C\n💦 *Humidity:* ${myweather.data.main.humidity}%\n🎐 *Wind:* ${myweather.data.wind.speed} km/h\n`
-        zk.sendMessage(from, { video: { url: 'https://media.tenor.com/bC57J4v11UcAAAPo/weather-sunny.mp4' }, gifPlayback: true, caption: weathertext }, { quoted: m })
+            dest.sendMessage(
+                citel.chat, {
+                    text: textw,
+                }, {
+                    quoted: zk,
+                }
+            );
 
-        break;
+        }
+    )
