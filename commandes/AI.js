@@ -87,16 +87,17 @@ fetch(`http://api.brainshop.ai/get?bid=177607&key=NwzhALqeO1kubFVD&uid=[uid]&msg
 
 const fetchData = async (prompt) => {
   try {
-    const response = await axios.get(`https://giftedgpt.vercel.app/?text=${prompt}`);
-    // Handle the response data
-    console.log(response.data);
+   const axios = require('axios'); 
+
+const fetchData = async (prompt) => {
+  try {
+    const response = await axios.get(`https://giftedgpt.vercel.app/?text=${encodeURIComponent(prompt)}`);
+    console.log(response.data); // Handle the response data as per your requirement
   } catch (error) {
-    // Handle any error that occurred during the request
-    console.error(error);
+    console.error(error); // Handle any error that occurred during the request
   }
 };
 
 // Call the fetchData function with the prompt variable
-fetchData("prompt");
-
-  
+const prompt = "Your prompt text here";
+fetchData(prompt);
