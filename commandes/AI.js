@@ -83,19 +83,20 @@ fetch(`http://api.brainshop.ai/get?bid=177607&key=NwzhALqeO1kubFVD&uid=[uid]&msg
   
       // Regrouper les arguments en une seule chaîne séparée par "-"
       const question = arg.join(' ');
-      const response = await axios.get(`https://giftedgpt.vercel.app?q=${question}`);
-      
-      const data = response.data;
-      if (data) {
-        repondre(data.data);
-      } else {
-        repondre("Error during response generation.");
-      }
-    } catch (error) {
-      console.error('Erreur:', error.message || 'Une erreur s\'est produite');
-      repondre("Oops, an error occurred while processing your request.");
-    }
-  });
+      const axios = require('axios'); // Import the axios library
 
+const fetchData = async (prompt) => {
+  try {
+    const response = await axios.get(`https://giftedgpt.vercel.app/?text=${prompt}`);
+    // Handle the response data
+    console.log(response.data);
+  } catch (error) {
+    // Handle any error that occurred during the request
+    console.error(error);
+  }
+};
+
+// Call the fetchData function with the prompt variable
+fetchData("prompt");
 
   
