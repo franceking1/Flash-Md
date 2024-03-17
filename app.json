@@ -67,7 +67,13 @@
       "description":"put your session ID , make sure it starts with eyJub2I...",   
       "value":"",
       "required": true
-      
+
+    },
+  "OPENAI_API_KEY": {
+    "description": "insert your openai api key here for gpt to function (this is optionnal)",
+     "required" :false
+    }  
+	    
     },
     "OWNER_NAME":
     {
