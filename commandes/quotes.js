@@ -3,7 +3,7 @@ const traduire = require("../framework/traduction") ;
 const { default: axios } = require('axios'); 
 
 
-  zokou({ nomCom: "quote", reaction: "🌟", categorie: "NEW" }, async (dest, zk, commandeOptions) => {
+  zokou({ nomCom: "quotes", reaction: "🌟", categorie: "NEW" }, async (dest, zk, commandeOptions) => {
     const { repondre, arg, ms } = commandeOptions;
   
   
