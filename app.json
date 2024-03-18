@@ -72,8 +72,7 @@
   "OPENAI_API_KEY": {
     "description": "insert your openai api key here for gpt to function (this is optionnal)",
      "required" :false
-    }  
-	    
+      
     },
     "OWNER_NAME":
     {
