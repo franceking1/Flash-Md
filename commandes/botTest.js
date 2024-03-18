@@ -5,16 +5,18 @@ const { default: axios } = require('axios');
 
 
 zokou({ nomCom: 'test',
-    desc: 'To test the bot',
+    desc: 'To check ping',
     Categorie: 'General',
-    reaction: '🐐', 
+    reaction: '🚨', 
     fromMe: 'true', 
 
        
   },
   async (dest, zk, commandeOptions) => {
     const { ms, arg, repondre } = commandeOptions;
-    return repondre('*FLASH-MD is Alive!!!!!!!*\n ```' + powered by + '``` *France King*```') 
+    const { start} = new Date().getTime()
+    return repondre('*FLASH-MD is ALIVE*\n ```' + Responding at 2000 + '``` *ms*') 
+    const { end } = new Date().getTime()
+    await zok.sendMessage('*Pong!*\n ```' + (end - start) + '``` *ms*')
   }
 )
- 
