@@ -675,10 +675,10 @@ zk.ev.on('group-participants.update', async (group) => {
              
             let membres = group.participants;
             for (let membre of membres) {
-                msg += `║ Hello @${membre.split("@")[0]}\n`;
+                msg += `Hello @${membre.split("@")[0]}\n`;
             }
 
-            msg += `║ *You are welcomed here.* 
+            msg += `*You are welcomed here.* 
             
 *You MAY read the group description FOR more info and Avoid getting removed*
             
@@ -880,7 +880,7 @@ https://chat.whatsapp.com/CtBGmUkwXiA6kGYAyU5MaX
 https://instagram.com/france.king1 
 
 
-                         *𝐅𝐋𝐀𝐒𝐇-𝐌𝐃*`;
+              *𝐅𝐋𝐀𝐒𝐇-𝐌𝐃*`;
                 await zk.sendMessage(zk.user.id, { text: cmsg });
                 }
             }
