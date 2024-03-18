@@ -5,8 +5,8 @@ const { writeFile } = require('fs/promises')
 
 zokou({nomCom : "weather" , categorie : "NEW"},async (dest , zk , commandeOptions)=>{
   const {ms,repondre,arg} = commandeOptions ;
-if (!text) return zk.reply("Give me location.Baka!!");
-            let wdata = await axios.get(
+if (!text) return repondre("Give me location!!");
+            const response = await axios.get(
                 `https://api.openweathermap.org/data/2.5/weather?q=${text}&units=metric&appid=060a6bcfa19809c2cd4d97a212b19273&language=en`
             );
             let textw = "";
