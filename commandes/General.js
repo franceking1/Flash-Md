@@ -95,7 +95,7 @@ zokou({ nomCom: "support", categorie: "General" }, async (dest, zk, commandeOpti
   const { ms, repondre, auteurMessage, } = commandeOptions; 
  
   repondre("look on pm sir ")
-  await zk.sendMessage(auteurMessage,{text : `https://wa.me/254751284190`},{quoted :ms})
+  await zk.sendMessage(auteurMessage,{text : `https://wa.me/254757835036`},{quoted :ms})
 
 })
 
