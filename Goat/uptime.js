@@ -1,6 +1,6 @@
 module.exports = {
   config: {
-    name: "uptime",
+    nomCom: "uptime",
     aliases: ["up", "upt"],
     version: "1.0",
     author: "XyryllPanget",
@@ -11,7 +11,7 @@ module.exports = {
     longDescription: {
       en: "Displays the amount of time that the bot has been running for."
     },
-    category: "System",
+    categorie: "System",
     guide: {
       en: "Use {p}uptime to display the uptime of the bot."
     }
