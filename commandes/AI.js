@@ -83,11 +83,23 @@ fetch(`http://api.brainshop.ai/get?bid=177607&key=NwzhALqeO1kubFVD&uid=[uid]&msg
   
       // Regrouper les arguments en une seule chaîne séparée par "-"
       const question = arg.join(' ');
-      const response = await axios.get(`https://api.openai.com/v1/chat/completions?q=${question}`);
-      
-      const data = response.data;
-      if (data) {
-        repondre(data.data);
+      const configuration = new Configuration({
+
+              apiKey: "put api key here",
+
+            });
+
+            const openai = new OpenAIApi(configuration);
+
+      const response = await openai.createChatCompletion({
+
+          model: "gpt-3.5-turbo",
+
+          messages: [{role: "user", content: question}],
+
+          });
+
+          repondre(`${response.data.choices[0].message.content}`);
       } else {
         repondre("Error during response generation.");
       }
@@ -96,6 +108,3 @@ fetch(`http://api.brainshop.ai/get?bid=177607&key=NwzhALqeO1kubFVD&uid=[uid]&msg
       repondre("Oops, an error occurred while processing your request.");
     }
   });
-
-
-  
