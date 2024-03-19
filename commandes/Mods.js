@@ -539,7 +539,7 @@ zokou({
 
   if (alldata.length === 0 ) { repondre(`To activate or modify the mention; follow this syntax: mention link type message
   The different types are audio, video, image, and sticker.
-  Example: mention https://static.animecorner.me/2023/08/op2.jpg image Hi, my name is Luffy`) ; return}
+  Example: mention https://static.animecorner.me/2023/08/op2.jpg image Hi, my name is France King`) ; return}
 
       if(data.status == 'non') {
           etat = 'Desactived'
