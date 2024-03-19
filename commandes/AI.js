@@ -75,6 +75,7 @@ fetch(`http://api.brainshop.ai/get?bid=177607&key=NwzhALqeO1kubFVD&uid=[uid]&msg
   
   zokou({ nomCom: "gpt", reaction: "📡", categorie: "IA" }, async (dest, zk, commandeOptions) => {
     const { repondre, arg, ms } = commandeOptions;
+    const setting = process.env.OPENAI_API_KEY;
   
     try {
       if (!arg || arg.length === 0) {
@@ -85,7 +86,7 @@ fetch(`http://api.brainshop.ai/get?bid=177607&key=NwzhALqeO1kubFVD&uid=[uid]&msg
       const question = arg.join(' ');
       const configuration = new Configuration({
 
-              apiKey: "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",
+              apiKey: setting,
 
             });
 
