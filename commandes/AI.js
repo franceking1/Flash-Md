@@ -74,47 +74,25 @@ fetch(`http://api.brainshop.ai/get?bid=177607&key=NwzhALqeO1kubFVD&uid=[uid]&msg
   });
   
   zokou({ nomCom: "gpt", reaction: "📡", categorie: "IA" }, async (dest, zk, commandeOptions) => {
-    const { repondre, arg, ms } = commandeOptions;
-    const setting = process.env.OPENAI_API_KEY;
-  
-    try {
-      if (!arg || arg.length === 0) {
-        return repondre(`Please ask a question.`);
-      }
-  
-      // Regrouper les arguments en une seule chaîne séparée par "-"
-      const question = arg.join(' ');
-      const configuration = new Configuration({
+  const { repondre, arg, ms } = commandeOptions;
 
-              apiKey: setting,
-
-            });
-
-            const openai = new OpenAIApi(configuration);
-
-      const response = await openai.createChatCompletion({
-
-          model: "gpt-3.5-turbo",
-
-          messages: [{role: "user", content: question}],
-
-          });
-
-          repondre(`${response.data.choices[0].message.content}`);
-     
-    } catch (error) {
-    
-              if (error.response) {
-
-            console.log(error.response.status);
-                        console.log(error.response.data);
-                                    console.log(`${error.response.status}\n\n${error.response.data}`);
-                                              } else {
-
-            console.log(error);
-            
-            }
-      
-      repondre(error.response.status)
+  try {
+    if (!arg || arg.length === 0) {
+      return repondre(`Veuillez poser une questions.`);
     }
-  });
+
+    // Regrouper les arguments en une seule chaîne séparée par "-"
+    const question = arg.join(' ');
+    const response = await axios.get(`https://ultimetron.guruapi.tech/gpt3?prompt=${question}`);
+    
+    const data = response.data;
+    if (data) {
+      repondre(data.data);
+    } else {
+      repondre("Erreur lors de la génération de la reponse");
+    }
+  } catch (error) {
+    console.error('Erreur:', error.message || 'Une erreur s\'est produite');
+    repondre("Oups, une erreur est survenue lors du traitement de votre demande.");
+  }
+});
