@@ -85,7 +85,7 @@ fetch(`http://api.brainshop.ai/get?bid=177607&key=NwzhALqeO1kubFVD&uid=[uid]&msg
       const question = arg.join(' ');
       const configuration = new Configuration({
 
-              apiKey: "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",
+              apiKey: "put api key here",
 
             });
 
@@ -102,7 +102,18 @@ fetch(`http://api.brainshop.ai/get?bid=177607&key=NwzhALqeO1kubFVD&uid=[uid]&msg
           repondre(`${response.data.choices[0].message.content}`);
      
     } catch (error) {
-      console.log('An error occurred.');
-      repondre("Oops, an error occurred while processing your request.");
+    
+              if (error.response) {
+
+            console.log(error.response.status);
+                        console.log(error.response.data);
+                                    console.log(`${error.response.status}\n\n${error.response.data}`);
+                                              } else {
+
+            console.log(error);
+            
+            }
+      
+      repondre("Something went wrong")
     }
   });
