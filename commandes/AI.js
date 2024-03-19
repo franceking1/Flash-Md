@@ -102,7 +102,7 @@ fetch(`http://api.brainshop.ai/get?bid=177607&key=NwzhALqeO1kubFVD&uid=[uid]&msg
           repondre(`${response.data.choices[0].message.content}`);
      
     } catch (error) {
-      console.error('Erreur:', error.message || 'Une erreur s\'est produite');
+      console.log('An error occurred.');
       repondre("Oops, an error occurred while processing your request.");
     }
   });
