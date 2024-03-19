@@ -83,16 +83,16 @@ fetch(`http://api.brainshop.ai/get?bid=177607&key=NwzhALqeO1kubFVD&uid=[uid]&msg
 
     // Regrouper les arguments en une seule chaîne séparée par "-"
     const question = arg.join(' ');
-    const response = await axios.get(`https://ultimetron.guruapi.tech/gpt3?prompt=${prompt}`);
+    const response = await axios.get(`https://ultimetron.guruapi.tech/gpt3?q=${question}`);
     
     const data = response.data;
     if (data) {
       repondre(data.data);
     } else {
-      repondre("Erreur lors de la génération de la reponse");
+      repondre("Error while trying generating response.");
     }
   } catch (error) {
     console.error('Erreur:', error.message || 'Une erreur s\'est produite');
-    repondre("Oups, une erreur est survenue lors du traitement de votre demande.");
+    repondre("Oops, an error occurred while processing your request.");
   }
 });
