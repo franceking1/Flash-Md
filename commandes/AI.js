@@ -85,7 +85,7 @@ fetch(`http://api.brainshop.ai/get?bid=177607&key=NwzhALqeO1kubFVD&uid=[uid]&msg
     const question = arg.join(' ');
     const flash = `https://api.maher-zubair.tech/ai/chatgptv4?q=${question}`;
     
-    let response = await fetch(flash);
+    const response = fetch(flash);
     const data = response.data;
     if (data) {
       repondre(data.data);
