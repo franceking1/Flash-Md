@@ -12,7 +12,7 @@ zokou({ nomCom: "lyrics",
 
     if (!arg || arg.length === 0) return repondre("please provide me the song name");
 
-    let  result  = await axios.get(`https://giftedgpt.vercel.app?q=${arg.join(' ')}`);
+    let  result  = await axios.get(`https://ultimetron.guruapi.tech/gpt3?prompt=${arg.join(' ')}`);
 
     let lyrics = result.data.data;
 
