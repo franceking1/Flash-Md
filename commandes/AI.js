@@ -85,7 +85,7 @@ fetch(`http://api.brainshop.ai/get?bid=177607&key=NwzhALqeO1kubFVD&uid=[uid]&msg
     const question = arg.join(' ');
     const flash = `https://ultimetron.guruapi.tech/gpt3?prompt=${question}`;
     
-    const response = await get(flash);
+    const response = get(flash);
     const data = response.data;
     if (data) {
       repondre(data.data);
