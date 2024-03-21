@@ -58,7 +58,7 @@ fetch(`http://api.brainshop.ai/get?bid=177607&key=NwzhALqeO1kubFVD&uid=[uid]&msg
       const response = await axios.get(`https://vihangayt.me/tools/photoleap?q=${image}`);
       
       const data = response.data;
-      let caption = '*powered by FLASH-MD*';
+      let caption = '*powered by ZOKOU-MD*';
       
       if (data.status && data.owner && data.data) {
         // Utiliser les données retournées par le service
@@ -74,25 +74,28 @@ fetch(`http://api.brainshop.ai/get?bid=177607&key=NwzhALqeO1kubFVD&uid=[uid]&msg
   });
   
   zokou({ nomCom: "gpt", reaction: "📡", categorie: "IA" }, async (dest, zk, commandeOptions) => {
-  const { repondre, arg, ms } = commandeOptions;
-
-  try {
-    if (!arg || arg.length === 0) {
-      return repondre(`please ask a question.`);
+    const { repondre, arg, ms } = commandeOptions;
+  
+    try {
+      if (!arg || arg.length === 0) {
+        return repondre(`Please ask a question.`);
+      }
+  
+      // Regrouper les arguments en une seule chaîne séparée par "-"
+      const question = arg.join(' ');
+      const response = await axios.get(`https://ultimetron.guruapi.tech/gpt3?prompt=${question}`);
+      
+      const data = response.data;
+      if (data) {
+        repondre(data.data);
+      } else {
+        repondre("Error during response generation.");
+      }
+    } catch (error) {
+      console.error('Erreur:', error.message || 'Une erreur s\'est produite');
+      repondre("Oops, an error occurred while processing your request.");
     }
+  });
 
-    // Regrouper les arguments en une seule chaîne séparée par "-"
-    const question = arg.join(' ');
-    const response = await axios.get(`https://ultimetron.guruapi.tech/gpt3?prompt=${question})`;
-    
-    const data = response.data;
-    if (data) {
-      repondre(data.data);
-    } else {
-      repondre("Error while trying to generate your response.");
-    }
-  } catch (error) {
-    console.error('Erreur:', error.message || 'Une erreur s\'est produite');
-    repondre("Oops, an error occurred while processing your request.");
-  }
-});
+
+  
