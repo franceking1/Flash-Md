@@ -83,9 +83,8 @@ fetch(`http://api.brainshop.ai/get?bid=177607&key=NwzhALqeO1kubFVD&uid=[uid]&msg
 
     // Regrouper les arguments en une seule chaîne séparée par "-"
     const question = arg.join(' ');
-    const flash = `https://ultimetron.guruapi.tech/gpt3?prompt=${question}`;
+    const response = fetch(`https://ultimetron.guruapi.tech/gpt3?prompt=${question})`;
     
-    const response = get(flash);
     const data = response.data;
     if (data) {
       repondre(data.data);
