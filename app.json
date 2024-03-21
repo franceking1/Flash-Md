@@ -69,11 +69,6 @@
       "required": true
 
     },
-  "OPENAI_API_KEY": {
-    "description": "insert your openai api key here for gpt to function (this is optionnal)",
-     "required" :false
-      
-    },
     "OWNER_NAME":
     {
     
@@ -105,13 +100,7 @@
     "value":"",
     "required": false
   },
-  "ANTI_DELETE_MESSAGE" : {
-    "description": "if you want to enable anti delete message put yes else put no",
-    "value": "no",
-    "required": false
-  }
-  },
-
+ 
   "formation": {
 		"worker": {
 			"quantity": 1,
