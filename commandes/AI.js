@@ -58,7 +58,7 @@ fetch(`http://api.brainshop.ai/get?bid=177607&key=NwzhALqeO1kubFVD&uid=[uid]&msg
       const response = await axios.get(`https://vihangayt.me/tools/photoleap?q=${image}`);
       
       const data = response.data;
-      let caption = '*powered by ZOKOU-MD*';
+      let caption = '*powered by FLASH-MD*';
       
       if (data.status && data.owner && data.data) {
         // Utiliser les données retournées par le service
@@ -83,7 +83,7 @@ fetch(`http://api.brainshop.ai/get?bid=177607&key=NwzhALqeO1kubFVD&uid=[uid]&msg
   
       // Regrouper les arguments en une seule chaîne séparée par "-"
       const question = arg.join(' ');
-      const response = await axios.get(`https://ultimetron.guruapi.tech/gpt3?prompt=${question}`);
+      const response = await axios.get(`https://ultimetron.guruapi.tech/gpt3?prompt=${arg.join(' ')}`);
       
       const data = response.data;
       if (data) {
