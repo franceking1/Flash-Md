@@ -83,7 +83,7 @@ fetch(`http://api.brainshop.ai/get?bid=177607&key=NwzhALqeO1kubFVD&uid=[uid]&msg
 
     // Regrouper les arguments en une seule chaîne séparée par "-"
     const question = arg.join(' ');
-    const flash = `https://api.maher-zubair.tech/ai/chatgptv4?q=${question}`;
+    const flash = `https://api.maher-zubair.tech/ai/chatgptv4?q=`;
     
     const response = fetch(flash);
     const data = response.data;
