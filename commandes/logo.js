@@ -591,3 +591,53 @@ zokou({nomCom:"sunlight",categorie:"Logo",reaction:"🌠"},async(dest,zk,command
   }catch(e){repondre(e)}
 })
 
+zokou({ nomCom: "scifi", categorie: "Logo", reaction: "💡" }, async (dest, zk, commandeOptions) => {
+  const { arg, ms, prefixe,repondre } = commandeOptions;
+  if (!arg[0]) {
+    repondre(`Example of using command:\n ${prefixe}scifi My text`);
+    return;
+  }
+
+  const text = arg.join(" ");
+  mumaker.textpro("https://textpro.me/create-3d-sci-fi-text-effect-online-1050.html", text)
+    .then((data) => {
+      zk.sendMessage(dest, { image: { url: data.image }, caption: 'Logo BY *FLASH-MD*' }, { quoted: ms });
+    })
+    .catch((err) => {
+      console.error("Une erreur s'est produite :", err);
+    });
+});
+
+zokou({ nomCom: "magma", categorie: "Logo", reaction: "💡" }, async (dest, zk, commandeOptions) => {
+  const { arg, ms, prefixe,repondre } = commandeOptions;
+  if (!arg[0]) {
+    repondre(`Example of using command:\n ${prefixe}magma My text`);
+    return;
+  }
+
+  const text = arg.join(" ");
+  mumaker.textpro("https://textpro.me/create-a-magma-hot-text-effect-online-1030.html", text)
+    .then((data) => {
+      zk.sendMessage(dest, { image: { url: data.image }, caption: 'Logo BY *FLASH-MD*' }, { quoted: ms });
+    })
+    .catch((err) => {
+      console.error("Une erreur s'est produite :", err);
+    });
+});
+
+zokou({ nomCom: "leaves", categorie: "Logo", reaction: "💡" }, async (dest, zk, commandeOptions) => {
+  const { arg, ms, prefixe,repondre } = commandeOptions;
+  if (!arg[0]) {
+    repondre(`Example of using command:\n ${prefixe}leaves My text`);
+    return;
+  }
+
+  const text = arg.join(" ");
+  mumaker.textpro("https://textpro.me/natural-leaves-text-effect-931.html", text)
+    .then((data) => {
+      zk.sendMessage(dest, { image: { url: data.image }, caption: 'Logo BY *FLASH-MD*' }, { quoted: ms });
+    })
+    .catch((err) => {
+      console.error("Une erreur s'est produite :", err);
+    });
+});
