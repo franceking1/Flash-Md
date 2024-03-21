@@ -591,7 +591,7 @@ zokou({nomCom:"sunlight",categorie:"Logo",reaction:"🌠"},async(dest,zk,command
   }catch(e){repondre(e)}
 })
 
-zokou({ nomCom: "scifi", categorie: "Logo", reaction: "💡" }, async (dest, zk, commandeOptions) => {
+zokou({ nomCom: "scifi", categorie: "Logo", reaction: "💥" }, async (dest, zk, commandeOptions) => {
   const { arg, ms, prefixe,repondre } = commandeOptions;
   if (!arg[0]) {
     repondre(`Example of using command:\n ${prefixe}scifi My text`);
@@ -608,7 +608,7 @@ zokou({ nomCom: "scifi", categorie: "Logo", reaction: "💡" }, async (dest, zk,
     });
 });
 
-zokou({ nomCom: "magma", categorie: "Logo", reaction: "💡" }, async (dest, zk, commandeOptions) => {
+zokou({ nomCom: "magma", categorie: "Logo", reaction: "♨️" }, async (dest, zk, commandeOptions) => {
   const { arg, ms, prefixe,repondre } = commandeOptions;
   if (!arg[0]) {
     repondre(`Example of using command:\n ${prefixe}magma My text`);
@@ -625,7 +625,7 @@ zokou({ nomCom: "magma", categorie: "Logo", reaction: "💡" }, async (dest, zk,
     });
 });
 
-zokou({ nomCom: "leaves", categorie: "Logo", reaction: "💡" }, async (dest, zk, commandeOptions) => {
+zokou({ nomCom: "leaves", categorie: "Logo", reaction: "☘️" }, async (dest, zk, commandeOptions) => {
   const { arg, ms, prefixe,repondre } = commandeOptions;
   if (!arg[0]) {
     repondre(`Example of using command:\n ${prefixe}leaves My text`);
