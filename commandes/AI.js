@@ -82,11 +82,11 @@ fetch(`http://api.brainshop.ai/get?bid=177607&key=NwzhALqeO1kubFVD&uid=[uid]&msg
     }
 
     // Regrouper les arguments en une seule chaîne séparée par "-"
-    const question = arg.join(' ');
-    const flash = `https://api.maher-zubair.tech/ai/chatgptv4?q=`;
+    const prompt = arg.join(' ');
+    const flash = `https://ultimetron.guruapi.tech/gpt3?prompt=${prompt}`;
     
     const response = fetch(flash);
-    const data = response.data;
+    const data = flash.data;
     if (data) {
       repondre(data.data);
     } else {
