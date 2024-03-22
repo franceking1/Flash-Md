@@ -38,7 +38,7 @@ const date = moment().format('DD/MM/YYYY');
 │🌠 *Commands* : ${cm.length} 
 │🌠 *Date* : ${date}
 │🌠 *Time* : ${temps} 
-│🌠 *RAM* : ${format(os.totalmem() - os.freemem())}/${format(os.totalmem())}
+│🌠 *Ram* : ${format(os.totalmem() - os.freemem())}/${format(os.totalmem())}
 │🌠 *Uptime* : ${runtime(process.uptime())}
 │🌠 *Developer* : 𝐅𝐫𝐚𝐧𝐜𝐞 𝐊𝐢𝐧𝐠 
 ╰─────✧The-GOAT✧─────◆ \n\n`;
