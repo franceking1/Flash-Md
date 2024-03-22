@@ -39,7 +39,7 @@ const date = moment().format('DD/MM/YYYY');
 │🌠 *Date* : ${date}
 │🌠 *Time* : ${temps} 
 │🌠 *Ram* : ${format(os.totalmem() - os.freemem())}/${format(os.totalmem())}
-│🌠 *Uptime* : ${runtime(process.uptime())}
+│🌠 *Platform* : Linux 
 │🌠 *Developer* : 𝐅𝐫𝐚𝐧𝐜𝐞 𝐊𝐢𝐧𝐠 
 ╰─────✧The-GOAT✧─────◆ \n\n`;
 
