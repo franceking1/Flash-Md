@@ -38,10 +38,9 @@ const date = moment().format('DD/MM/YYYY');
 │🌠 *Commands* : ${cm.length} 
 │🌠 *Date* : ${date}
 │🌠 *Time* : ${temps} 
-│🌠 *Ram* : ${format(os.totalmem() - os.freemem())}/${format(os.totalmem())}
-│🌠 *Platform* : ${os.platform()}
+│🌠 *RAM* : ${format(os.totalmem() - os.freemem())}/${format(os.totalmem())}
+│🌠 *Uptime* : ${runtime(process.uptime())}
 │🌠 *Developer* : 𝐅𝐫𝐚𝐧𝐜𝐞 𝐊𝐢𝐧𝐠 
-│🌠 *Version* : 𝐯7.5.25
 ╰─────✧The-GOAT✧─────◆ \n\n`;
 
   let menuMsg=`  
