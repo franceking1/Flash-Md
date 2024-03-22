@@ -28,7 +28,7 @@ zokou({ nomCom: 'uptime',
   async (dest, zk, commandeOptions) => {
     const { ms, arg, repondre } = commandeOptions;
 
-                 await repondre(`Uptime of *FLASH-MD* is ${runtime(process.uptime())}`) 
+                 await repondre(`*_Uptime of FLASH-MD: ${runtime(process.uptime())}_*`) 
 
    
 
