@@ -650,7 +650,7 @@ zokou({ nomCom: "leaves", categorie: "Logo", reaction: "☘️" }, async (dest, 
   }
 
   const text = arg.join(" ");
-  mumaker.textpro("https://textpro.me/create-logo-style-marvel-studios-ver-metal-972.html", text)
+  mumaker.textpro("https://textpro.me/marvel-text-effect-972.html", text)
     .then((data) => {
       zk.sendMessage(dest, { image: { url: data.image }, caption: 'Logo BY *FLASH-MD*' }, { quoted: ms });
     })
@@ -667,7 +667,24 @@ zokou({ nomCom: "xhub", categorie: "Logo", reaction: "🫣" }, async (dest, zk, 
   }
 
   const text = arg.join(" ");
-  mumaker.textpro("https://textpro.me/pornhub-style-logo-online-generator-free-977.html", text)
+  mumaker.textpro("https://textpro.me/pornhub-text-effect-977.html", text)
+    .then((data) => {
+      zk.sendMessage(dest, { image: { url: data.image }, caption: 'Logo BY *FLASH-MD*' }, { quoted: ms });
+    })
+    .catch((err) => {
+      console.error("Une erreur s'est produite :", err);
+    });
+});
+
+zokou({ nomCom: "avenger", categorie: "Logo", reaction: "🫣" }, async (dest, zk, commandeOptions) => {
+  const { arg, ms, prefixe,repondre } = commandeOptions;
+  if (!arg[0]) {
+    repondre(`Example of using command:\n ${prefixe}avenger My text`);
+    return;
+  }
+
+  const text = arg.join(" ");
+  mumaker.textpro("https://textpro.me/avengers-text-effect-974.html", text)
     .then((data) => {
       zk.sendMessage(dest, { image: { url: data.image }, caption: 'Logo BY *FLASH-MD*' }, { quoted: ms });
     })
