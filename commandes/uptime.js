@@ -1,29 +1,37 @@
-const { zokou } 
-module.exports = {
-  zokou: {
-    nomCom: "uptime",
-    aliases: ["up", "upt"],
-    version: "1.0",
-    author: "XyryllPanget",
-    role: 0,
-    shortDescription: {
-      en: "Displays the uptime of the bot."
-    },
-    longDescription: {
-      en: "Displays the amount of time that the bot has been running for."
-    },
-    categorie: "New",
-    guide: {
-      en: "Use {p}uptime to display the uptime of the bot."
-    }
+const { zokou } = require("../framework/zokou");
+const moment = require("moment-timezone");
+
+const { default: axios } = require('axios');
+
+const runtime = function (seconds) { 
+ seconds = Number(seconds); 
+ var d = Math.floor(seconds / (3600 * 24)); 
+ var h = Math.floor((seconds % (3600 * 24)) / 3600); 
+ var m = Math.floor((seconds % 3600) / 60); 
+ var s = Math.floor(seconds % 60); 
+ var dDisplay = d > 0 ? d + (d == 1 ? " day, " : " Day, ") : ""; 
+ var hDisplay = h > 0 ? h + (h == 1 ? " hour, " : " Hours, ") : ""; 
+ var mDisplay = m > 0 ? m + (m == 1 ? " minute, " : " Minutes, ") : ""; 
+ var sDisplay = s > 0 ? s + (s == 1 ? " second" : " Seconds") : ""; 
+ return dDisplay + hDisplay + mDisplay + sDisplay; 
+ } 
+
+
+zokou({ nomCom: 'uptime',
+    desc: 'To check runtime',
+    Categorie: 'General',
+    reaction: '⚙️', 
+    fromMe: 'true', 
+
+
   },
-  onStart: async function ({ api, event, args }) {
-    const uptime = process.uptime();
-    const seconds = Math.floor(uptime % 60);
-    const minutes = Math.floor((uptime / 60) % 60);
-    const hours = Math.floor((uptime / (60 * 60)) % 24);
-    const days = Math.floor(uptime / (60 * 60 * 24));
-    const uptimeString = `${hours} hours ${minutes} minutes ${seconds} second`;
-    api.sendMessage(`hello user, the bot has been running for ${uptimeString}.`, event.threadID);
+  async (dest, zk, commandeOptions) => {
+    const { ms, arg, repondre } = commandeOptions;
+
+                 await repondre(`Uptime of *FLASH-MD* is ${runtime(process.uptime())}`) 
+
+   
+
+
   }
-};
+);
