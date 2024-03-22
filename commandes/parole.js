@@ -22,7 +22,7 @@ zokou({ nomCom: "lyrics",
  const lyrics = await firstSong.lyrics(); 
  await zk.sendMessage(dest, { text: lyrics}, { quoted: ms }); 
  } catch (error) { 
-             reply(`I did not find any lyrics for ${text}. Try searching a different song.`); 
+             repondre(`I did not find any lyrics for ${text}. Try searching a different song.`); 
              console.log(error); 
          } 
 
