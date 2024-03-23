@@ -2,11 +2,11 @@
   "name": "FLASH-MD",
   "version": "2.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "flash.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "s": "node index.js",
-    "flashmd": "pm2 start index.js --attach --max-memory-restart 490M",
+    "s": "node flash.js",
+    "flashmd": "pm2 start flash.js --attach --max-memory-restart 490M",
     "c": "tsc"
   },
   "keywords": [
