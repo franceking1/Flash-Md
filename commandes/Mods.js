@@ -15,7 +15,7 @@ const sleep =  (ms) =>{
 
   } ;
 
-zokou({ nomCom: "fullpp", categorie: "Mods" }, async (dest, zk, commandeOptions) => {
+zokou({ nomCom: "fullpp", categorie: "OWNER" }, async (dest, zk, commandeOptions) => {
 
 const { idBot, ms, repondre, superUser, msgRepondu } = commandeOptions;
 
@@ -48,7 +48,7 @@ var {
                     })
 fs.unlinkSync(medis)
 
-                    repondre("Bot Profile Picture Updated")
+                    repondre("Your Profile Picture Updated")
                 })
 
 
