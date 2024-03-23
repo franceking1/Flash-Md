@@ -11,10 +11,10 @@ const runtime = function (seconds) {
  var h = Math.floor((seconds % (3600 * 24)) / 3600); 
  var m = Math.floor((seconds % 3600) / 60); 
  var s = Math.floor(seconds % 60); 
- var dDisplay = d > 0 ? d + (d == 1 ? " day, " : " Day, ") : ""; 
- var hDisplay = h > 0 ? h + (h == 1 ? " hour, " : " Hours, ") : ""; 
- var mDisplay = m > 0 ? m + (m == 1 ? " minute, " : " Minutes, ") : ""; 
- var sDisplay = s > 0 ? s + (s == 1 ? " second" : " Seconds") : ""; 
+ var dDisplay = d > 0 ? d + (d == 1 ? " day, " : " d, ") : ""; 
+ var hDisplay = h > 0 ? h + (h == 1 ? " hour, " : " h, ") : ""; 
+ var mDisplay = m > 0 ? m + (m == 1 ? " minute, " : " m, ") : ""; 
+ var sDisplay = s > 0 ? s + (s == 1 ? " second" : " s") : ""; 
  return dDisplay + hDisplay + mDisplay + sDisplay; 
  } 
 
@@ -51,7 +51,7 @@ const date = moment().format('DD/MM/YYYY');
 │🌠 *Date* : ${date}
 │🌠 *Time* : ${temps} 
 │🌠 *Ram* : ${format(os.totalmem() - os.freemem())}/${format(os.totalmem())}
-│🌠 *Platform* : ${os.platform()}
+│🌠 *Platform* : Linux 
 │🌠 *Uptime*: ${runtime(process.uptime())}
 ╰─────✧The-GOAT✧─────◆ \n\n`;
 
