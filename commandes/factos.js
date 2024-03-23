@@ -4,7 +4,7 @@ const { default: axios } = require('axios');
 
 
 zokou({
-        pattern: "fact",
+        nomCom: "fact",
         desc: "Sends fact in chat.",
         categorie: "NEW",
         reaction: "🙌" ,
