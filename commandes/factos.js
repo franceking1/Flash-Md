@@ -10,8 +10,8 @@ zokou({
         reaction: "🙌" ,
     },
     async(zk) => {
-        const { data } = await axios.get(`https://nekos.life/api/v2/fact`)
-        return zk.reply(`*Fact:* ${data.fact}\n\n*Powered by FLASH-MD*`)   
+        const { data } = await fetch(`https://nekos.life/api/v2/fact`)
+        const response = zk.reply(`*Fact:* ${data.fact}\n\n*Powered by FLASH-MD*`)   
     }
 
 )
