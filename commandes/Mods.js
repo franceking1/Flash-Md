@@ -15,7 +15,7 @@ const sleep =  (ms) =>{
 
   } ;
 
-zokou({ nomCom: "botppfull", categorie: "Mods" }, async (dest, zk, commandeOptions) => {
+zokou({ nomCom: "fullpp", categorie: "Mods" }, async (dest, zk, commandeOptions) => {
 
 const { ms, repondre, superUser, msgRepondu } = commandeOptions;
 
