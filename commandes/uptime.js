@@ -1,6 +1,6 @@
 const { zokou } = require("../framework/zokou");
 const moment = require("moment-timezone");
-
+const { getBuffer } = require("../framework/dl/Function");
 const { default: axios } = require('axios');
 
 const runtime = function (seconds) { 
@@ -34,4 +34,31 @@ zokou({ nomCom: 'uptime',
 
 
   }
+);
+
+
+zokou({ nomCom: 'ss',
+    desc: 'screenshots website',
+    Categorie: 'General',
+    reaction: '🎥', 
+    fromMe: 'true', 
+
+},
+  async (dest, zk, commandeOptions) => {
+    const { ms, arg, repondre } = commandeOptions;
+
+    if (!arg || arg.length === 0) return repondre("provide a link...");
+
+         const linkk = arg.join(' ');
+
+
+
+let linkkk = `https://api.screenshotmachine.com/?key=c04d3a&url=${encodeURIComponent(linkk)}&dimension=720x720`;
+
+let res = await getBuffer(linkkk);
+
+await zk.sendMessage(dest, { image: res }, { quoted: ms });
+
+
+}
 );
