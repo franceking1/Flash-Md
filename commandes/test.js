@@ -25,7 +25,7 @@ const gitdata = `This is *FLASH-MD* 🐐🔵
 *Repository:* ${data.html_url}
 ✨ *STARS:* ${repoInfo.stars}
 🧧 *FORKS:* ${repoInfo.forks}
-📅 *RELEASED DATE:* ${releaseDate}
+📅 *RELEASED ON:* ${releaseDate}
 🕐 *LAST UPDATED:* ${lastUpdateDate}
 👨‍💻 *OWNER:* ${repoInfo.owner}`;
 
