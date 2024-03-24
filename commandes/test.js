@@ -27,7 +27,7 @@ const gitdata = `This is *FLASH-MD* 🐐🔵
 🧧 *FORKS:* ${repoInfo.forks}
 📅 *RELEASED ON:* ${releaseDate}
 🕐 *LAST UPDATED:* ${lastUpdateDate}
-👨‍💻 *OWNER:* *France King®🐐🔵`;
+👨‍💻 *OWNER:* *France King®🐐🔵*`;
 
 
 await zk.sendMessage(dest, { image: { url: img }, caption: gitdata });
