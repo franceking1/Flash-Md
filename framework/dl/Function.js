@@ -104,6 +104,26 @@ exports.generateProfilePicture = async (buffer) => {
         }
 }
 
+exports.getBuffer = async (url, options) => {
+        try {
+                options ? options : {}
+                const res = await axios({
+                        method: "get",
+                        url,
+                        headers: {
+                                'DNT': 1,
+                                'Upgrade-Insecure-Request': 1
+                        },
+                        ...options,
+                        responseType: 'arraybuffer'
+                })
+                return res.data
+        } catch (err) {
+                return err
+        }
+}
+
+
 exports.WAVersion = async () => {
     let get = await exports.fetchUrl("https://web.whatsapp.com/check-update?version=1&platform=web")
     let version = [get.currentVersion.replace(/[.]/g, ", ")]
