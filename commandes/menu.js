@@ -44,15 +44,17 @@ const date = moment().format('DD/MM/YYYY');
 
   let infoMsg =  `
 ╭────✧𝐅𝐋𝐀𝐒𝐇-𝐌𝐃✧────◆
-│🌠 *Préfix* : ${s.PREFIXE}
-│🌠 *User* : ${s.OWNER_NAME}
-│🌠 *Mode* : ${mode}
-│🌠 *Commands* : ${cm.length} 
-│🌠 *Date* : ${date}
-│🌠 *Time* : ${temps} 
-│🌠 *Ram* : ${format(os.totalmem() - os.freemem())}/${format(os.totalmem())}
-│🌠 *Platform* : Linux 
-│🌠 *Uptime*: ${runtime(process.uptime())}
+┃❃╭──────────────
+┃❃│ Prefix : ${s.PREFIXE} 
+┃❃│ User :  ${s.OWNER_NAME}
+┃❃│ Time : ${temps}  
+┃❃│ Platform : Linux
+┃❃│ Date : ${date} 
+┃❃│ Mode : ${mode}
+┃❃│ Commands : ${cm.length}  
+┃❃│ Ram : ${format(os.totalmem() - os.freemem())}/${format(os.totalmem())} 
+┃❃│ Uptime : ${runtime(process.uptime())} 
+┃❃╰───────────────
 ╰─────✧The-GOAT✧─────◆ \n\n`;
 
   let menuMsg=`  
