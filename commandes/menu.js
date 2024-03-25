@@ -20,7 +20,7 @@ const runtime = function (seconds) {
 
 france({ nomCom: "menu", categorie: "General" }, async (dest, zk, commandeOptions) => {
     let { ms, repondre ,prefixe,nomAuteurMessage,mybotpic} = commandeOptions;
-    let { cm } = require(__dirname + "/../framework//zokou");
+    let { cm } = require(__dirname + "/../framework//france");
     var coms = {};
     var mode = "public";
 
