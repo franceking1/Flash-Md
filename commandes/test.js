@@ -28,7 +28,7 @@ This is *FLASH-MD* The following is *FLASH-MD's*
 🧧 *FORKS:* ${repoInfo.forks}
 📅 *RELEASED:* ${releaseDate}
 🕐 *LAST UPDATED:* ${lastUpdateDate}
-👨‍💻 *CRETOR:* *France King®🐐🔵*`;
+👨‍💻 *OWNER:* *France King®🐐🔵*`;
 
 
 await zk.sendMessage(dest, { image: { url: img }, caption: gitdata });
