@@ -1,4 +1,4 @@
-const ( france ) = require('../framework')
+const { france } = require('../framework/france')
 france({
         nomCom: "speed",
         desc: "To check ping",
