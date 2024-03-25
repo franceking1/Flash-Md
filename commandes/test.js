@@ -22,7 +22,7 @@ const releaseDate = new Date(data.created_at).toLocaleDateString('en-GB');
             const lastUpdateDate = new Date(repoInfo.lastUpdate).toLocaleDateString('en-GB');
 
 const gitdata = `Hello 👋 
-This is *FLASH-MD* The following is *FLASH-MD's*
+This is *FLASH-MD.* The following is *FLASH-MD's*
 *REPOSITORY:* ${data.html_url}
 ✨ *STARS:* ${repoInfo.stars}
 🧧 *FORKS:* ${repoInfo.forks}
