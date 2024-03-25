@@ -28,7 +28,7 @@ france(
       
     
      
-    moment.tz.setDefault('EAT');
+    moment.tz.setDefault('Africa/Nairobi');
 
 // Créer une date et une heure en EAT
 const temps = moment().format('HH:mm:ss');
