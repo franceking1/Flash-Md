@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const { zokou } = require("../framework/zokou");
-zokou({ nomCom: "repo", reaction: "😌", nomFichier: __filename }, async (dest, zk, commandeOptions) => {
+const { zokou } = require("../framework/france");
+france({ nomCom: "repo", reaction: "😌", nomFichier: __filename }, async (dest, zk, commandeOptions) => {
 
 
 const githubRepo = 'https://api.github.com/repos/franceking1/Flash-Md';
