@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const { zokou } = require("../framework/zokou");
-zokou({ nomCom: "tempmail", reaction: "😌", nomFichier: __filename }, async (dest, zk, commandeOptions) => {
+const { france } = require("../framework/france");
+france({ nomCom: "tempmail", reaction: "😌", nomFichier: __filename }, async (dest, zk, commandeOptions) => {
     console.log("Commande saisie !!!s");
     let z = '*FLASH-MD* Temporary emails,Powered by *France King* \n\n ' + "Click the link below to create unlimited TEMPORARY Emails. Powered by *FLASH-MD.*";
     let d = ' https://tempmailpro.app';

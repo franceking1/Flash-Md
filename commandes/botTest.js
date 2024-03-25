@@ -1,10 +1,10 @@
-const { zokou } = require("../framework/zokou");
+const { france } = require("../framework/france");
 const moment = require("moment-timezone");
 const { default: axios } = require('axios');
 //const conf = require('../set');
 
 
-zokou({ nomCom: 'test',
+france({ nomCom: 'test',
     desc: 'To check ping',
     Categorie: 'General',
     reaction: '🚨', 

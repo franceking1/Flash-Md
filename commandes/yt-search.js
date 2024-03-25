@@ -1,10 +1,10 @@
-const { zokou } = require("../framework/zokou");
+const { france } = require("../framework/france");
 const { getytlink, ytdwn } = require("../framework/ytdl-core");
 const yts = require("yt-search");
 const ytdl = require('ytdl-core');
 const fs = require('fs');
 
-zokou({ nomCom: "yts", categorie: "Search", reaction: "✋" }, async (dest, zk, commandeOptions) => {
+france({ nomCom: "yts", categorie: "Search", reaction: "✋" }, async (dest, zk, commandeOptions) => {
   const { ms, repondre, arg } = commandeOptions;
   const query = arg.join(" ");
 
@@ -30,7 +30,7 @@ zokou({ nomCom: "yts", categorie: "Search", reaction: "✋" }, async (dest, zk, 
   }
 });
 
-zokou({
+france({
   nomCom: "ytmp4",
   categorie: "Download",
   reaction: "🎥"
@@ -92,7 +92,7 @@ _*En cours de téléchargement...*_\n\n`
   }
 });
 
-zokou({
+france({
   nomCom: "ytmp3",
   categorie: "Download",
   reaction: "💿"

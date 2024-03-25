@@ -1,4 +1,4 @@
-const { zokou } = require("../framework/zokou");
+const { france } = require("../framework/france");
 const moment = require("moment-timezone");
 const { getBuffer } = require("../framework/dl/Function");
 const { default: axios } = require('axios');
@@ -17,7 +17,7 @@ const runtime = function (seconds) {
  } 
 
 
-zokou({ nomCom: 'uptime',
+france({ nomCom: 'uptime',
     desc: 'To check runtime',
     Categorie: 'General',
     reaction: '⚙️', 
@@ -37,7 +37,7 @@ zokou({ nomCom: 'uptime',
 );
 
 
-zokou({ nomCom: 'ss',
+france({ nomCom: 'ss',
     desc: 'screenshots website',
     Categorie: 'General',
     reaction: '🎥', 

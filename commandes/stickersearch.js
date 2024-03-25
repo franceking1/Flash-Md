@@ -1,8 +1,8 @@
 const axios = require("axios");
 const { Sticker, StickerTypes } = require("wa-sticker-formatter");
-const {zokou} = require("../framework/zokou");
+const {france} = require("../framework/france");
 
-zokou({
+france({
   nomCom: "stickersearch",
   categorie: 'Search',
   reaction: "🍁"

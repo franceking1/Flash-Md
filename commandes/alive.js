@@ -1,9 +1,9 @@
-const { zokou } = require('../framework/zokou');
+const { france } = require('../framework/france');
 const {addOrUpdateDataInAlive , getDataFromAlive} = require('../bdd/alive')
 const moment = require("moment-timezone");
 const s = require(__dirname + "/../set");
 
-zokou(
+france(
     {
         nomCom : 'alive',
         categorie : 'General'

@@ -1,9 +1,9 @@
-const { zokou } = require('../framework/zokou');
+const { france } = require('../framework/france');
 const {ajouterUtilisateurAvecWarnCount , getWarnCountByJID , resetWarnCountByJID} = require('../bdd/warn')
 const s = require("../set")
 
 
-zokou(
+france(
     {
         nomCom : 'warn',
         categorie : 'Group'

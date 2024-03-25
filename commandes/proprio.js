@@ -1,4 +1,4 @@
-const {zokou}=require("../framework/zokou")
+const {france}=require("../framework/france")
 
 
 
@@ -6,7 +6,7 @@ const {zokou}=require("../framework/zokou")
 
 
 
-zokou({nomCom:"reboot",categorie:"Mods",reaction:"👨🏿‍💼"},async(dest,z,com)=>{
+france({nomCom:"reboot",categorie:"Mods",reaction:"👨🏿‍💼"},async(dest,z,com)=>{
 
 
   

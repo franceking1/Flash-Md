@@ -1,4 +1,4 @@
-const { zokou } = require("../framework/zokou");
+const { france } = require("../framework/france");
 const yts = require('yt-search');
 const ytdl = require('ytdl-core');
 const fs = require('fs');
@@ -7,7 +7,7 @@ const ffmpeg = require("fluent-ffmpeg");
 const yts1 = require("youtube-yts");
 //var fs =require("fs-extra")
 
-zokou({
+france({
   nomCom: "play",
   categorie: "Search",
   reaction: "💿"
@@ -81,7 +81,7 @@ _*on downloading...*_\n\n`
 
   
 
-zokou({
+france({
   nomCom: "video",
   categorie: "Search",
   reaction: "🎥"

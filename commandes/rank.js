@@ -1,4 +1,4 @@
-const {zokou} = require("../framework/zokou");
+const {france} = require("../framework/france");
 const conf = require("../set");
 const {getMessagesAndXPByJID,getBottom10Users} = require("../bdd/level");
 
@@ -82,7 +82,7 @@ module.exports = {
    get_level_exp,
 } ;
 
-zokou( {
+france( {
   nomCom : "rank",
  categorie : "Fun",
    }, 
@@ -243,7 +243,7 @@ zokou( {
 
 }) ;
 
-zokou( {
+france( {
   nomCom : "toprank",
  categorie : "Fun",
    }, 

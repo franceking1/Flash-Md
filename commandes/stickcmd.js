@@ -1,9 +1,9 @@
-const {zokou }= require ('../framework/zokou') ;
+const {france }= require ('../framework/france') ;
 const {addstickcmd, deleteCmd, getCmdById, inStickCmd , getAllStickCmds} = require('../bdd/stickcmd') ;
 
 
 
-zokou(
+france(
     {
         nomCom : 'setcmd',
         categorie : 'stickcmd'
@@ -30,7 +30,7 @@ zokou(
 
     }) ; 
 
-    zokou(
+    france(
       {
           nomCom: 'delcmd',
           categorie: 'stickcmd'
@@ -62,7 +62,7 @@ zokou(
   );
   
 
-  zokou(
+  france(
     {
         nomCom: 'allcmd',
         categorie: 'stickcmd'

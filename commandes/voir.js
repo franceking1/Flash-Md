@@ -1,9 +1,9 @@
-const {zokou}=require("../framework/zokou")
+const {france}=require("../framework/france")
 const {getContentType}=require("@whiskeysockets/baileys")
 
 
 
-zokou({nomCom:"vv",categorie:"General",reaction:"🤩"},async(dest,zk,commandeOptions)=>{
+france({nomCom:"vv",categorie:"General",reaction:"🤩"},async(dest,zk,commandeOptions)=>{
 
 const {ms,msgRepondu,repondre}=commandeOptions;
 

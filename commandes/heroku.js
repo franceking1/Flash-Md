@@ -1,8 +1,8 @@
-const { zokou } = require('../framework/zokou');
+const { france } = require('../framework/france');
 const s = require('../set')
 
 
-zokou(
+france(
     {
         nomCom : "setvar",
         categorie : "heroku"
@@ -30,7 +30,7 @@ zokou(
     }
 );
 
-zokou(
+france(
     {
         nomCom : "allvar",
         categorie : "heroku"
@@ -60,7 +60,7 @@ str+= '⚡ *'+vr+'* '+'= '+h[vr]+'\n'
 );       
 
 
-    zokou(
+    france(
         {
             nomCom : "getvar",
             categorie : "heroku"

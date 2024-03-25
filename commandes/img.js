@@ -1,11 +1,11 @@
 
 
 
-const {zokou} = require('../framework/zokou');
+const {france} = require('../framework/france');
 var gis = require('g-i-s');
 
 
-zokou({
+france({
   nomCom: "img",
   categorie: "Search",
   reaction: "📷"

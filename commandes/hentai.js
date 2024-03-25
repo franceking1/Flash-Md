@@ -1,9 +1,9 @@
 
-const {zokou } = require("../framework/zokou");
+const {france } = require("../framework/france");
 const axios = require('axios');
 
 
-zokou({
+france({
   nomCom: "hwaifu",
   categorie: "Hentai",
   reaction: "🙄"
@@ -25,7 +25,7 @@ async (origineMessage, zk, commandeOptions) => {
 
 
   /////////////// hneko //////////
-zokou({
+france({
   nomCom: "trap",
   categorie: "Hentai",
   reaction: "🙄"
@@ -45,7 +45,7 @@ async (origineMessage, zk, commandeOptions) => {
   }
 });
 
-zokou({
+france({
   nomCom: "hneko",
   categorie: "Hentai",
   reaction: "🙄"
@@ -66,7 +66,7 @@ async (origineMessage, zk, commandeOptions) => {
 });
 
 
-zokou({
+france({
   nomCom: "blowjob",
   categorie: "Hentai",
   reaction: "🙄"

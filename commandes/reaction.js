@@ -1,5 +1,5 @@
 const axios = require('axios');
-const { zokou } = require("../framework/zokou");
+const { france } = require("../framework/france");
 const fs = require("fs-extra");
 const { exec } = require("child_process");
 const child_process = require('child_process');
@@ -28,7 +28,7 @@ const GIFBufferToVideoBuffer = async (image) => {
 };
 
 const generateReactionCommand = (reactionName, reactionEmoji) => {
-    zokou({
+    france({
         nomCom: reactionName,
         categorie: "Reaction",
         reaction: reactionEmoji,
@@ -49,7 +49,7 @@ const generateReactionCommand = (reactionName, reactionEmoji) => {
             // Convertir le GIF en vidéo et obtenir le buffer vidéo
             const videoBuffer = await GIFBufferToVideoBuffer(gifBuffer);
 
-            // Envoyer la vidéo avec Zokou
+            // Envoyer la vidéo avec france
             if (msgRepondu) { 
               var txt =` @${auteurMessage.split("@")[0]}  ${reactionName} @${auteurMsgRepondu.split("@")[0]}`
        zk.sendMessage(origineMessage, { video: videoBuffer,gifPlayback: true,caption:txt,mentions:[auteurMessage,auteurMsgRepondu] }, { quoted: ms });

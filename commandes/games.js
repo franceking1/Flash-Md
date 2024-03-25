@@ -1,10 +1,10 @@
-const {zokou} = require("../framework/zokou");
+const {france} = require("../framework/france");
 const axios = require('axios');
 const traduire = require('../framework/traduction')
 
 
 
-zokou({
+france({
     nomCom: "chifumi",
     categorie: "Games",
     reaction: "📺"
@@ -141,7 +141,7 @@ Therefore, the game is canceled`, mentions : [auteurMessage, auteurMsgRepondu]})
 });
 
 
-zokou(
+france(
     { nomCom: "quizz", categorie: "Games", reaction: "👨🏿‍💻" },
     async (origineMessage, zk, commandeOptions) => {
         const { repondre, auteurMessage } = commandeOptions;

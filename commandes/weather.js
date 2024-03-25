@@ -1,6 +1,6 @@
 const axios = require('axios');
-const {zokou} = require('../framework/zokou');
-zokou({nomCom : "weather" , categorie : "NEW"},async (dest , zk , commandeOptions)=>{
+const {france} = require('../framework/france');
+france({nomCom : "weather" , categorie : "NEW"},async (dest , zk , commandeOptions)=>{
   const {text,repondre,textw} = commandeOptions ;
 if (!text) return repondre("Give me location!!");
             const response = await axios.get(
