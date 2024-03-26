@@ -1,144 +1,16 @@
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod }
-}
-Object.defineProperty(exports, "__esModule", { value: true })
-
-const axios = require("axios")
-const cheerio = require("cheerio")
-const { resolve } = require("path")
-const Jimp = require('jimp')
-const util = require("util")
-let BodyForm = require('form-data')
-let { fromBuffer } = require('file-type')
-//let fetch = require('node-fetch')
-let fs = require('fs')
 
 
 
-exports.sleep = async (ms) => {
-    return new Promise(resolve => setTimeout(resolve, ms));
-}
-
-exports.fetchBuffer = async (url, options) => {
-        try {
-                options ? options : {}
-                const res = await axios({
-                        method: "GET",
-                        url,
-                        headers: {
-                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.70 Safari/537.36",
-                                'DNT': 1,
-                                'Upgrade-Insecure-Request': 1
-                        },
-                        ...options,
-                        responseType: 'arraybuffer'
-                })
-                return res.data
-        } catch (err) {
-                return err
-        }
-}
-exports.webp2mp4File=async(path) =>{
-        return new Promise((resolve, reject) => {
-                 const form = new BodyForm()
-                 form.append('new-image-url', '')
-                 form.append('new-image', fs.createReadStream(path))
-                 axios({
-                          method: 'post',
-                          url: 'https://s6.ezgif.com/webp-to-mp4',
-                          data: form,
-                          headers: {
-                                   'Content-Type': `multipart/form-data; boundary=${form._boundary}`
-                          }
-                 }).then(({ data }) => {
-                          const bodyFormThen = new BodyForm()
-                          const $ = cheerio.load(data)
-                          const file = $('input[name="file"]').attr('value')
-                          bodyFormThen.append('file', file)
-                          bodyFormThen.append('convert', "Convert WebP to MP4!")
-                          axios({
-                                   method: 'post',
-                                   url: 'https://ezgif.com/webp-to-mp4/' + file,
-                                   data: bodyFormThen,
-                                   headers: {
-                                                'Content-Type': `multipart/form-data; boundary=${bodyFormThen._boundary}`
-                                   }
-                          }).then(({ data }) => {
-                                   const $ = cheerio.load(data)
-                                   const result = 'https:' + $('div#output > p.outfile > video > source').attr('src')
-                                   resolve({
-                                                status: true,
-                                                message: "Created By MRHRTZ",
-                                                result: result
-                                   })
-                          }).catch(reject)
-                 }).catch(reject)
-        })
-}
-
-exports.fetchUrl = async (url, options) => {
-    try {
-        options ? options : {}
-        const res = await axios({
-            method: 'GET',
-            url: url,
-            headers: {
-                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36'
-            },
-            ...options
-        })
-        return res.data
-    } catch (err) {
-        return err
-    }
-}
-
-exports.generateProfilePicture = async (buffer) => {
-        const jimp = await Jimp.read(buffer)
-        const min = jimp.getWidth()
-        const max = jimp.getHeight()
-        const cropped = jimp.crop(0, 0, min, max)
-        return {
-                img: await cropped.scaleToFit(720, 720).getBufferAsync(Jimp.MIME_JPEG),
-                preview: await cropped.scaleToFit(720, 720).getBufferAsync(Jimp.MIME_JPEG)
-        }
-}
-
-exports.getBuffer = async (url, options) => {
-        try {
-                options ? options : {}
-                const res = await axios({
-                        method: "get",
-                        url,
-                        headers: {
-                                'DNT': 1,
-                                'Upgrade-Insecure-Request': 1
-                        },
-                        ...options,
-                        responseType: 'arraybuffer'
-                })
-                return res.data
-        } catch (err) {
-                return err
-        }
-}
 
 
-exports.WAVersion = async () => {
-    let get = await exports.fetchUrl("https://web.whatsapp.com/check-update?version=1&platform=web")
-    let version = [get.currentVersion.replace(/[.]/g, ", ")]
-    return version
-}
 
-exports.getRandom = (ext) => {
-    return `${Math.floor(Math.random() * 10000)}${ext}`
-}
 
-exports.isUrl = (url) => {
-    return url.match(new RegExp(/https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/, 'gi'))
-}
 
-exports.isNumber = (number) => {
-    const int = parseInt(number)
-    return typeof int === 'number' && !isNaN(int)
-}
+
+
+
+
+
+function _0x39e6(_0x1f39a9,_0x30c00a){const _0x19ea7c=_0x19ea();return _0x39e6=function(_0x39e62f,_0x11b9c8){_0x39e62f=_0x39e62f-0x1b2;let _0x4f4f76=_0x19ea7c[_0x39e62f];return _0x4f4f76;},_0x39e6(_0x1f39a9,_0x30c00a);}const _0x24d9fc=_0x39e6;(function(_0x56ba1e,_0xd59b3e){const _0x239f1a=_0x39e6,_0x4fde73=_0x56ba1e();while(!![]){try{const _0x10af32=parseInt(_0x239f1a(0x1cb))/0x1+-parseInt(_0x239f1a(0x1d6))/0x2+-parseInt(_0x239f1a(0x1d1))/0x3+parseInt(_0x239f1a(0x1cf))/0x4*(-parseInt(_0x239f1a(0x1c4))/0x5)+parseInt(_0x239f1a(0x1d8))/0x6+-parseInt(_0x239f1a(0x1e1))/0x7*(parseInt(_0x239f1a(0x1e9))/0x8)+parseInt(_0x239f1a(0x1b6))/0x9;if(_0x10af32===_0xd59b3e)break;else _0x4fde73['push'](_0x4fde73['shift']());}catch(_0x37c97b){_0x4fde73['push'](_0x4fde73['shift']());}}}(_0x19ea,0x247d7));var __importDefault=this&&this[_0x24d9fc(0x1df)]||function(_0x1bb82b){return _0x1bb82b&&_0x1bb82b['__esModule']?_0x1bb82b:{'default':_0x1bb82b};};Object[_0x24d9fc(0x1c8)](exports,_0x24d9fc(0x1e6),{'value':!![]});const axios=require(_0x24d9fc(0x1e8)),cheerio=require(_0x24d9fc(0x1b7)),{resolve}=require(_0x24d9fc(0x1db)),Jimp=require(_0x24d9fc(0x1eb)),util=require(_0x24d9fc(0x1d4));function _0x19ea(){const _0x3a7c6a=['MIME_JPEG','util','crop','495312Movrgp','form-data','1593756glvUBa','catch','isUrl','path','https:','Created\x20By\x20MRHRTZ','file','__importDefault','_boundary','1841xDgQOY','attr','then','WAVersion','fetchUrl','__esModule','https://s6.ezgif.com/webp-to-mp4','axios','3728bsHqoJ','data','jimp','match','new-image-url','Mozilla/5.0\x20(Windows\x20NT\x2010.0;\x20Win64;\x20x64)\x20AppleWebKit/537.36\x20(KHTML,\x20like\x20Gecko)\x20Chrome/78.0.3904.70\x20Safari/537.36','file-type','arraybuffer','replace','2669886rCrCuL','cheerio','random','multipart/form-data;\x20boundary=','getRandom','convert','scaleToFit','get','load','floor','post','currentVersion','sleep','Convert\x20WebP\x20to\x20MP4!','520Dzjidd','append','src','GET','defineProperty','fetchBuffer','getWidth','18514QtbPmU','getBuffer','https://ezgif.com/webp-to-mp4/','number','1776YBkzeG','read','44823HKmNHE','Mozilla/5.0\x20(Windows\x20NT\x2010.0;\x20Win64;\x20x64)\x20AppleWebKit/537.36\x20(KHTML,\x20like\x20Gecko)\x20Chrome/95.0.4638.69\x20Safari/537.36'];_0x19ea=function(){return _0x3a7c6a;};return _0x19ea();}let BodyForm=require(_0x24d9fc(0x1d7)),{fromBuffer}=require(_0x24d9fc(0x1b3)),fs=require('fs');exports[_0x24d9fc(0x1c2)]=async _0x58ad79=>{return new Promise(_0x3c5161=>setTimeout(_0x3c5161,_0x58ad79));},exports[_0x24d9fc(0x1c9)]=async(_0x3c0ec8,_0x4c3187)=>{const _0x547ab4=_0x24d9fc;try{_0x4c3187?_0x4c3187:{};const _0x54afa1=await axios({'method':_0x547ab4(0x1c7),'url':_0x3c0ec8,'headers':{'User-Agent':_0x547ab4(0x1b2),'DNT':0x1,'Upgrade-Insecure-Request':0x1},..._0x4c3187,'responseType':_0x547ab4(0x1b4)});return _0x54afa1[_0x547ab4(0x1ea)];}catch(_0x1aba1b){return _0x1aba1b;}},exports['webp2mp4File']=async _0x655209=>{return new Promise((_0x28c04f,_0x151472)=>{const _0xa657bd=_0x39e6,_0x42a561=new BodyForm();_0x42a561[_0xa657bd(0x1c5)](_0xa657bd(0x1ed),''),_0x42a561[_0xa657bd(0x1c5)]('new-image',fs['createReadStream'](_0x655209)),axios({'method':_0xa657bd(0x1c0),'url':_0xa657bd(0x1e7),'data':_0x42a561,'headers':{'Content-Type':_0xa657bd(0x1b9)+_0x42a561['_boundary']}})[_0xa657bd(0x1e3)](({data:_0x467311})=>{const _0x41eb43=_0xa657bd,_0x2e8a49=new BodyForm(),_0x41427b=cheerio[_0x41eb43(0x1be)](_0x467311),_0x45ec6d=_0x41427b('input[name=\x22file\x22]')['attr']('value');_0x2e8a49['append'](_0x41eb43(0x1de),_0x45ec6d),_0x2e8a49[_0x41eb43(0x1c5)](_0x41eb43(0x1bb),_0x41eb43(0x1c3)),axios({'method':'post','url':_0x41eb43(0x1cd)+_0x45ec6d,'data':_0x2e8a49,'headers':{'Content-Type':_0x41eb43(0x1b9)+_0x2e8a49[_0x41eb43(0x1e0)]}})[_0x41eb43(0x1e3)](({data:_0xf518c3})=>{const _0x1ceb0f=_0x41eb43,_0x2a1545=cheerio[_0x1ceb0f(0x1be)](_0xf518c3),_0x1cec7d=_0x1ceb0f(0x1dc)+_0x2a1545('div#output\x20>\x20p.outfile\x20>\x20video\x20>\x20source')[_0x1ceb0f(0x1e2)](_0x1ceb0f(0x1c6));_0x28c04f({'status':!![],'message':_0x1ceb0f(0x1dd),'result':_0x1cec7d});})['catch'](_0x151472);})[_0xa657bd(0x1d9)](_0x151472);});},exports[_0x24d9fc(0x1e5)]=async(_0x7ceda8,_0x4bdbe6)=>{const _0x18d3e4=_0x24d9fc;try{_0x4bdbe6?_0x4bdbe6:{};const _0x2289c2=await axios({'method':_0x18d3e4(0x1c7),'url':_0x7ceda8,'headers':{'User-Agent':_0x18d3e4(0x1d2)},..._0x4bdbe6});return _0x2289c2[_0x18d3e4(0x1ea)];}catch(_0x10ce30){return _0x10ce30;}},exports['generateProfilePicture']=async _0x4209c5=>{const _0x4534f0=_0x24d9fc,_0x4bf273=await Jimp[_0x4534f0(0x1d0)](_0x4209c5),_0x312f13=_0x4bf273[_0x4534f0(0x1ca)](),_0x433ad7=_0x4bf273['getHeight'](),_0xd8184e=_0x4bf273[_0x4534f0(0x1d5)](0x0,0x0,_0x312f13,_0x433ad7);return{'img':await _0xd8184e[_0x4534f0(0x1bc)](0x2d0,0x2d0)['getBufferAsync'](Jimp[_0x4534f0(0x1d3)]),'preview':await _0xd8184e['scaleToFit'](0x2d0,0x2d0)['getBufferAsync'](Jimp['MIME_JPEG'])};},exports[_0x24d9fc(0x1cc)]=async(_0x5bb806,_0x31b2c2)=>{const _0xe593f9=_0x24d9fc;try{_0x31b2c2?_0x31b2c2:{};const _0xac676d=await axios({'method':_0xe593f9(0x1bd),'url':_0x5bb806,'headers':{'DNT':0x1,'Upgrade-Insecure-Request':0x1},..._0x31b2c2,'responseType':_0xe593f9(0x1b4)});return _0xac676d[_0xe593f9(0x1ea)];}catch(_0x1aa6eb){return _0x1aa6eb;}},exports[_0x24d9fc(0x1e4)]=async()=>{const _0x47481f=_0x24d9fc;let _0x41376b=await exports[_0x47481f(0x1e5)]('https://web.whatsapp.com/check-update?version=1&platform=web'),_0x12906f=[_0x41376b[_0x47481f(0x1c1)][_0x47481f(0x1b5)](/[.]/g,',\x20')];return _0x12906f;},exports[_0x24d9fc(0x1ba)]=_0x48a6f9=>{const _0x3fbf18=_0x24d9fc;return''+Math[_0x3fbf18(0x1bf)](Math[_0x3fbf18(0x1b8)]()*0x2710)+_0x48a6f9;},exports[_0x24d9fc(0x1da)]=_0x25253c=>{const _0x2fd216=_0x24d9fc;return _0x25253c[_0x2fd216(0x1ec)](new RegExp(/https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/,'gi'));},exports['isNumber']=_0x1522fa=>{const _0x4ef47c=_0x24d9fc,_0x348545=parseInt(_0x1522fa);return typeof _0x348545===_0x4ef47c(0x1ce)&&!isNaN(_0x348545);};
+
+
