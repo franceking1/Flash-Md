@@ -44,7 +44,7 @@
     "google-tts-api": "latest",
     "heroku-client": "^3.1.0",
     "human-readable": "^0.2.1",
-                 "jimp": "^0.16.13", 
+    "jimp": "^0.16.13", 
     "latest": "^0.2.0",
     "link-preview-js": "^3.0.4",
     "moment-timezone": "^0.5.43",
