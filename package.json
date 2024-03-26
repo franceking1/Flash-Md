@@ -5,7 +5,7 @@
   "main": "flash.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "s": "node flash.js"
+    "start": "node flash.js"
     "c": "tsc"
   },
   "keywords": [
