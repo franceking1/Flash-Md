@@ -745,7 +745,7 @@ ${metadata.desc}
 
     /*****************************Cron setup */
 
-  /*      
+        
     async  function activateCrons() {
         const cron = require('node-cron');
         const { getCron } = require('./bdd/cron');
@@ -795,7 +795,7 @@ ${metadata.desc}
           return
         }
 
-*/
+
         
         //événement contact
         zk.ev.on("contacts.upsert", async (contacts) => {
@@ -855,7 +855,7 @@ ${metadata.desc}
                 }
                 console.log("chargement des commandes terminé ✅");
 
-               // await activateCrons();
+                await activateCrons();
                 
                 if((conf.DP).toLowerCase() === 'yes') {     
                 let cmsg = `
