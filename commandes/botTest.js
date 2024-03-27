@@ -1,9 +1,4 @@
-const { france } = require("../framework/france");
-const moment = require("moment-timezone");
-const { default: axios } = require('axios');
-//const conf = require('../set');
-
-
+const { france } = require("../framework")
 france({ nomCom: 'test',
     desc: 'To check ping',
     Categorie: 'General',
@@ -14,9 +9,10 @@ france({ nomCom: 'test',
   },
   async (dest, zk, commandeOptions) => {
     const { ms, arg, repondre } = commandeOptions;
-    const { start} = new Date().getTime()
-    return repondre('*FLASH-MD is ALIVE*\n ```' + Responding at 2000 + '``` *ms*') 
-    const { end } = new Date().getTime()
-    await zok.sendMessage('*Pong!*\n ```' + (end - start) + '``` *ms*')
-  }
-)
+    var inital = new Date().getTime();
+        const { key } = await dest.sendMessage(zk.chat, {text: '```PINGING!!...```'});
+        var final = new Date().getTime();
+       // await Secktor.sleep(1000)
+       return await dest.sendMessage(zk.chat, {text: '_FLASH 𝙥𝙤𝙣𝙜_\n *' + (final - inital) + ' ms* ', edit: key});
+    }
+);
