@@ -1,10 +1,9 @@
-const { france } = require("../framework")
-france({ nomCom: 'test',
-    desc: 'To check ping',
-    Categorie: 'General',
-    reaction: '🚨', 
-    fromMe: 'true', 
-
+const { france } = require('../framework')
+france({ nomCom: "test",
+    desc: "To check ping",
+    Categorie: "General",
+    reaction: "🚨", 
+   
        
   },
   async (dest, zk, commandeOptions) => {
