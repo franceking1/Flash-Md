@@ -1,8 +1,62 @@
+const {france} =require("../framework/france");
+const axios =require("axios");
+const Genius = require("genius-lyrics"); 
+ const Client = new Genius.Client("jKTbbU-6X2B9yWWl-KOm7Mh3_Z6hQsgE4mmvwV3P3Qe7oNa9-hsrLxQV5l5FiAZO");
 
 
 
+france({ nomCom: "poll",
+        reaction: "✨",
+        categorie: "General" }, async (dest, zk, commandeOptions) => {
+    
+    const { repondre, arg, ms } = commandeOptions; 
+const polll = arg.join(' ');
 
 
 
+let [poll, opt] = polll.split("|")
 
-function _0x33a3(_0x488119,_0xf52be2){const _0x54a75d=_0x54a7();return _0x33a3=function(_0x33a335,_0x34b7ea){_0x33a335=_0x33a335-0xd9;let _0x224856=_0x54a75d[_0x33a335];return _0x224856;},_0x33a3(_0x488119,_0xf52be2);}const _0x11cc4e=_0x33a3;function _0x54a7(){const _0x350db3=['Incorrect\x20format.\x0aExample:\x20poll\x20How\x20are\x20you\x20today?/Good,\x20Just\x20There\x20,\x20Very\x20Fine','Search','15pPmtYy','genius-lyrics','split','sendMessage','jKTbbU-6X2B9yWWl-KOm7Mh3_Z6hQsgE4mmvwV3P3Qe7oNa9-hsrLxQV5l5FiAZO','1064gpkOTg','axios','33719730AdYxnX','../framework/france','poll','87847yDKksS','lyrics','5527494ISygAy','.\x20Try\x20searching\x20a\x20different\x20song.','3219433hdMNed','714740UeiMwN','I\x20did\x20not\x20find\x20any\x20lyrics\x20for\x20','length','46017pUSFaM','5aDbZRD','General','songs','search','join','please\x20provide\x20me\x20the\x20song\x20name','push','168294AseWQw'];_0x54a7=function(){return _0x350db3;};return _0x54a7();}(function(_0x1e4b35,_0x2e6eb6){const _0x112a18=_0x33a3,_0x18c7e7=_0x1e4b35();while(!![]){try{const _0x1e4be3=-parseInt(_0x112a18(0xdc))/0x1+parseInt(_0x112a18(0xec))/0x2*(-parseInt(_0x112a18(0xef))/0x3)+parseInt(_0x112a18(0xe1))/0x4*(parseInt(_0x112a18(0xe5))/0x5)+-parseInt(_0x112a18(0xde))/0x6+-parseInt(_0x112a18(0xe0))/0x7+-parseInt(_0x112a18(0xf4))/0x8*(parseInt(_0x112a18(0xe4))/0x9)+parseInt(_0x112a18(0xd9))/0xa;if(_0x1e4be3===_0x2e6eb6)break;else _0x18c7e7['push'](_0x18c7e7['shift']());}catch(_0xbb376c){_0x18c7e7['push'](_0x18c7e7['shift']());}}}(_0x54a7,0xef78f));const {france}=require(_0x11cc4e(0xda)),axios=require(_0x11cc4e(0xf5)),Genius=require(_0x11cc4e(0xf0)),Client=new Genius['Client'](_0x11cc4e(0xf3));france({'nomCom':_0x11cc4e(0xdb),'reaction':'💫','categorie':_0x11cc4e(0xe6)},async(_0x48f3b2,_0x22ac03,_0x38ad25)=>{const _0x3726d1=_0x11cc4e,{repondre:_0x5480e7,arg:_0x2825cf,ms:_0xd84c20}=_0x38ad25,_0x3344ed=_0x2825cf[_0x3726d1(0xe9)]('\x20');let [_0x2bca1c,_0x5a8932]=_0x3344ed['split']('/');if(_0x3344ed[_0x3726d1(0xf1)]('/')<0x2)return _0x5480e7(_0x3726d1(0xed));let _0x17a04f=[];for(let _0x1e9bf4 of _0x5a8932[_0x3726d1(0xf1)](',')){_0x17a04f[_0x3726d1(0xeb)](_0x1e9bf4);}await _0x22ac03['sendMessage'](_0x48f3b2,{'poll':{'name':_0x2bca1c,'values':_0x17a04f}});}),france({'nomCom':'lyrics','reaction':'✨','categorie':_0x11cc4e(0xee)},async(_0x14eee1,_0x6353b6,_0x233715)=>{const _0x40ce9a=_0x11cc4e,{repondre:_0x4905e3,arg:_0x20cdff,ms:_0x5c9bba}=_0x233715;try{if(!_0x20cdff||_0x20cdff[_0x40ce9a(0xe3)]===0x0)return _0x4905e3(_0x40ce9a(0xea));const _0x139e52=_0x20cdff['join']('\x20'),_0x34413f=await Client[_0x40ce9a(0xe7)][_0x40ce9a(0xe8)](_0x139e52),_0x34001d=_0x34413f[0x0],_0x15e891=await _0x34001d[_0x40ce9a(0xdd)]();await _0x6353b6[_0x40ce9a(0xf2)](_0x14eee1,{'text':_0x15e891},{'quoted':_0x5c9bba});}catch(_0x42da19){reply(_0x40ce9a(0xe2)+text+_0x40ce9a(0xdf)),console['log'](_0x42da19);}});
+if (polll.split("|") < 2)
+                return repondre(`Incorrect format.\nExample: poll what is 1+1|2, 3, 4`);
+
+let options = []
+            for (let i of opt.split(',')) {
+                options.push(i)
+            }
+            await zk.sendMessage(dest, {
+                poll: {
+                    name: poll,
+                    values: options
+                }
+            })
+
+})
+
+ 
+        
+france({ nomCom: "lyrics",
+        reaction: "✨",
+        categorie: "Search" }, async (dest, zk, commandeOptions) => {
+    
+    const { repondre, arg, ms } = commandeOptions;  
+        
+   try {
+
+    if (!arg || arg.length === 0) return repondre("please provide me the song name");
+
+         const question = arg.join(' ');
+
+ 
+  
+ const searches = await Client.songs.search(question); 
+ const firstSong = searches[0]; 
+ const lyrics = await firstSong.lyrics(); 
+ await zk.sendMessage(dest, { text: lyrics}, { quoted: ms }); 
+ } catch (error) { 
+             reply(`I did not find any lyrics for ${text}. Try searching a different song.`); 
+             console.log(error); 
+         } 
+
+
+
+        })
