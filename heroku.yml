@@ -2,4 +2,4 @@ build:
   docker:
       worker: Dockerfile
 run:
-   worker: node flash.js
+   worker:   npm run flashmd
