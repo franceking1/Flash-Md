@@ -17,7 +17,7 @@ const polll = arg.join(' ');
 let [poll, opt] = polll.split("/")
 
 if (polll.split("/") < 2)
-                return repondre(`Incorrect format.\nExample: poll Who is France King?/Owner Of FLASH-MD, Who FLASH-MD belongs to, Creator of FLASH-MD`);
+                return repondre(`Incorrect format.\nExample: poll How are you today?/Good, Just There , Very Fine`);
 
 let options = []
             for (let i of opt.split(',')) {
