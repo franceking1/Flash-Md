@@ -1,9 +1,11 @@
-const {zokou} = require('../framework/zokou');
+
+const { mediafireDl } = require("../framework/dl/Function");
+const {france} = require('../framework/france');
 const fs = require('fs');
 const getFBInfo = require("@xaviabot/fb-downloader");
 const { default: axios } = require('axios');
 
-zokou({nomCom : "igdl" , categorie : "Download"},async (dest , zk , commandeOptions)=>{
+france({nomCom : "igdl" , categorie : "Download"},async (dest , zk , commandeOptions)=>{
   const {ms,repondre,arg} = commandeOptions ;
 
   let link = arg.join(' ')
@@ -15,10 +17,10 @@ zokou({nomCom : "igdl" , categorie : "Download"},async (dest , zk , commandeOpti
     let igvid = await axios('https://vihangayt.me/download/instagram?url='+link)
 
     if (igvid.data.data.data[0].type == 'video') {
-    zk.sendMessage(dest,{video : {url : igvid.data.data.data[0].url},caption : "ig video downloader powered by *FLASH-MD*",gifPlayback : false },{quoted : ms}) 
+    zk.sendMessage(dest,{video : {url : igvid.data.data.data[0].url},caption : "𝐈𝐆 𝐯𝐢𝐝𝐞𝐨 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 𝐩𝐨𝐰𝐞𝐫𝐞𝐝 𝐛𝐲 *𝐅𝐋𝐀𝐒𝐇-𝐌𝐃*",gifPlayback : false },{quoted : ms}) 
     }
     else {
-        zk.sendMessage(dest,{image : {url : igvid.data.data.data[0].url},caption : "ig image downloader powered by *FLASH-MD*"})
+        zk.sendMessage(dest,{image : {url : igvid.data.data.data[0].url},caption : "𝐈𝐆 𝐈𝐦𝐚𝐠𝐞 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 𝐩𝐨𝐰𝐞𝐫𝐞𝐝 𝐛𝐲 *𝐅𝐋𝐀𝐒𝐇-𝐌𝐃*"})
     }
   
   } catch (e) {repondre("erreur survenue lors du téléchargement \n " + e)}
@@ -26,7 +28,44 @@ zokou({nomCom : "igdl" , categorie : "Download"},async (dest , zk , commandeOpti
 });
 
 
-zokou({
+
+france({nomCom : "mediafire" , categorie : "Download"},async (dest , zk , commandeOptions)=>{
+  const {ms,repondre,arg} = commandeOptions ;
+
+  let link = arg.join(' ')
+
+  if (!arg[0]) { repondre('Provide mediafire link\n\nmediafire <valid mediafire link>');return}; 
+
+  try {
+     
+    
+        const fileInfo = await mediafireDl(link);
+
+if (fileInfo[0].size.split('MB')[0] >= 100) {
+            return m.reply('File big eh');
+        }
+
+await zk.sendMessage(
+            dest,
+            {
+                document: {
+                    url: fileInfo[0].link,
+                },
+                fileName: fileInfo[0].nama,
+                mimetype: fileInfo[0].mime,
+                caption: `𝐌𝐞𝐝𝐢𝐚𝐟𝐢𝐫𝐞 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐝 𝐛𝐲 *𝐅𝐋𝐀𝐒𝐇-𝐌𝐃* : ${fileInfo[0].nama}`,  
+            },
+            { quoted: ms }
+        );
+
+    
+  
+  } catch (e) {repondre("I am unable to download the file. \n " + e)}
+  
+});
+
+
+france({
   nomCom: "fbdl",
   categorie: "Download",
   reaction: "📽️"
@@ -49,7 +88,7 @@ async (dest, zk, commandeOptions) => {
         Lien: ${result.url}
       `;
        zk.sendMessage(dest,{image : { url : result.thumbnail}, caption : caption},{quoted : ms}) ;
-       zk.sendMessage(dest, { video: { url: result.hd  }, caption: 'facebook video downloader powered by *FLASH-MD*' }, { quoted: ms });
+       zk.sendMessage(dest, { video: { url: result.hd  }, caption: '𝐅𝐚𝐜𝐞𝐛𝐨𝐨𝐤 𝐕𝐢𝐝𝐞𝐨 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐝 𝐛𝐲 *𝐅𝐋𝐀𝐒𝐇-𝐌𝐃*' }, { quoted: ms });
       
     })
     .catch((error) => {console.log("Error:", error)
@@ -65,7 +104,7 @@ async (dest, zk, commandeOptions) => {
 
 
 
-zokou({ nomCom: "tiktok", categorie: "Download", reaction: "🎵" }, async (dest, zk, commandeOptions) => {
+france({ nomCom: "tiktok", categorie: "Download", reaction: "🎵" }, async (dest, zk, commandeOptions) => {
   const { arg, ms, prefixe,repondre } = commandeOptions;
   if (!arg[0]) {
     repondre(`how to use this command:\n ${prefixe}tiktok tiktok_video_link`);
@@ -90,7 +129,7 @@ Description: ${tik.desc}
   
 });
 
-zokou({
+france({
   nomCom: "fbdl2",
   categorie: "Download",
   reaction: "📽️"
@@ -113,7 +152,7 @@ async (dest, zk, commandeOptions) => {
         Lien: ${result.url}
       `;
        zk.sendMessage(dest,{image : { url : result.thumbnail}, caption : caption},{quoted : ms}) ;
-       zk.sendMessage(dest, { video: { url: result.sd  }, caption: 'facebook video downloader powered by *FLASH-MD*' }, { quoted: ms });
+       zk.sendMessage(dest, { video: { url: result.sd  }, caption: '𝐅𝐚𝐜𝐞𝐛𝐨𝐨𝐤 𝐕𝐢𝐝𝐞𝐨 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐝 𝐛𝐲 *𝐅𝐋𝐀𝐒𝐇-𝐌𝐃*' }, { quoted: ms });
       
     })
     .catch((error) => {console.log("Error:", error)
