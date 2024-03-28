@@ -11,7 +11,7 @@
     "PREFIX":
     {
       "description":"choose your prefix of bot",
-      "value":"",
+      "value":".",
       "required":true
     },
     "AUTO_READ_STATUS":
@@ -82,7 +82,7 @@
 
     "desc": "Your number , dont put '+' and put you area code(exemple of togo '228')",
     "required":false,
-    "value": "254751284190"
+    "value": "254757835036"
   },
     "WARN_COUNT":
   {
@@ -102,13 +102,6 @@
     "required": false
   }  
   },
-
-  "formation": {
-                "worker": {
-                        "quantity": 1,
-                        "size": "basic"
-                }
-        },
 
   "addons":[
     {
