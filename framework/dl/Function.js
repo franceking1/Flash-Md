@@ -6,6 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true })
 const axios = require("axios")
 const cheerio = require("cheerio")
 const { resolve } = require("path")
+const Jimp = require('jimp')
 const util = require("util")
 let BodyForm = require('form-data')
 let { fromBuffer } = require('file-type')
@@ -75,6 +76,48 @@ exports.webp2mp4File=async(path) =>{
 	})
 }
 
+
+
+
+exports.mediafireDl = async (url, options) => {
+    try {
+        options = options ? options : {};
+        const res = await axios.get(url, options);
+        const $ = cheerio.load(res.data);
+        const hasil = [];
+        const link = $('a#downloadButton').attr('href');
+        const size = $('a#downloadButton').text().replace('Download', '').replace('(', '').replace(')', '').replace('\n', '').replace('\n', '').replace('                         ', '');
+        const seplit = link.split('/');
+        const nama = seplit[5];
+        mime = nama.split('.');
+        mime = mime[1];
+        hasil.push({ nama, mime, size, link });
+        return hasil;
+    } catch (err) {
+        return err;
+    }
+};
+
+exports.getBuffer = async (url, options) => {
+	try {
+		options ? options : {}
+		const res = await axios({
+			method: "get",
+			url,
+			headers: {
+				'DNT': 1,
+				'Upgrade-Insecure-Request': 1
+			},
+			...options,
+			responseType: 'arraybuffer'
+		})
+		return res.data
+	} catch (err) {
+		return err
+	}
+}
+
+
 exports.fetchUrl = async (url, options) => {
     try {
         options ? options : {}
@@ -90,6 +133,17 @@ exports.fetchUrl = async (url, options) => {
     } catch (err) {
         return err
     }
+}
+
+exports.generateProfilePicture = async (buffer) => {
+        const jimp = await Jimp.read(buffer)
+        const min = jimp.getWidth()
+        const max = jimp.getHeight()
+        const cropped = jimp.crop(0, 0, min, max)
+        return {
+                img: await cropped.scaleToFit(720, 720).getBufferAsync(Jimp.MIME_JPEG),
+                preview: await cropped.scaleToFit(720, 720).getBufferAsync(Jimp.MIME_JPEG)
+        }
 }
 
 exports.WAVersion = async () => {
