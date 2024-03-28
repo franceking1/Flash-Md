@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "s": "node flash.js",
-    "flashmd": "node flash.js",
+    "flashmd": "pm2 start flash.js --attach --max-memory-restart 490M",
     "c": "tsc"
   },
   "keywords": [
@@ -23,7 +23,7 @@
     "@adiwajshing/keyed-db": "^0.2.4",
     "@hapi/boom": "^10.0.1",
     "@types/node": "^18.0.6",
-    "@sampandey001/baileys": "^6.3.0",
+    "@whiskeysockets/baileys": "github:Luffy2ndAccount/Baileys",
     "@xaviabot/fb-downloader": "^1.0.14",
     "aptoide-scraper": "^1.0.1",
     "axios": "^1.4.0",
@@ -42,7 +42,6 @@
     "gist": "^0.2.0",
     "google-it": "^1.6.4",
     "google-tts-api": "latest",
-     "genius-lyrics": "^4.4.3", 
     "heroku-client": "^3.1.0",
     "human-readable": "^0.2.1",
     "jimp": "^0.22.10",
@@ -66,6 +65,6 @@
     "youtube-yts": "^2.0.0",
     "youtubedl-core": "^4.11.7",
     "yt-search": "^2.10.4",
-    "ytdl-core": "^4.11.5"
+    "ytdl-core": "^4.10.0"
   }
 }
