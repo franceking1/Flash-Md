@@ -14,10 +14,10 @@ const polll = arg.join(' ');
 
 
 
-let [poll, opt] = polll.split("|")
+let [poll, opt] = polll.split("/")
 
-if (polll.split("|") < 2)
-                return repondre(`Incorrect format.\nExample: poll what is 1+1|2, 3, 4`);
+if (polll.split("/") < 2)
+                return repondre(`Incorrect format.\nExample: poll Who is France King?/Owner Of FLASH-MD, Who FLASH-MD belongs to, Creator of FLASH-MD`);
 
 let options = []
             for (let i of opt.split(',')) {
