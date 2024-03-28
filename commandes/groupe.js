@@ -282,7 +282,6 @@ france({ nomCom: "remove", categorie: 'Group', reaction: "👨🏿‍💼" }, as
 /** ***fin démettre****  **
 /** *****fin retirer */
 
-
 france({ nomCom: "del", categorie: 'Group',reaction:"🧹" }, async (dest, zk, commandeOptions) => {
 
   const { ms, repondre, verifGroupe,auteurMsgRepondu,idBot, msgRepondu, verifAdmin, superUser} = commandeOptions;
