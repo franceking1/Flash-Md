@@ -5,8 +5,7 @@
   "logo":"https://telegra.ph/file/dfccbf12397757c321ac4.jpg",
   "repository":"https://github.com/franceking1/Flash-Md",
   "succes_url":"/",
-"stack":"container",
-
+  "stack":"container",
   "env":{
     "PREFIX":
     {
@@ -34,18 +33,18 @@
     }
     ,
     "BOT_NAME" : {
-
+       
       "description":"put A name for your bot",
       "value":"FLASH-MD",
       "required":false
 
     } ,
      "BOT_MENU_LINKS" : {
-
+    
       "description":"add one or many link for your bot menu  ; eg : url1,url2,url3.....",
       "value":"https://telegra.ph/file/dfccbf12397757c321ac4.jpg",
       "required":false
-
+       
      },
     "PUBLIC_MODE":
     {
@@ -53,7 +52,7 @@
       "value":"yes",
       "required":false
     }
-        ,
+	,
     "HEROKU_API_KEY": {
     "description": "insert your heroku api-key (this is optionnal)",
      "required" :false
@@ -62,7 +61,7 @@
     "description": "insert your heroku APP NAME (this is optionnal)",
      "required" :false
     }  
-          ,
+	  ,
     "SESSION_ID":
     {
       "description":"put your session ID , make sure it starts with eyJub2I...",   
@@ -72,14 +71,14 @@
     },
     "OWNER_NAME":
     {
-
+    
     "desc": "Your Name",
     "required": false,
     "value": "France King"
   },
     "OWNER_NUMBER":
   {
-
+    
     "desc": "Your number , dont put '+' and put you area code(exemple of togo '228')",
     "required":false,
     "value": "254757835036"
@@ -102,6 +101,13 @@
     "required": false
   }  
   },
+ 
+  "formation": {
+		"worker": {
+			"quantity": 1,
+			"size": "basic"
+		}
+	},
 
   "addons":[
     {
