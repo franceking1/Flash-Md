@@ -1,5 +1,5 @@
 {
-  "name": "FLASH-MD",
+  "name": "Eternal-Thoughts",
   "version": "2.0.0",
   "description": "",
   "main": "flash.js",
@@ -15,9 +15,9 @@
     "Flash-Md",
     "whatsapp",
     "whatsapp-bot",
-    "franceking1"
+    "HaseebJaved"
   ],
-  "author": "France King",
+  "author": "Haseeb Javed",
   "license": "ISC",
   "dependencies": {
     "@adiwajshing/keyed-db": "^0.2.4",
