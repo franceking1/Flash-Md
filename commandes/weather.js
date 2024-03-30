@@ -33,7 +33,7 @@ if (!question) return repondre("Give me location...");
 
 await repondre(`❄️ Weather in ${cityName}
 
-🌡️ Temperature: ${temperature}°C
+🌡️Temperature: ${temperature}°C
 📝 Description: ${description}
 ❄️ Humidity: ${humidity}%
 🌀 Wind Speed: ${windSpeed} m/s
@@ -41,8 +41,7 @@ await repondre(`❄️ Weather in ${cityName}
 ☁️ Cloudiness: ${cloudiness}%
 🌄 Sunrise: ${sunrise.toLocaleTimeString()}
 🌅 Sunset: ${sunset.toLocaleTimeString()}
-💫country: ${country}`);
-
+🗺 country: ${country}`);
 
 
 
