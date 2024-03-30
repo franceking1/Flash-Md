@@ -28,23 +28,25 @@ if (!question) return repondre("Give me location...");
         const cloudiness = data.clouds.all;
         const sunrise = new Date(data.sys.sunrise * 1000);
         const sunset = new Date(data.sys.sunset * 1000);
-
-
+        const country = (data.sys.country);
+       
 
 await repondre(`❄️ Weather in ${cityName}
 
-🌡️ Temperature: ${temperature}°C
+🌡️Temperature: ${temperature}°C
 📝 Description: ${description}
 ❄️ Humidity: ${humidity}%
 🌀 Wind Speed: ${windSpeed} m/s
 🌧️ Rain Volume (last hour): ${rainVolume} mm
 ☁️ Cloudiness: ${cloudiness}%
 🌄 Sunrise: ${sunrise.toLocaleTimeString()}
-🌅 Sunset: ${sunset.toLocaleTimeString()}`);
+🌅 Sunset: ${sunset.toLocaleTimeString()}
+🗺 country: ${country}
+
+    °Powered by *FLASH-MD* `);
 
 
 
-
-
+            
 
         });
