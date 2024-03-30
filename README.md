@@ -1,4 +1,4 @@
- <h1 align="center"> THE FLASH MULTI DEVICE </h1>
+ <h1 align="center"> 𝐓𝐇𝐄 𝐅𝐋𝐀𝐒𝐇 𝐌𝐔𝐋𝐓𝐈 𝐃𝐄𝐕𝐈𝐂𝐄  </h1>
 <p align="center"> FLASH-MD, A Simple WhatsApp user BOT, Created by France King.
 </p>
 
