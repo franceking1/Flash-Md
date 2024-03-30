@@ -1,52 +1,11 @@
-const axios = require('axios');
-const fs = require('fs');
-const {france} = require('../framework/france');
-const { writeFile } = require('fs/promises')
-
-france({ nomCom: "weather",
-        reaction: "🌡️",
-        categorie: "Search" }, async (dest, zk, commandeOptions) => {
-
-    const { repondre, arg, ms } = commandeOptions;  
-      const question = arg.join(' ');
-if (!question) return repondre("Give me location...");
-
-            const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${question}&units=metric&appid=060a6bcfa19809c2cd4d97a212b19273&language=en`);
-
-        const data = await response.json();
-
-
-        const cityName = data.name;
-        const temperature = data.main.temp;
-        const feelsLike = data.main.feels_like;
-        const minTemperature = data.main.temp_min;
-        const maxTemperature = data.main.temp_max;
-        const description = data.weather[0].description;
-        const humidity = data.main.humidity;
-        const windSpeed = data.wind.speed;
-        const rainVolume = data.rain ? data.rain['1h'] : 0;
-        const cloudiness = data.clouds.all;
-        const sunrise = new Date(data.sys.sunrise * 1000);
-        const sunset = new Date(data.sys.sunset * 1000);
-        const country = (data.sys.country);
-       
-
-await repondre(`❄️ Weather in ${cityName}
-
-🌡️Temperature: ${temperature}°C
-📝 Description: ${description}
-❄️ Humidity: ${humidity}%
-🌀 Wind Speed: ${windSpeed} m/s
-🌧️ Rain Volume (last hour): ${rainVolume} mm
-☁️ Cloudiness: ${cloudiness}%
-🌄 Sunrise: ${sunrise.toLocaleTimeString()}
-🌅 Sunset: ${sunset.toLocaleTimeString()}
-🗺 country: ${country}
-
-    °Powered by *FLASH-MD* `);
 
 
 
-            
 
-        });
+
+
+
+
+
+
+function _0x1f98(_0x2d4297,_0x1d253c){const _0x4c47a6=_0x4c47();return _0x1f98=function(_0x1f9894,_0x3ffa9e){_0x1f9894=_0x1f9894-0x1d6;let _0x11f627=_0x4c47a6[_0x1f9894];return _0x11f627;},_0x1f98(_0x2d4297,_0x1d253c);}const _0x3eca1a=_0x1f98;function _0x4c47(){const _0x119908=['axios','244931kxHvtm','description','\x0a🗺\x20country:\x20','wind','rain','1556724EKMzBR','13959HnBKwt','join','2urDYwP','Search','°C\x0a📝\x20Description:\x20','104dPMMjy','toLocaleTimeString','name','\x20m/s\x0a🌧️\x20Rain\x20Volume\x20(last\x20hour):\x20','2420mQdrnC','\x0a🌅\x20Sunset:\x20','308574CYuLQT','temp_max','🌡️','4369939iqpEhP','1497276PQmkZQ','json','sunrise','feels_like','12085xnjMZS','&units=metric&appid=060a6bcfa19809c2cd4d97a212b19273&language=en','main','sys','304tweTXU','\x0a\x0a🌡️Temperature:\x20','Give\x20me\x20location...','weather','speed'];_0x4c47=function(){return _0x119908;};return _0x4c47();}(function(_0x15351d,_0x477126){const _0x51b1b9=_0x1f98,_0x117833=_0x15351d();while(!![]){try{const _0x270562=-parseInt(_0x51b1b9(0x1e7))/0x1*(-parseInt(_0x51b1b9(0x1ef))/0x2)+parseInt(_0x51b1b9(0x1d9))/0x3+-parseInt(_0x51b1b9(0x1e1))/0x4*(parseInt(_0x51b1b9(0x1dd))/0x5)+-parseInt(_0x51b1b9(0x1ec))/0x6+-parseInt(_0x51b1b9(0x1d8))/0x7+-parseInt(_0x51b1b9(0x1f2))/0x8*(-parseInt(_0x51b1b9(0x1f8))/0x9)+parseInt(_0x51b1b9(0x1f6))/0xa*(parseInt(_0x51b1b9(0x1ed))/0xb);if(_0x270562===_0x477126)break;else _0x117833['push'](_0x117833['shift']());}catch(_0x4a111f){_0x117833['push'](_0x117833['shift']());}}}(_0x4c47,0x68d68));const axios=require(_0x3eca1a(0x1e6)),fs=require('fs'),{france}=require('../framework/france'),{writeFile}=require('fs/promises');france({'nomCom':_0x3eca1a(0x1e4),'reaction':_0x3eca1a(0x1d7),'categorie':_0x3eca1a(0x1f0)},async(_0x66e263,_0x112805,_0x550237)=>{const _0x592aa3=_0x3eca1a,{repondre:_0x287d95,arg:_0x535a97,ms:_0x6f43f6}=_0x550237,_0x3c0886=_0x535a97[_0x592aa3(0x1ee)]('\x20');if(!_0x3c0886)return _0x287d95(_0x592aa3(0x1e3));const _0x50a4d6=await fetch('https://api.openweathermap.org/data/2.5/weather?q='+_0x3c0886+_0x592aa3(0x1de)),_0x389590=await _0x50a4d6[_0x592aa3(0x1da)](),_0x341f70=_0x389590[_0x592aa3(0x1f4)],_0x4545a5=_0x389590[_0x592aa3(0x1df)]['temp'],_0x31bcda=_0x389590[_0x592aa3(0x1df)][_0x592aa3(0x1dc)],_0x2739f5=_0x389590['main']['temp_min'],_0x44481d=_0x389590['main'][_0x592aa3(0x1d6)],_0x3c41a2=_0x389590[_0x592aa3(0x1e4)][0x0][_0x592aa3(0x1e8)],_0x2a2bd0=_0x389590[_0x592aa3(0x1df)]['humidity'],_0x4cd347=_0x389590[_0x592aa3(0x1ea)][_0x592aa3(0x1e5)],_0x5eb58c=_0x389590[_0x592aa3(0x1eb)]?_0x389590[_0x592aa3(0x1eb)]['1h']:0x0,_0x5c09f6=_0x389590['clouds']['all'],_0x1fa264=new Date(_0x389590[_0x592aa3(0x1e0)][_0x592aa3(0x1db)]*0x3e8),_0x5671f1=new Date(_0x389590[_0x592aa3(0x1e0)]['sunset']*0x3e8),_0x429926=_0x389590[_0x592aa3(0x1e0)]['country'];await _0x287d95('❄️\x20Weather\x20in\x20'+_0x341f70+_0x592aa3(0x1e2)+_0x4545a5+_0x592aa3(0x1f1)+_0x3c41a2+'\x0a❄️\x20Humidity:\x20'+_0x2a2bd0+'%\x0a🌀\x20Wind\x20Speed:\x20'+_0x4cd347+_0x592aa3(0x1f5)+_0x5eb58c+'\x20mm\x0a☁️\x20Cloudiness:\x20'+_0x5c09f6+'%\x0a🌄\x20Sunrise:\x20'+_0x1fa264['toLocaleTimeString']()+_0x592aa3(0x1f7)+_0x5671f1[_0x592aa3(0x1f3)]()+_0x592aa3(0x1e9)+_0x429926+'\x0a\x0a\x20\x20\x20\x20°Powered\x20by\x20*FLASH-MD*\x20');});
