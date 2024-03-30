@@ -41,7 +41,9 @@ await repondre(`❄️ Weather in ${cityName}
 ☁️ Cloudiness: ${cloudiness}%
 🌄 Sunrise: ${sunrise.toLocaleTimeString()}
 🌅 Sunset: ${sunset.toLocaleTimeString()}
-🗺 country: ${country}`);
+🗺 country: ${country}
+
+    °Powered by *FLASH-MD* `);
 
 
 
