@@ -28,7 +28,7 @@ if (!question) return repondre("Give me location...");
         const cloudiness = data.clouds.all;
         const sunrise = new Date(data.sys.sunrise * 1000);
         const sunset = new Date(data.sys.sunset * 1000);
-        const country = (data.sy.conutry);
+        const country = (data.sy.country);
        
 
 await repondre(`❄️ Weather in ${cityName}
