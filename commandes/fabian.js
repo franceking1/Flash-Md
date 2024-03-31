@@ -9,7 +9,7 @@ const (zokou) = require("../framework/zokou");
 
       
        const { data } = await axios.get(`https://nekos.life/api/v2/fact`)
-        return response = zk.reply(`*Fact:* ${data.fact}\n\n*Powered by FLASH-MD*`)   
+        return response = zk.sendMessage(dest, {`*Fact:*} ${data.fact}\n\n*Powered by FLASH-MD*`)   
     }
 
 )
