@@ -1,5 +1,5 @@
 const ( zokou ) = require("../framework/zokou");
-const axios = require("axios") ;
+const axios = require("axios");
 
 
   
@@ -8,9 +8,8 @@ const axios = require("axios") ;
 
 
       
-       const { data } = await axios.get(`https://nekos.life/api/v2/fact`)
-        return response = zk.sendMessage(dest, {
-          `*Fact:* ${data.fact}\n\n*Powered by FLASH-MD*`)   
+       const { data } = await fetch(`https://nekos.life/api/v2/fact`)
+        const response = zk.sendMessage(`*Fact:* ${data.fact}\n\n*Powered by FLASH-MD*`)   
     }
 
 )
