@@ -1,19 +1,15 @@
-const ( zokou ) = require("../framework/zokou");
-const axios = require("axios");
-
+const ( zokou ) = require("../framework") 
 
   
-    zokou({ nomCom: "fact", reaction: "👌", categorie: "NEW" }, async (dest, zk, commandeOptions) => {
+    zokou({ nomCom: "fabian", reaction: "👌", categorie: "NEW" }, async (dest, zk, commandeOptions) => {
     const { repondre, arg, ms } = commandeOptions;
 
 
-      
-       const { data } = await fetch(`https://nekos.life/api/v2/fact`)
-        const response = zk.sendMessage(`*Fact:* ${data.fact}\n\n*Powered by FLASH-MD*`)   
+         var inital = new Date().getTime();
+        const { key } = await zk.sendMessage(dest.chat, {text: '```Ping!!!```'});
+        var final = new Date().getTime();
+       // await Flash.sleep(1000)
+       return await zk.sendMessage(dest.chat, {text: '*Pong*\n *' + (final - inital) + ' ms* ', edit: key});
     }
-
-)
-
-
-
+);
   
