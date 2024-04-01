@@ -1,20 +1,17 @@
- <h1 align="center"> FLASH-MD </h1>
-<p align="center"> FLASH-MD, A Simple WhatsApp user BOT, Created by France King.
-</p>
+  <h1 align="center"> 𝐓𝐇𝐄 𝐅𝐋𝐀𝐒𝐇 𝐌𝐔𝐋𝐓𝐈 𝐃𝐄𝐕𝐈𝐂𝐄  </h1>
+<div align="center">
+ <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Black+Ops+One&size=50&pause=1000&color=1BAFBAFF&center=true&width=910&height=100&lines=THANKS FOR CHOOSING +FLASH-MD;MULTI+DEVICE+WHATSAPP+BOT;CREATED+BY+FRANCE+KING;RELESED+22.2.2024" alt="Typing SVG" /></a>
+  </p>
+<img src="https://telegra.ph/file/3f985014b51b3cf335bfe.jpg" width="800" height="400"/>
 
  
-<img src="https://telegra.ph/file/3f985014b51b3cf335bfe.jpg" width="700" height="300"/>
-
-
-
-### Setup
-
+ ### SET-UP
 **📌DEPLOY ON HEROKU**
-   - ***Click [`FORK REPO FIRST`](https://github.com/franceking1/Flash-Md/fork) and `Star ⭐ Repository` for Courage.***
-   - ***`Get Session` by [`SCANING QR`](https://flash-md-qr.onrender.com) Or [`PAIRING CODE`](https://flashmd-session-5fea4d73011f.herokuapp.com/pair) Then `Go-to Whatapp>Three dots>Linked Devices`***
-   - You will get a session ID in WhatsApp, copy the ID only.
-   - **If you don't have an account on [Heroku](https://signup.heroku.com/), [create an account now](https://signup.heroku.com/).**
-   - ***Now [DEPLOY](https://flash-deploy.vercel.app).***
+- ***Click [`FORK`](https://github.com/franceking1/Flash-Md/fork) and `Star ⭐ Repository` for Courage.***
+- ***`Get Session` by [`SCANING QR`](https://flash-md-qr.onrender.com) Or [`PAIRING CODE`](https://flashmd-session-5fea4d73011f.herokuapp.com/pair)***
+- You will get a session ID in WhatsApp, copy the ID only.
+- **If you don't have an account on [Heroku](https://signup.heroku.com/), [create an account now](https://signup.heroku.com/).**
+- ***Now [DEPLOY](https://flash-deploy.vercel.app).***
 
 
 ## Contributions
