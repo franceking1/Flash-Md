@@ -14,17 +14,17 @@
 - ***Now [DEPLOY](https://flash-deploy.vercel.app).***
 
 
-## Contributions
+### CONTRIBUTIONS 
 
 Contributions to Flash-Md are welcome! If you have ideas for new features, improvements, or bug fixes, feel free to open an issue or submit a pull request.
 
-## License
+### LICENSE 
 
 The FLASH-MD is released under the [MIT License](https://opensource.org/licenses/MIT).
 
 Enjoy the diverse features of the Flash-Md  to enhance your conversations and make your WhatsApp experience more interesting!
 
-## Developer:
+### DEVELOPER:
 
 - [**Instagram**](https://instagram.com/france.king1)
 - [**WhatsApp**](https://wa.me/254757835036)
