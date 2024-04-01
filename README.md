@@ -2,6 +2,10 @@
 <p align="center"> 𝐅𝐋𝐀𝐒𝐇-𝐌𝐃, 𝐀 𝐒𝐢𝐦𝐩𝐥𝐞 𝐖𝐡𝐚𝐭𝐬𝐀𝐩𝐩 𝐮𝐬𝐞𝐫 𝐁𝐎𝐓, 𝐂𝐫𝐞𝐚𝐭𝐞𝐝 𝐛𝐲 𝐅𝐫𝐚𝐧𝐜𝐞 𝐊𝐢𝐧𝐠. </p>
 
 
+<div align="center">
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Black+Ops+One&size=50&pause=1000&color=1BAFBAFF&center=true&width=910&height=100&lines=Thanks For CHOOSING FLASH-MD ;MULTI+DEVICE+WHATSAPP+BOT;CREATED+BY+France King" alt="Typing SVG" /></a>
+  </p>
+
 
 <img src="https://telegra.ph/file/3f985014b51b3cf335bfe.jpg" width="700" height="300"/>
 
