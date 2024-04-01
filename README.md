@@ -8,7 +8,7 @@
  ### SET-UP
 **📌DEPLOY ON HEROKU**
 - ***Click [`FORK`](https://github.com/franceking1/Flash-Md/fork) and `Star ⭐ Repository` for Courage.***
-- ***`Get Session` by [`SCANING QR`](https://flash-md-qr.onrender.com) Or [`PAIRING CODE`](https://flashmd-session-5fea4d73011f.herokuapp.com/pair)***
+- ***`Get Session` by [`SCANING QR`](https://flash-md-qr.onrender.com) Or [`PAIRING CODE`](https://flash-md-pair-85cef2fd8430.herokuapp.com/pair)***
 - You will get a session ID in WhatsApp, copy the ID only.
 - **If you don't have an account on [Heroku](https://signup.heroku.com/), [create an account now](https://signup.heroku.com/).**
 - ***Now [DEPLOY](https://flash-deploy.vercel.app).***
