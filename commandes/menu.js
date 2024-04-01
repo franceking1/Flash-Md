@@ -43,7 +43,7 @@ const temps = moment().format('HH:mm:ss');
 const date = moment().format('DD/MM/YYYY');
 
   let infoMsg =  `
-╭────✧𝐅𝐋𝐀𝐒𝐇-𝐌𝐃✧────◆
+╭────✧𝐅𝐀𝐑𝐎𝐎𝐐-𝐌𝐀𝐆𝐒𝐈✧──◆
 ┃❃╭──────────────
 ┃❃│ Prefix : ${s.PREFIXE} 
 ┃❃│ User :  ${s.OWNER_NAME}
@@ -55,11 +55,11 @@ const date = moment().format('DD/MM/YYYY');
 ┃❃│ Ram : ${format(os.totalmem() - os.freemem())}/${format(os.totalmem())} 
 ┃❃│ Uptime : ${runtime(process.uptime())} 
 ┃❃╰───────────────
-╰─────✧The-GOAT✧─────◆ \n\n`;
+╰─────✧𝐅𝐀𝐑𝐎𝐎𝐐-𝐌𝐀𝐆𝐒𝐈✧─────◆ \n\n`;
 
   let menuMsg=`  
 
-*FLASH-MD COMMANDS :*
+*𝐅𝐀𝐑𝐎𝐎𝐐-𝐌𝐀𝐆𝐒𝐈 COMMANDS :*
 ◇                             ◇
 `;
 
@@ -77,7 +77,7 @@ const date = moment().format('DD/MM/YYYY');
 ◇            ◇
 *————— ★ —————*
 
-  *📌France King®🐐²0²⁴*                                         
+  *💫𝐅𝐀𝐑𝐎𝐎𝐐 𝐌𝐀𝐆𝐒𝐈🌠*                                         
 *╰═════════════⊷*
 `;
 
@@ -85,7 +85,7 @@ const date = moment().format('DD/MM/YYYY');
 
    if (lien.match(/\.(mp4|gif)$/i)) {
     try {
-        zk.sendMessage(dest, { video: { url: lien }, caption:infoMsg + menuMsg, footer: "Je suis *Zokou-MD*, développé par Djalega++" , gifPlayback : true }, { quoted: ms });
+        zk.sendMessage(dest, { video: { url: lien }, caption:infoMsg + menuMsg, footer: "Je suis *𝐅𝐀𝐑𝐎𝐎𝐐-𝐌𝐃*, développé par Djalega++" , gifPlayback : true }, { quoted: ms });
     }
     catch (e) {
         console.log("🥵🥵 Menu erreur " + e);
@@ -95,7 +95,7 @@ const date = moment().format('DD/MM/YYYY');
 // Vérification pour .jpeg ou .png
 else if (lien.match(/\.(jpeg|png|jpg)$/i)) {
     try {
-        zk.sendMessage(dest, { image: { url: lien }, caption:infoMsg + menuMsg, footer: "*📌France King*" }, { quoted: ms });
+        zk.sendMessage(dest, { image: { url: lien }, caption:infoMsg + menuMsg, footer: "*𝐅𝐀𝐑𝐎𝐎𝐐_𝐌𝐀𝐆𝐒𝐈*" }, { quoted: ms });
     }
     catch (e) {
         console.log("🥵🥵 Menu erreur " + e);
