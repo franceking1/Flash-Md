@@ -11,7 +11,7 @@
 2. ***`Get Session` by [`SCANING QR`](https://flash-md-qr.onrender.com) Or [`PAIRING CODE`](https://flash-md-pair-85cef2fd8430.herokuapp.com/pair)***
 - You will get a session ID in WhatsApp, copy the ID only.
 3. **If you don't have an account on [Heroku](https://signup.heroku.com/), [create an account now](https://signup.heroku.com/).**
-- ***Now [DEPLOY](https://flash-deploy.vercel.app).***
+4. ***Now [DEPLOY](https://flash-deploy.vercel.app).***
 
 
 ### CONTRIBUTIONS 
