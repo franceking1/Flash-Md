@@ -14,9 +14,9 @@ zokou({ nomCom: 'ping',
   },
   async (dest, zk, commandeOptions) => {
     const { ms, arg, repondre } = commandeOptions;
-    const { start} = new Date().getTime()
-    return repondre('*Pong!!*\n ```' + 2000 + '``` *ms*') 
-    const { end } = new Date().getTime()
-    await zok.sendMessage('*Pong!*\n ```' + (end - start) + '``` *ms*')
+    var inital = new Date().getTime();
+        const { key } = await zk.sendMessage(repondre.chat, {text: '```Ping!!!```'});
+        var final = new Date().getTime();
+       return await zk.sendMessage(repondre.chat, {text: '*Pong*\n *' + (final - inital) + ' ms* ', edit: key});
   }
 )
