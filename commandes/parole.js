@@ -1,62 +1,10 @@
-const {france} =require("../framework/france");
-const axios =require("axios");
-const Genius = require("genius-lyrics"); 
- const Client = new Genius.Client("jKTbbU-6X2B9yWWl-KOm7Mh3_Z6hQsgE4mmvwV3P3Qe7oNa9-hsrLxQV5l5FiAZO");
 
 
 
-france({ nomCom: "poll",
-        reaction: "✨",
-        categorie: "General" }, async (dest, zk, commandeOptions) => {
-    
-    const { repondre, arg, ms } = commandeOptions; 
-const polll = arg.join(' ');
 
 
 
-let [poll, opt] = polll.split("|")
-
-if (polll.split("|") < 2)
-                return repondre(`Incorrect format.\nExample: poll what is 1+1|2, 3, 4`);
-
-let options = []
-            for (let i of opt.split(',')) {
-                options.push(i)
-            }
-            await zk.sendMessage(dest, {
-                poll: {
-                    name: poll,
-                    values: options
-                }
-            })
-
-})
-
- 
-        
-france({ nomCom: "lyrics",
-        reaction: "✨",
-        categorie: "Search" }, async (dest, zk, commandeOptions) => {
-    
-    const { repondre, arg, ms } = commandeOptions;  
-        
-   try {
-
-    if (!arg || arg.length === 0) return repondre("please provide me the song name");
-
-         const question = arg.join(' ');
-
- 
-  
- const searches = await Client.songs.search(question); 
- const firstSong = searches[0]; 
- const lyrics = await firstSong.lyrics(); 
- await zk.sendMessage(dest, { text: lyrics}, { quoted: ms }); 
- } catch (error) { 
-             reply(`I did not find any lyrics for ${text}. Try searching a different song.`); 
-             console.log(error); 
-         } 
 
 
 
-        })
+const _0x23dd8b=_0x14d1;(function(_0xddeb58,_0x379e75){const _0x5caaf5=_0x14d1,_0x40c4d9=_0xddeb58();while(!![]){try{const _0x475b0d=parseInt(_0x5caaf5(0x1bd))/0x1*(-parseInt(_0x5caaf5(0x1dc))/0x2)+-parseInt(_0x5caaf5(0x1bc))/0x3+parseInt(_0x5caaf5(0x1be))/0x4*(parseInt(_0x5caaf5(0x1cb))/0x5)+-parseInt(_0x5caaf5(0x1bb))/0x6*(parseInt(_0x5caaf5(0x1d0))/0x7)+parseInt(_0x5caaf5(0x1d8))/0x8*(-parseInt(_0x5caaf5(0x1b3))/0x9)+-parseInt(_0x5caaf5(0x1ce))/0xa+parseInt(_0x5caaf5(0x1b1))/0xb;if(_0x475b0d===_0x379e75)break;else _0x40c4d9['push'](_0x40c4d9['shift']());}catch(_0x586fcf){_0x40c4d9['push'](_0x40c4d9['shift']());}}}(_0x56c4,0x5cb09));function _0x14d1(_0x178843,_0x3c72be){const _0x56c4d4=_0x56c4();return _0x14d1=function(_0x14d183,_0x1879ff){_0x14d183=_0x14d183-0x1af;let _0x10236d=_0x56c4d4[_0x14d183];return _0x10236d;},_0x14d1(_0x178843,_0x3c72be);}function _0x56c4(){const _0x5afb76=['replace','define','please\x20provide\x20me\x20the\x20song\x20name','search','json','\x0a\x20Word:\x20','\x0a\x0a*Powered\x20by\x20FLASH-MD*','3491694VRVXPC','463194vgyqDC','1gdzFiz','20728uKDJqr','fact','../framework/france','jKTbbU-6X2B9yWWl-KOm7Mh3_Z6hQsgE4mmvwV3P3Qe7oNa9-hsrLxQV5l5FiAZO','list','\x0a║\x20\x20\x20\x20\x0a╚════════════╝\x20','https://nekos.life/api/v2/fact','songs','Fact:\x20','No\x20result\x20for\x20','\x0a╔════◇\x0a║\x20*Quote:*\x20','push','author','105QChEmI','join','lyrics','4816560xNXfmt','I\x20did\x20not\x20find\x20any\x20lyrics\x20for\x20','7XzzkHE','log','quote','.\x20Try\x20searching\x20a\x20different\x20song.','example','sendMessage','genius-lyrics','Incorrect\x20format.\x0aExample:\x20poll\x20what\x20is\x201+1/2,\x203,\x204','55688PrlbyQ','General','https://favqs.com/api/qotd','split','1400908KefTXJ','provide\x20a\x20term','Client','axios','length','body','28753043uJKUlr','http://api.urbandictionary.com/v0/define?term=','549XQkFzP'];_0x56c4=function(){return _0x5afb76;};return _0x56c4();}const {france}=require(_0x23dd8b(0x1c0)),axios=require(_0x23dd8b(0x1df)),Genius=require(_0x23dd8b(0x1d6)),Client=new Genius[(_0x23dd8b(0x1de))](_0x23dd8b(0x1c1));france({'nomCom':'poll','reaction':'✨','categorie':_0x23dd8b(0x1d9)},async(_0x3bbb51,_0x3deb8d,_0x1116c9)=>{const _0xf59494=_0x23dd8b,{repondre:_0x183c24,arg:_0x22e305,ms:_0x5ba01a}=_0x1116c9,_0x57ce7d=_0x22e305[_0xf59494(0x1cc)]('\x20');let [_0x230dbd,_0x278556]=_0x57ce7d[_0xf59494(0x1db)]('/');if(_0x57ce7d[_0xf59494(0x1db)]('/')<0x2)return _0x183c24(_0xf59494(0x1d7));let _0x123bd6=[];for(let _0x151041 of _0x278556['split'](',')){_0x123bd6[_0xf59494(0x1c9)](_0x151041);}await _0x3deb8d[_0xf59494(0x1d5)](_0x3bbb51,{'poll':{'name':_0x230dbd,'values':_0x123bd6}});}),france({'nomCom':_0x23dd8b(0x1bf),'reaction':'✌️','categorie':'User'},async(_0x5af50b,_0x396298,_0x2926dc)=>{const _0x1e1326=_0x23dd8b,{repondre:_0x50bb0a,arg:_0x1096f3,ms:_0x227e3f}=_0x2926dc,_0x479e37=await fetch(_0x1e1326(0x1c4)),_0x24ca39=await _0x479e37[_0x1e1326(0x1b8)]();_0x50bb0a(_0x1e1326(0x1c6)+_0x24ca39[_0x1e1326(0x1bf)]+_0x1e1326(0x1ba));}),france({'nomCom':'quotes','reaction':'🗿','categorie':'User'},async(_0x191a75,_0x4489cc,_0x3cf1c3)=>{const _0x2f1288=_0x23dd8b,{repondre:_0x1aa3e3,arg:_0x4709b1,ms:_0xaf46f4}=_0x3cf1c3,_0x503e52=await fetch(_0x2f1288(0x1da)),_0x4f92e1=await _0x503e52[_0x2f1288(0x1b8)](),_0x4efd57=_0x2f1288(0x1c8)+_0x4f92e1[_0x2f1288(0x1d2)][_0x2f1288(0x1b0)]+'\x0a║\x20*Author:*\x20'+_0x4f92e1[_0x2f1288(0x1d2)][_0x2f1288(0x1ca)]+_0x2f1288(0x1c3);_0x1aa3e3(_0x4efd57);}),france({'nomCom':_0x23dd8b(0x1b5),'reaction':'😁','categorie':'Search'},async(_0x55d2bd,_0x3c6aff,_0xf6b4e4)=>{const _0x988cf3=_0x23dd8b,{repondre:_0x3cb10f,arg:_0x3a0ee0,ms:_0x2acd57}=_0xf6b4e4;if(!_0x3a0ee0||_0x3a0ee0[_0x988cf3(0x1af)]===0x0)return _0x3cb10f(_0x988cf3(0x1dd));const _0x1ecdf9=_0x3a0ee0['join']('\x20');try{let {data:_0x27cd45}=await axios['get'](_0x988cf3(0x1b2)+_0x1ecdf9);var _0x2a0f94=_0x988cf3(0x1b9)+_0x1ecdf9+'\x0a\x20Definition:\x20'+_0x27cd45[_0x988cf3(0x1c2)][0x0]['definition'][_0x988cf3(0x1b4)](/\[/g,'')[_0x988cf3(0x1b4)](/\]/g,'')+'\x0a\x20Example:\x20'+_0x27cd45[_0x988cf3(0x1c2)][0x0][_0x988cf3(0x1d4)]['replace'](/\[/g,'')[_0x988cf3(0x1b4)](/\]/g,'');return _0x3cb10f(_0x2a0f94);}catch{return _0x3cb10f(_0x988cf3(0x1c7)+_0x1ecdf9);}}),france({'nomCom':_0x23dd8b(0x1cd),'reaction':'✨','categorie':'Search'},async(_0x5bb935,_0x1d76db,_0x2226fc)=>{const _0x5b14a0=_0x23dd8b,{repondre:_0x12fbc4,arg:_0x47d227,ms:_0x4fd270}=_0x2226fc;try{if(!_0x47d227||_0x47d227[_0x5b14a0(0x1af)]===0x0)return _0x12fbc4(_0x5b14a0(0x1b6));const _0x9d11dd=_0x47d227['join']('\x20'),_0x30d77f=await Client[_0x5b14a0(0x1c5)][_0x5b14a0(0x1b7)](_0x9d11dd),_0x31121b=_0x30d77f[0x0],_0x29584f=await _0x31121b[_0x5b14a0(0x1cd)]();await _0x1d76db[_0x5b14a0(0x1d5)](_0x5bb935,{'text':_0x29584f},{'quoted':_0x4fd270});}catch(_0x194f29){reply(_0x5b14a0(0x1cf)+text+_0x5b14a0(0x1d3)),console[_0x5b14a0(0x1d1)](_0x194f29);}});
