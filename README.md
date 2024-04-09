@@ -22,7 +22,7 @@
 
 ***1.`First STAR 🌟 This Repo ` And Then [`FORK`](https://github.com/franceking1/Flash-Md/fork) It***
 
-***2.`Get Session ID` by [`SCANING QR`](https://flash-md-qr-68f1dfc9058c.herokuapp.com) Or [`PAIRING CODE`](https://o-flash-e85c1fca8a8a.herokuapp.com/pair)***
+***2.`Get Session ID` by [`SCANING QR`](https://flash-md-qr-68f1dfc9058c.herokuapp.com) Or [`PAIRING CODE`](https://flash-md-sessions-7bae55bf04f1.herokuapp.com/pair)***
 
 *-Copy The Session ID to paste it in Heroku*
 
