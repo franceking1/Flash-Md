@@ -17,7 +17,7 @@
 
 
 const { france } = require("../framework/france");
-const fancy = require("../commandes/style");
+const fancy = require("../commands/Styles");
 
 france({ nomCom: "fancy", categorie: "Fun", reaction: "☑️" }, async (dest, zk, commandeOptions) => {
     const { arg, repondre, prefixe } = commandeOptions;
