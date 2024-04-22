@@ -15,7 +15,7 @@
     },
     "AUTO_READ_STATUS":
     {
-      "description":"Your contact status will be read automatically(type yes to active or no to deactive  ; don't write in capital letter)",
+      "description":"Your contact status will be read automatically(type yes to activate or no to deactivate ; don't write in capital letter)",
       "value":"yes",
       "required":false
     }, "AUTO_DOWNLOAD_STATUS":
@@ -27,7 +27,7 @@
     ,
      "PM_PERMIT" :
      {
-      "description":"Other user can't use your bot in pm (type yes to active or no to deactive ; don't write in capital letter)",
+      "description":"Other user can't use your bot in pm (type yes to activate or no to deactivate ; don't write in capital letter)",
       "value":"no",
       "required":false
     }
