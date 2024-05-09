@@ -9,8 +9,8 @@ const DATABASE_URL = process.env.DATABASE_URL === undefined
     : process.env.DATABASE_URL;
 module.exports = { session: process.env.SESSION_ID || 'zokk',
     PREFIXE: process.env.PREFIX || "+",
-    OWNER_NAME: process.env.OWNER_NAME || "France King",
-    NUMERO_OWNER : process.env.OWNER_NUMBER || "",              
+    OWNER_NAME: process.env.OWNER_NAME || "kashaija",
+    NUMERO_OWNER : process.env.OWNER_NUMBER || "255620387051",              
     AUTO_READ_STATUS: process.env.AUTO_READ_STATUS || "oui",
     AUTO_DOWNLOAD_STATUS: process.env.AUTO_DOWNLOAD_STATUS || 'non',
     BOT : process.env.BOT_NAME || 'FLASH-MD',
