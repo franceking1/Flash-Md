@@ -6,53 +6,59 @@
   "repository":"https://github.com/franceking1/Flash-Md",
   "succes_url":"/",
   "stack":"container",
-  "env":{
+     "env":{
     "PREFIX":
     {
       "description":"choose your prefix of bot",
-      "value":".",
+      "value":"+",
       "required":true
     },
+    "AUTO_READ_MESSAGES":
+    {
+      "description":"Put yes if you want the bot to autoread people's messages or else put no", 
+      "value":"no", 
+      "required":false 
+    }, 
     "AUTO_READ_STATUS":
     {
-      "description":"Your contact status will be read automatically(type yes to activate or no to deactivate ; don't write in capital letter)",
+      "description":"Your contact status will be read automatically(type yes to active or no to deactive  ; don't write in capital letter)",
       "value":"yes",
       "required":false
     }, "AUTO_DOWNLOAD_STATUS":
     {
       "description":"Your contact status will be download automatically and send to you(type yes to active or no to deactive ; don't write in capital letter)",
-      "value":"no",
+      "value":"yes",
       "required":false
     }
     ,
      "PM_PERMIT" :
      {
-      "description":"Other user can't use your bot in pm (type yes to activate or no to deactivate ; don't write in capital letter)",
+      "description":"Other user can't use your bot in pm (type yes to active or no to deactive ; don't write in capital letter)",
       "value":"no",
       "required":false
     }
     ,
     "BOT_NAME" : {
-       
+
       "description":"put A name for your bot",
       "value":"FLASH-MD",
       "required":false
 
     } ,
      "BOT_MENU_LINKS" : {
-    
+
       "description":"add one or many link for your bot menu  ; eg : url1,url2,url3.....",
       "value":"https://telegra.ph/file/dfccbf12397757c321ac4.jpg",
       "required":false
-       
+
      },
     "PUBLIC_MODE":
     {
       "description":"type yes to put your bot on public mode or no to put it on private mod",
-      "value":"no",
+      "value":"yes",
       "required":false
     }
-	,
+        ,
     "HEROKU_API_KEY": {
     "description": "insert your heroku api-key (this is optionnal)",
      "required" :false
@@ -61,7 +67,7 @@
     "description": "insert your heroku APP NAME (this is optionnal)",
      "required" :false
     }  
-	  ,
+          ,
     "SESSION_ID":
     {
       "description":"put your session ID , make sure it starts with eyJub2I...",   
@@ -71,17 +77,17 @@
     },
     "OWNER_NAME":
     {
-    
+
     "desc": "Your Name",
     "required": false,
     "value": "France King"
   },
     "OWNER_NUMBER":
   {
-    
+
     "desc": "Your number , dont put '+' and put you area code(exemple of togo '228')",
     "required":false,
-    "value": "254757835036"
+    "value": "254751284190"
   },
     "WARN_COUNT":
   {
@@ -89,6 +95,12 @@
     "required": false,
     "value": "3"
   },
+    "CHAT_BOT":
+    {
+      "desc": "Put yes to allow the bot to chat with people who text you or put no if you don't want the bot to chat with people",
+      "required": false, 
+       "value": "no" 
+    }, 
   "STARTING_BOT_MESSAGE":
   {
     "description": "if you don't want startting-bot-message put no else put yes",
@@ -96,18 +108,32 @@
     "value": "yes"
   },
   "PRESENCE":{
-    "description":"Mark your presence: 1 to indicate that you are online even if you are not. 2 to indicate that you are currently typing a message. 3 to indicate that you are currently recording an audio. Or leave the field blank to indicate your real state.",
+    "description":"Put online to indicate that you are ever online even if you are not. Put typing to indicate that you are currently typing a message. Put recording to indicate that you are currently recording an audio. Or leave the field blank to indicate your real state.",
     "value":"",
     "required": false
   }  
   },
- 
+
+
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    },
+
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+    },
+    {
+      "url": "https://github.com/clhuang/heroku-buildpack-webp-binaries.git"
+    }
+  ],
+
   "formation": {
-		"worker": {
-			"quantity": 1,
-			"size": "basic"
-		}
-	},
+                "worker": {
+                        "quantity": 1,
+                        "size": "basic"
+                }
+        },
 
   "addons":[
     {
