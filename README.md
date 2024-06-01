@@ -51,13 +51,14 @@
 - <a href="https://instagram.com/france.king1"><img title="Author" src="https://img.shields.io/badge/ON INSTAGRAM-black?style=for-the-badge&logo=Instagram"></a>
 OR 
 - <a href="https://wa.me/254742063632"><img title="Author" src="https://img.shields.io/badge/ON WHATSAPP-black?style=for-the-badge&logo=WhatsApp"></a>
+<a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 
 ***
 
-### JOIN OUR SUPPORT GROUP 
+### TO JOIN OUR SUPPORT GROUP 
 
 
-<p align="centre">
+**CLICK HERE** <p align="centre">
   <a href="https://whatsapp.com/channel/0029Vaan9TF9Bb62l8wpoD47">
     <img align="left" alt="SIEGRIN | Whastapp" width="86px" src="https://raw.githubusercontent.com/PikaBotz/My_Personal_Space/main/Images/AnyaBot_pics/Anya_v2/Whatsapp.svg" />
   
