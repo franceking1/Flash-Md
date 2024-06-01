@@ -43,7 +43,7 @@
 
 
 ### CONTRIBUTIONS 
--Contributions to Flash-Md are welcome! If you have ideas for new features, improvements, or bug fixes, feel free to open an issue or submit a pull request.
+-Contributions to TOXXIC-MD are welcome! If you have ideas for new features, improvements, or bug fixes, feel free to open an issue or submit a pull request.
 
 ***
 
@@ -55,8 +55,8 @@
 ***
 ### DEVELOPER:
 **GET In Touch with The Owner**
-- [**On Instagram**](https://instagram.com/france.king1)
-- [**Via WhatsApp**](https://wa.me/254757835036)
+- [**On WhatsApp**](https://wa.me/2348165846414)
+- [**Via WhatsApp**](https://wa.me/2348165846414)
 
 ***
 
