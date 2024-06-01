@@ -73,7 +73,7 @@ OR
 
 <p align="left">
   <a href="https://whatsapp.com/channel/0029VaTbb3p84Om9LRX1jg0P">
- Click here    <img align="centre" alt="SIEGRIN | Whastapp" width="86px" src="https://raw.githubusercontent.com/PikaBotz/My_Personal_Space/main/Images/AnyaBot_pics/Anya_v2/Whatsapp.svg" />
+ "Click here"   <img align="centre" alt="SIEGRIN | Whastapp" width="86px" src="https://raw.githubusercontent.com/PikaBotz/My_Personal_Space/main/Images/AnyaBot_pics/Anya_v2/Whatsapp.svg" />
 
    
  <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
