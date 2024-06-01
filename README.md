@@ -49,13 +49,13 @@
 ### DEVELOPER:
 **GET In Touch with The Owner**
 - <a href="https://instagram.com/france.king1"><img title="Author" src="https://img.shields.io/badge/ON INSTAGRAM-black?style=for-the-badge&logo=Instagram"></a>
-
+Or 
 - <a href="https://wa.me/254742063632"><img title="Author" src="https://img.shields.io/badge/ON WHATSAPP-black?style=for-the-badge&logo=WhatsApp"></a>
 
 ***
 
 ### THANKS TO:
-- [***Fortunatus Mokaya***](https://github.com/Fortunatusmokaya) For several Cmds Addition.
-- [***Gifted Tech***](https://github.com/giftedtechnexus) For Genaral Help and Session Generation
-- [***Suhail Ser***](https://github.com/SuhailTechInfo) For Code encryption 
+- [***Fortunatus Mokaya***](https://github.com/Fortunatusmokaya) For several Cmds & Ideas.
+- [***Gifted Tech***](https://github.com/mouricedevs) For Genaral Help and Brotherhood. 
+- [***Suhail Ser***](https://github.com/SuhailTechInfo) For Code encryption. 
 - [***Luffy***](https://github.com/Luffy2ndAccount) For Providing a Base of **FLASH-MD**
