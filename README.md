@@ -48,6 +48,8 @@
 ***
 ### DEVELOPER:
 **GET In Touch with The Owner**
+ <a href="https://instagram.com/france.king1"><img title="Author" src="https://img.shields.io/badge/ON INSTAGRAM-black?style=for-the-badge&logo=Instagram"></a>
+
 - [**On Instagram**](https://instagram.com/france.king1)
 - [**Via WhatsApp**](https://wa.me/254757835036)
 - <a href="https://wa.me/254742063632"><img title="Author" src="https://img.shields.io/badge/OWNER-black?style=for-the-badge&logo=WhatsApp"></a>
