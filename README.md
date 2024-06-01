@@ -25,6 +25,7 @@
 ***2.`Get Session ID` by [`SCANING QR 1`](https://scan-flash-md.onrender.com) OR [`QR SCANNER 2`](https://king-france.vercel.app) OR [`PAIRING CODE 2`](https://flash-sessions.onrender.com/pair)***
 
 *-Copy The Session ID to paste it in Heroku*
+<a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 
 ***
 
@@ -37,6 +38,7 @@
 **2. If You Have a Heroku Account**
     <br>
 <p align="center"><a href="https://france-king.vercel.app"> <img src="https://img.shields.io/badge/DEPLOY%20NOW-blue?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a></p>
+<a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 
 
 ***
@@ -44,6 +46,7 @@
 
 ### CONTRIBUTIONS 
 -Contributions to Flash-Md are welcome! If you have ideas for new features, improvements, or bug fixes, feel free to open an issue or submit a pull request.
+<a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 
 ***
 ### DEVELOPER:
@@ -66,15 +69,14 @@ OR
    
    <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 
-### JOIN OUR WHATSAPP CHANNEL 
+### TO JOIN OUR WHATSAPP CHANNEL 
 
 <p align="left">
   <a href="https://whatsapp.com/channel/0029VaTbb3p84Om9LRX1jg0P">
-    <img align="centre" alt="SIEGRIN | Whastapp" width="86px" src="https://raw.githubusercontent.com/PikaBotz/My_Personal_Space/main/Images/AnyaBot_pics/Anya_v2/Whatsapp.svg" />
+ Click here    <img align="centre" alt="SIEGRIN | Whastapp" width="86px" src="https://raw.githubusercontent.com/PikaBotz/My_Personal_Space/main/Images/AnyaBot_pics/Anya_v2/Whatsapp.svg" />
 
    
  <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
-<a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 
 ***
 ### THANKS TO:
@@ -82,3 +84,5 @@ OR
 - [***Gifted Tech***](https://github.com/mouricedevs) For Genaral Help and Brotherhood. 
 - [***Suhail Ser***](https://github.com/SuhailTechInfo) For Code encryption. 
 - [***Luffy***](https://github.com/Luffy2ndAccount) For Providing a Base of **FLASH-MD**
+- <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
+
