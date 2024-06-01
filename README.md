@@ -22,7 +22,7 @@
 
 ***1.`First STAR 🌟 This Repo ` And Then [`FORK`](https://github.com/franceking1/Flash-Md/fork) It***
 
-***2.`Get Session ID` by [`SCANING QR 1`](https://scan-flash-md.onrender.com) if it's slow use [`QR SCANNER 2`](https://king-france.vercel.app) or [`PAIRING CODE 2`](https://flash-sessions.onrender.com/pair)***
+***2.`Get Session ID` by [`SCANING QR 1`](https://scan-flash-md.onrender.com) OR [`QR SCANNER 2`](https://king-france.vercel.app) OR [`PAIRING CODE 2`](https://flash-sessions.onrender.com/pair)***
 
 *-Copy The Session ID to paste it in Heroku*
 
