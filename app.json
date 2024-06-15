@@ -1,4 +1,3 @@
-{
   "name":"FLASH-MD",
   "description":"An easy and simple WhatsApp bot developed by France King",
   "keywords":["bot","node","baileys","whatsapp"],
@@ -128,7 +127,7 @@
     }
   ],
 
-  "formation": {
+    "formation": {
                 "worker": {
                         "quantity": 1,
                         "size": "basic"
