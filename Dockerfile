@@ -23,4 +23,3 @@ EXPOSE 5000
 
 CMD ["node", "flash.js"]
 
-
