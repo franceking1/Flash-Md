@@ -2,5 +2,5 @@ build:
   docker:
       worker: Dockerfile
 run:
-   worker:   npm run flashmd
+   worker:   npm run flash
 
