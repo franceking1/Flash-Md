@@ -9,8 +9,8 @@ RUN apt-get update && \
   npm i pm2 -g && \
   rm -rf /var/lib/apt/lists/*
   
-RUN git clone https://github.com/franceking1/Flash-MD.git  /root/FlashMd
-WORKDIR /root/FlashMD/
+RUN git clone https://github.com/franceking1/Flash-MD.git  /root/macsam
+WORKDIR /root/MACSAM/
 
 
 COPY package.json .
@@ -21,4 +21,4 @@ COPY . .
 
 EXPOSE 5000
 
-CMD ["node", "flash.js"]
+CMD ["node", "macsam.js"]
