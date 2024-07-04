@@ -9,7 +9,7 @@ RUN apt-get update && \
   npm i pm2 -g && \
   rm -rf /var/lib/apt/lists/*
   
-RUN git clone https://github.com/franceking1/Flash-MD.git  /root/Flash_B0t
+RUN git clone https://github.com/franceking1/Flash-Md  /root/Flash_BOt
 WORKDIR /root/Flash_Bot/
 
 
@@ -19,7 +19,6 @@ RUN npm install --legacy-peer-deps
 
 COPY . .
 
-EXPOSE 5000
+EXPOSE 8000
 
-CMD ["node", "flash.js"]
-
+CMD ["npm", "run" , "franceking"]
