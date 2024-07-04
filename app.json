@@ -26,7 +26,7 @@
     }, "AUTO_DOWNLOAD_STATUS":
     {
       "description":"Your contact status will be download automatically and send to you(type yes to active or no to deactive ; don't write in capital letter)",
-      "value":"yes",
+      "value":"no",
       "required":false
     }
     ,
@@ -70,7 +70,7 @@
     "SESSION_ID":
     {
       "description":"put your session ID, AMKE SURE IT STARTS WITH FLASH-MD-WA-BOT;;;=>",   
-      "value":"",
+      "value":"eyJub2lzZUtleSI6eyJwcml2YXRlIjp7InR5cGUiOiJCdWZmZXIiLCJkYXRhIjoic0NUeEFwOTBKdzIvV1BVTUZzaVROQkpmbGRSWDNveUFQNUFIVk16SnhFaz0ifSwicHVibGljIjp7InR5cGUiOiJCdWZmZXIiLCJkYXRhIjoiaGowcWpxRXAvQTMvSC9EY2kzS0UvUlFjbXJiNmV3bm5lT2grdzdPOUZGMD0ifX0sInBhaXJpbmdFcGhlbWVyYWxLZXlQYWlyIjp7InByaXZhdGUiOnsidHlwZSI6IkJ1ZmZlciIsImRhdGEiOiJDRXNuam5qV3V5c0JITWpPaTc0a1g1WDJ1TDNLZTRycGFOcWYyUkdvbldFPSJ9LCJwdWJsaWMiOnsidHlwZSI6IkJ1ZmZlciIsImRhdGEiOiJRcE4zbGYrRWpZckJ3WnhwNDMya1M3UkZSd0N6bzFrdmNPcm1pakgwcnpNPSJ9fSwic2lnbmVkSWRlbnRpdHlLZXkiOnsicHJpdmF0ZSI6eyJ0eXBlIjoiQnVmZmVyIiwiZGF0YSI6IkdFQnJjeXowMnZ5V3JBa3VrbkkyYlZ0ZXZHNVp5cnN6L1l6WDRpck5YSE09In0sInB1YmxpYyI6eyJ0eXBlIjoiQnVmZmVyIiwiZGF0YSI6IncxUGI1K0NQbFF6YjB3U2czZFJBVkc1aXMwVW5LVEZvN0U3U2lPNzFZVlU9In19LCJzaWduZWRQcmVLZXkiOnsia2V5UGFpciI6eyJwcml2YXRlIjp7InR5cGUiOiJCdWZmZXIiLCJkYXRhIjoiS1BzQktuUnQ0YkhhbVU0Y1NsdXNFdzh4d0pHOEVvRXp0dHVxUlFuR3Jsbz0ifSwicHVibGljIjp7InR5cGUiOiJCdWZmZXIiLCJkYXRhIjoiS2s1Z3l6aFhabnQxU2x5Y1NtbVlkYllEbUFNYmExY1dGYmVSOU9KOU5DQT0ifX0sInNpZ25hdHVyZSI6eyJ0eXBlIjoiQnVmZmVyIiwiZGF0YSI6IkdmQytjZG1FRDNkMlJ5bHVzSHdhZm1iNGpKclFKVmNZaGo3ZHdmWjhlalNVMllxRm5pUXFkY3BoaTRTLzc3ckc5VHluRXE1azhKdzNKczhQSmEra2pnPT0ifSwia2V5SWQiOjF9LCJyZWdpc3RyYXRpb25JZCI6NDksImFkdlNlY3JldEtleSI6InY3MG5HUXE5OUNpRlZjbXR1djRERmZIWkgwVFI1OUtUVjhyYVdUUEE4SjA9IiwicHJvY2Vzc2VkSGlzdG9yeU1lc3NhZ2VzIjpbXSwibmV4dFByZUtleUlkIjozMSwiZmlyc3RVbnVwbG9hZGVkUHJlS2V5SWQiOjMxLCJhY2NvdW50U3luY0NvdW50ZXIiOjAsImFjY291bnRTZXR0aW5ncyI6eyJ1bmFyY2hpdmVDaGF0cyI6ZmFsc2V9LCJkZXZpY2VJZCI6IkQ1bDFyaVdpU3UyOG9PUlI4OUJBc2ciLCJwaG9uZUlkIjoiNTg1NjczNzMtODZmZi00MTFmLWI3NjUtZTgyMzIxZjk2Y2VjIiwiaWRlbnRpdHlJZCI6eyJ0eXBlIjoiQnVmZmVyIiwiZGF0YSI6Im5LYW13aWtUa1RXUmFMaFJidnZWS3pySjFLMD0ifSwicmVnaXN0ZXJlZCI6dHJ1ZSwiYmFja3VwVG9rZW4iOnsidHlwZSI6IkJ1ZmZlciIsImRhdGEiOiJBbitYdDR2WW5zQW9EemdJQTkvRWlSUUx5ZUE9In0sInJlZ2lzdHJhdGlvbiI6e30sInBhaXJpbmdDb2RlIjoiSkdGWFFKUlkiLCJtZSI6eyJpZCI6IjIzNDgwODI3MzM0NzU6NTZAcy53aGF0c2FwcC5uZXQifSwiYWNjb3VudCI6eyJkZXRhaWxzIjoiQ0ptcXhhVUJFUHJGbDdRR0dBRWdBQ2dBIiwiYWNjb3VudFNpZ25hdHVyZUtleSI6IlZlNktxYjJPaC9OVU03R0pUM2FaUjVXWUZucUs2bTZVMU1ZVUpaVkR4VFE9IiwiYWNjb3VudFNpZ25hdHVyZSI6IlplZEVWcjh6V0JHQ1M1ZXlOYWJ0SEdHbkkxcTE1WGhpYWI1anRaL3VJODVONm1VYUQrQ0ZWNDRDRXN0MFhFaDFkVERRK0d2QTY1L1pnMU02YmUwRUJ3PT0iLCJkZXZpY2VTaWduYXR1cmUiOiJEVk9vYy9Ock1tcGZud0JYZ05RM0h3cmNucC90bmpHQlhuc1UzK05nT29EZHFMVDhrTzAzaHZmY2NnOTdJS2FPMkw5UkhoQXBTYndydFlhdmNDNXdqZz09In0sInNpZ25hbElkZW50aXRpZXMiOlt7ImlkZW50aWZpZXIiOnsibmFtZSI6IjIzNDgwODI3MzM0NzU6NTZAcy53aGF0c2FwcC5uZXQiLCJkZXZpY2VJZCI6MH0sImlkZW50aWZpZXJLZXkiOnsidHlwZSI6IkJ1ZmZlciIsImRhdGEiOiJCVlh1aXFtOWpvZnpWRE94aVU5Mm1VZVZtQlo2aXVwdWxOVEdGQ1dWUThVMCJ9fV0sInBsYXRmb3JtIjoiYW5kcm9pZCIsImxhc3RBY2NvdW50U3luY1RpbWVzdGFtcCI6MTcyMDA1MDQzOH0=",
       "required": true
 
     },
@@ -79,14 +79,14 @@
 
     "desc": "Your Name",
     "required": false,
-    "value": "France King"
+    "value": "Turbo Technologies "
   },
     "OWNER_NUMBER":
   {
 
     "desc": "Your number , dont put '+' and put you area code(exemple of togo '228')",
     "required":false,
-    "value": "254751284190"
+    "value": "2348082733475"
   },
     "WARN_COUNT":
   {
