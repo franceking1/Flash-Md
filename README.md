@@ -49,6 +49,7 @@
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 
 ***
+
 ### DEVELOPER:
 **GET In Touch with The Owner**
 - <a href="https://instagram.com/france.king1"><img title="Author" src="https://img.shields.io/badge/ON INSTAGRAM-black?style=for-the-badge&logo=Instagram"></a>
@@ -62,7 +63,7 @@ OR
 
 
 <a href="https://chat.whatsapp.com/IH4xWuVTGpf7ibfzC3h6LM" target="_blank">
-    <img alt="CLICK HERE" src="https://img.shields.io/badge/ Whatsapp Support Channel -25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
+    <img alt="CLICK HERE" src="https://img.shields.io/badge/ SUPPORT GROUP -25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
   </a>
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 
@@ -72,7 +73,7 @@ OR
 ### TO JOIN OUR WHATSAPP CHANNEL 
 
 <a href="https://whatsapp.com/channel/0029VaTbb3p84Om9LRX1jg0P" target="_blank">
-    <img alt="CLICK HERE " src="https://img.shields.io/badge/ Whatsapp Support Channel -25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
+    <img alt="CLICK HERE " src="https://img.shields.io/badge/ WhatsApp CHANNEL -25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
   </a>
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 
