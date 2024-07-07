@@ -52,9 +52,7 @@
 
 ### DEVELOPER:
 **GET In Touch with The Owner**
-- <a href="https://instagram.com/france.king1" target="_blank">
-    <img alt="CLICK HERE" src="https://img.shields.io/badge/ ON INSTAGRAM -25D366?style=for-the-badge&logo=instagram&logoColor=blue" />
-  </a>
+-<a href="https://instagram.com/france.king1"><img title="Author" src="https://img.shields.io/badge/ON INSTAGRAM-black?style=for-the-badge&logo=Instagram"></a>
 OR 
 - <a href="https://wa.me/254742063632" target="_blank">
     <img alt="CLICK HERE" src="https://img.shields.io/badge/ On WhatsApp  -25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
@@ -65,13 +63,13 @@ OR
 
 #### SUPPORT THE PROJECT 
 1. **JOIN OUR SUPPORT GROUP**
-<a href="https://chat.whatsapp.com/IH4xWuVTGpf7ibfzC3h6LM" target="_blank">
+- <a href="https://chat.whatsapp.com/IH4xWuVTGpf7ibfzC3h6LM" target="_blank">
     <img alt="CLICK HERE" src="https://img.shields.io/badge/ JOIN NOW 🚀 -25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
   </a>
   
 2. **FOLLOW OUR WHATSAPP CHANNEL**
 
-<a href="https://whatsapp.com/channel/0029VaTbb3p84Om9LRX1jg0P" target="_blank">
+- <a href="https://whatsapp.com/channel/0029VaTbb3p84Om9LRX1jg0P" target="_blank">
     <img alt="CLICK HERE " src="https://img.shields.io/badge/ FOLLOW NOW  -25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
   </a>
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
