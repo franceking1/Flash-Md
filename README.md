@@ -61,22 +61,20 @@ OR
 ### TO JOIN OUR SUPPORT GROUP 
 
 
-*CLICK THIS 👇 BUTTON* <p align="centre">
-  <a href="https://chat.whatsapp.com/IH4xWuVTGpf7ibfzC3h6LM">
-    <img align="left" alt="SIEGRIN | Whastapp" width="86px" src="https://raw.githubusercontent.com/PikaBotz/My_Personal_Space/main/Images/AnyaBot_pics/Anya_v2/Whatsapp.svg" />
-  
+<a href="https://chat.whatsapp.com/IH4xWuVTGpf7ibfzC3h6LM" target="_blank">
+    <img alt="CLICK HERE" src="https://img.shields.io/badge/ Whatsapp Support Channel -25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
+  </a>
+<a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 
    
    <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 
 ### TO JOIN OUR WHATSAPP CHANNEL 
 
-*CLICK THIS 👇 BUTTON* <p align="centre">
-  <a href="https://whatsapp.com/channel/0029VaTbb3p84Om9LRX1jg0P">
-   <img align="centre" alt="SIEGRIN | Whastapp" width="86px" src="https://raw.githubusercontent.com/PikaBotz/My_Personal_Space/main/Images/AnyaBot_pics/Anya_v2/Whatsapp.svg" />
-
-   
- <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
+<a href="https://whatsapp.com/channel/0029VaTbb3p84Om9LRX1jg0P" target="_blank">
+    <img alt="CLICK HERE " src="https://img.shields.io/badge/ Whatsapp Support Channel -25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
+  </a>
+<a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 
 ***
 ### THANKS TO:
