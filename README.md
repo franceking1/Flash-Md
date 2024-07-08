@@ -49,34 +49,30 @@
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 
 ***
+
 ### DEVELOPER:
 **GET In Touch with The Owner**
 - <a href="https://instagram.com/france.king1"><img title="Author" src="https://img.shields.io/badge/ON INSTAGRAM-black?style=for-the-badge&logo=Instagram"></a>
-OR 
-- <a href="https://wa.me/254742063632"><img title="Author" src="https://img.shields.io/badge/ON WHATSAPP-black?style=for-the-badge&logo=WhatsApp"></a>
+- OR 
+- <a href="https://wa.me/254742063632" target="_blank">
+    <img alt="CLICK HERE" src="https://img.shields.io/badge/ On WhatsApp  -25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
+  </a>
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 
 ***
 
-### TO JOIN OUR SUPPORT GROUP 
-
-
-*CLICK THIS 👇 BUTTON* <p align="centre">
-  <a href="https://chat.whatsapp.com/IH4xWuVTGpf7ibfzC3h6LM">
-    <img align="left" alt="SIEGRIN | Whastapp" width="86px" src="https://raw.githubusercontent.com/PikaBotz/My_Personal_Space/main/Images/AnyaBot_pics/Anya_v2/Whatsapp.svg" />
+#### SUPPORT THE PROJECT 
+1. **JOIN OUR SUPPORT GROUP**
+- <a href="https://chat.whatsapp.com/IH4xWuVTGpf7ibfzC3h6LM" target="_blank">
+    <img alt="CLICK HERE" src="https://img.shields.io/badge/ JOIN NOW 🚀 -25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
+  </a>
   
+2. **FOLLOW OUR WHATSAPP CHANNEL**
 
-   
-   <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
-
-### TO JOIN OUR WHATSAPP CHANNEL 
-
-*CLICK THIS 👇 BUTTON* <p align="centre">
-  <a href="https://whatsapp.com/channel/0029VaTbb3p84Om9LRX1jg0P">
-   <img align="centre" alt="SIEGRIN | Whastapp" width="86px" src="https://raw.githubusercontent.com/PikaBotz/My_Personal_Space/main/Images/AnyaBot_pics/Anya_v2/Whatsapp.svg" />
-
-   
- <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
+- <a href="https://whatsapp.com/channel/0029VaTbb3p84Om9LRX1jg0P" target="_blank">
+    <img alt="CLICK HERE " src="https://img.shields.io/badge/ FOLLOW NOW  -25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
+  </a>
+<a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 
 ***
 ### THANKS TO:
