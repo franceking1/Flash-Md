@@ -54,3 +54,4 @@ fs.watchFile(fichier, () => {
     delete require.cache[fichier];
     require(fichier);
 });
+
