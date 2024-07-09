@@ -24,7 +24,6 @@
 
 ***2.`Get Session ID` by [`SCANING QR`](https://scan-flash-md-ik5n.onrender.com) OR [`PAIRING CODE`](https://the-flash-md-sessions.onrender.com/pair)***
 
-*-Copy The Session ID to paste it in Heroku*
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 
 ***
@@ -38,6 +37,20 @@
 **2. If You Have a Heroku Account**
     <br>
 <p align="center"><a href="https://france-king.vercel.app"> <img src="https://img.shields.io/badge/DEPLOY%20NOW-blue?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a></p>
+<a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
+
+
+***
+
+#### DEPLOY TO CLEVER CLOUD
+**1. If You Don't Have An Account On Clever**
+    <br>
+<p align="center"><a href="https://api.clever-cloud.com/v2/sessions/signup?subscription_source=cta-home-signup">
+ <img src="https://img.shields.io/badge/Create%20Account%20Now-blue?style=for-the-badge&logo=clever-cloud" width="220" height="38.45"/></a></p>
+
+**2. If You Have an account on clever**
+    <br>
+<p align="center"><a href="https://console.clever-cloud.com/users/me/applications/new"> <img src="https://img.shields.io/badge/DEPLOY%20NOW-blue?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a></p>
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 
 
