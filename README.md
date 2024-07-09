@@ -43,7 +43,7 @@
 
 #### DEPLOY TO CLEVER CLOUD
 **1. If You Don't Have An Account On Clever**
-- <a href="https://api.clever-cloud.com/v2/sessions/signup?subscription_source=cta-home-signup"><img src="https://img.shields.io/badge/CREATE AN ACCOUNT NOW-h?color=red&style=for-the-badge&logo=msi" width="220" height="38.45"/></a></p>
+- <a href="https://www.clever-cloud.com"><img src="https://img.shields.io/badge/CREATE AN ACCOUNT NOW-h?color=red&style=for-the-badge&logo=msi" width="220" height="38.45"/></a></p>
 
 **2. If You Have an account on clever**
 - <a href="https://console.clever-cloud.com/users/me/applications/new"><img title="Deploy the bot of your choice" src="https://img.shields.io/badge/DEPLOY NOW-h?color=red&style=for-the-badge&logo=msi" width="220" height="38.45"/></a></p>
