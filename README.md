@@ -44,7 +44,7 @@
 
 #### DEPLOY TO CLEVER CLOUD
 **1. If You Don't Have An Account On Clever**
-<a href="https://api.clever-cloud.com/v2/sessions/signup?subscription_source=cta-home-signup"><img src="https://img.shields.io/badge/Pair%20session%20code-green" alt="CREATE AN ACCOUNT NOW" width="150"></a>
+- <a href="https://api.clever-cloud.com/v2/sessions/signup?subscription_source=cta-home-signup"><img src="https://img.shields.io/badge/CREATE%20AN%20ACCOUNT%20NOW-maroon" alt="CREATE AN ACCOUNT NOW" width="150"></a>
 
 **2. If You Have an account on clever**
     <br>
