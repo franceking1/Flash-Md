@@ -47,9 +47,8 @@
 - <a href="https://api.clever-cloud.com/v2/sessions/signup?subscription_source=cta-home-signup"><img src="https://img.shields.io/badge/CREATE%20AN%20ACCOUNT%20NOW-maroon" alt="CREATE AN ACCOUNT NOW" width="150"></a>
 
 **2. If You Have an account on clever**
-    <br>
-<p align="center"><a href="https://console.clever-cloud.com/users/me/applications/new"> <img src="https://img.shields.io/badge/DEPLOY%20NOW-blue?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a></p>
-<a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
+- <a href="https://console.clever-cloud.com/users/me/applications/new"><img title="Deploy the bot of your choice" src="https://img.shields.io/badge/DEPLOY NOW-h?color=red&style=for-the-badge&logo=msi" width="220" height="38.45"/></a></p>
+
 
 
 ***
