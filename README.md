@@ -48,6 +48,9 @@
 **2. If You Have an account on clever**
 - <a href="https://console.clever-cloud.com/users/me/applications/new"><img title="Deploy the bot of your choice" src="https://img.shields.io/badge/DEPLOY NOW-h?color=red&style=for-the-badge&logo=msi" width="220" height="38.45"/></a></p>
 
+**3. Join our telegram and watch tutorials on how to deploy**
+- <a href="https://t.me/france_king1"><img title="Author" src="https://img.shields.io/badge/JOIN NOW-black?style=for-the-badge&logo=Telegram"></a>
+
 
 
 ***
