@@ -1,49 +1,155 @@
-const axios = require("axios");
-const { Sticker, StickerTypes } = require("wa-sticker-formatter");
-const {king} = require("../france/king");
-
+const _0xbc2cab = _0x2561;
+(function (_0x529770, _0x4f74ea) {
+    const _0x4da71b = _0x2561, _0x21e4ba = _0x529770();
+    while (!![]) {
+        try {
+            const _0xe09b3 = -parseInt(_0x4da71b(0x9d)) / (-0x11b5 + 0x11 * 0x237 + -0x13f1) * (parseInt(_0x4da71b(0xb9)) / (-0x337 * -0xc + -0x119a * -0x1 + -0xe0b * 0x4)) + parseInt(_0x4da71b(0xc4)) / (-0x7b6 + 0x21cc + -0x1a13) * (parseInt(_0x4da71b(0xca)) / (-0x266f + 0x9ea + 0x1e7 * 0xf)) + -parseInt(_0x4da71b(0xc5)) / (0x2500 + -0x613 + 0x17 * -0x158) + parseInt(_0x4da71b(0xa0)) / (0x1 * -0x1dd5 + 0x1477 + 0x964) + -parseInt(_0x4da71b(0xd8)) / (0x18c6 + -0x5 * -0x367 + 0x5 * -0x85a) * (parseInt(_0x4da71b(0xa3)) / (0x48a + -0x6 * -0x3d5 + 0xb0 * -0x28)) + -parseInt(_0x4da71b(0xbf)) / (0x1 * -0x114f + -0x14dc + 0x2634) + -parseInt(_0x4da71b(0xa2)) / (-0xcf8 + 0x1 * 0x1a65 + 0x95 * -0x17) * (-parseInt(_0x4da71b(0xb3)) / (-0x3e * -0x92 + -0x19b8 + -0x999));
+            if (_0xe09b3 === _0x4f74ea)
+                break;
+            else
+                _0x21e4ba['push'](_0x21e4ba['shift']());
+        } catch (_0x73024a) {
+            _0x21e4ba['push'](_0x21e4ba['shift']());
+        }
+    }
+}(_0x1dbf, 0x3 * -0x24bc9 + -0x19 * -0x6603 + -0x19f12 * -0x6));
+const axios = require(_0xbc2cab(0xb5)), {Sticker, StickerTypes} = require(_0xbc2cab(0xad) + _0xbc2cab(0xd7)), {king} = require(_0xbc2cab(0xbd) + _0xbc2cab(0xde));
+function _0x2561(_0x324beb, _0x11d661) {
+    const _0x219d53 = _0x1dbf();
+    return _0x2561 = function (_0x4afe8f, _0x35d507) {
+        _0x4afe8f = _0x4afe8f - (0x152b + 0x1936 + -0x2dc7);
+        let _0x1b9c53 = _0x219d53[_0x4afe8f];
+        return _0x1b9c53;
+    }, _0x2561(_0x324beb, _0x11d661);
+}
+function _0x1dbf() {
+    const _0x16c682 = [
+        '5221940ymFLpz',
+        'media_form',
+        'ca1_KKy4W_',
+        'transparen',
+        'RpRkX',
+        '4mIoVRe',
+        'join',
+        'get',
+        'eipWD',
+        'cJYqb',
+        '&key=',
+        'ckers!:',
+        'g\x20your\x20sti',
+        'FULL',
+        'ter=gif',
+        'AIzaSyCyou',
+        'Error\x20Occu',
+        '\x20type\x20of\x20s',
+        '-formatter',
+        '7lOEKWe',
+        'rch',
+        'FLASH-MD',
+        'ceajk',
+        '5oa8W358c',
+        '&client_ke',
+        'king',
+        '12345',
+        '\x20searching',
+        'data',
+        'downloadin',
+        '21FIUiUY',
+        'ur\x20want\x20!',
+        'ctpBj',
+        '2008308NGIBLi',
+        'Search',
+        '10HYvRXM',
+        '8971856KpjvjF',
+        'ct&limit=8',
+        'red\x20while\x20',
+        'gif',
+        'nor.google',
+        'ats',
+        'results',
+        'apis.com/v',
+        'insert\x20the',
+        'rred\x20while',
+        'wa-sticker',
+        'CxpjM',
+        'Error\x20occo',
+        'toBuffer',
+        'MG1xsPzuku',
+        '2/search?q',
+        '46135276RTKxkf',
+        'sendMessag',
+        'axios',
+        'mOyaM',
+        'vlvYl',
+        'url',
+        '63810XIftnk',
+        'error',
+        'tickers\x20yo',
+        '&media_fil',
+        '../france/',
+        'y=my_proje',
+        '8499474yRpHuS',
+        'https://te',
+        'pMvkn',
+        'stickersea',
+        'nuQgA',
+        '271293vKWjSf'
+    ];
+    _0x1dbf = function () {
+        return _0x16c682;
+    };
+    return _0x1dbf();
+}
 king({
-  nomCom: "stickersearch",
-  categorie: 'Search',
-  reaction: "💥"
-},
-async (dest, zk, commandeOptions) => {
-  const { repondre, ms, arg, nomAuteurMessage } = commandeOptions;
-
-  if (!arg[0]) {
-    repondre("insert the type of stickers your want !");
-    return;
-  }
-
-  const gifSearchTerm = arg.join(" ");
-  const tenorApiKey = "AIzaSyCyouca1_KKy4W_MG1xsPzuku5oa8W358c"; // Remplacez par votre clé d'API Tenor
-
-  try { for ( i = 0 ; i < 5 ; i++) {
-    const gif = await axios.get(
-      `https://tenor.googleapis.com/v2/search?q=${gifSearchTerm}&key=${tenorApiKey}&client_key=my_project&limit=8&media_filter=gif`
-    );
-
-    const gifUrl = gif.data.results[i].media_formats.gif.url;
-
-    
-   
-
-    // Assurez-vous de remplacer les valeurs manquantes dans la création du sticker
-    const packname = nomAuteurMessage; // Remplacez par le nom de votre pack de stickers
-
-    const stickerMess = new Sticker(gifUrl, {
-      pack: packname,
-      author: 'FLASH-MD',
-      type: StickerTypes.FULL,
-      categories: ["🤩", "🎉"],
-      id: "12345",
-      quality: 60,
-      background: "transparent",
-    });
-    const stickerBuffer2 = await stickerMess.toBuffer();
-    zk.sendMessage(dest, { sticker: stickerBuffer2 }, { quoted: ms }); }
-  } catch (error) {
-    console.error("Error occored while downloading your stickers!:", error);
-    repondre("Error Occurred  while searching");
-  }
+    'nomCom': _0xbc2cab(0xc2) + _0xbc2cab(0xd9),
+    'categorie': _0xbc2cab(0xa1),
+    'reaction': '💥'
+}, async (_0x5a03e5, _0x4faaed, _0xb1f2e9) => {
+    const _0x244a64 = _0xbc2cab, _0x12d4f4 = {
+            'ceajk': function (_0x33d18d, _0x56d1ae) {
+                return _0x33d18d(_0x56d1ae);
+            },
+            'mOyaM': _0x244a64(0xab) + _0x244a64(0xd6) + _0x244a64(0xbb) + _0x244a64(0x9e),
+            'vlvYl': _0x244a64(0xd4) + _0x244a64(0xc7) + _0x244a64(0xb1) + _0x244a64(0xdc),
+            'CxpjM': function (_0x49445a, _0x46856a) {
+                return _0x49445a < _0x46856a;
+            },
+            'cJYqb': _0x244a64(0xda),
+            'nuQgA': _0x244a64(0xdf),
+            'ctpBj': _0x244a64(0xc8) + 't',
+            'RpRkX': _0x244a64(0xaf) + _0x244a64(0xa5) + _0x244a64(0x9c) + _0x244a64(0xd1) + _0x244a64(0xd0),
+            'pMvkn': function (_0x414be1, _0x3ae510) {
+                return _0x414be1(_0x3ae510);
+            },
+            'eipWD': _0x244a64(0xd5) + _0x244a64(0xac) + _0x244a64(0x9a)
+        }, {
+            repondre: _0x1b3049,
+            ms: _0x1aa39d,
+            arg: _0x16d00f,
+            nomAuteurMessage: _0x48df24
+        } = _0xb1f2e9;
+    if (!_0x16d00f[0x19 * -0x140 + -0xca6 + 0x2be6]) {
+        _0x12d4f4[_0x244a64(0xdb)](_0x1b3049, _0x12d4f4[_0x244a64(0xb6)]);
+        return;
+    }
+    const _0x4ca785 = _0x16d00f[_0x244a64(0xcb)]('\x20'), _0x152281 = _0x12d4f4[_0x244a64(0xb7)];
+    try {
+        for (i = -0x592 * -0x7 + 0xd59 + 0x1 * -0x3457; _0x12d4f4[_0x244a64(0xae)](i, 0x3 * -0xcb5 + -0xdbb + 0x7 * 0x769); i++) {
+            const _0x47e272 = await axios[_0x244a64(0xcc)](_0x244a64(0xc0) + _0x244a64(0xa7) + _0x244a64(0xaa) + _0x244a64(0xb2) + '=' + _0x4ca785 + _0x244a64(0xcf) + _0x152281 + (_0x244a64(0xdd) + _0x244a64(0xbe) + _0x244a64(0xa4) + _0x244a64(0xbc) + _0x244a64(0xd3))), _0x3f6bbe = _0x47e272[_0x244a64(0x9b)][_0x244a64(0xa9)][i][_0x244a64(0xc6) + _0x244a64(0xa8)][_0x244a64(0xa6)][_0x244a64(0xb8)], _0x11dd74 = _0x48df24, _0x4068f6 = new Sticker(_0x3f6bbe, {
+                    'pack': _0x11dd74,
+                    'author': _0x12d4f4[_0x244a64(0xce)],
+                    'type': StickerTypes[_0x244a64(0xd2)],
+                    'categories': [
+                        '🤩',
+                        '🎉'
+                    ],
+                    'id': _0x12d4f4[_0x244a64(0xc3)],
+                    'quality': 0x3c,
+                    'background': _0x12d4f4[_0x244a64(0x9f)]
+                }), _0x4bd16b = await _0x4068f6[_0x244a64(0xb0)]();
+            _0x4faaed[_0x244a64(0xb4) + 'e'](_0x5a03e5, { 'sticker': _0x4bd16b }, { 'quoted': _0x1aa39d });
+        }
+    } catch (_0x192bb5) {
+        console[_0x244a64(0xba)](_0x12d4f4[_0x244a64(0xc9)], _0x192bb5), _0x12d4f4[_0x244a64(0xc1)](_0x1b3049, _0x12d4f4[_0x244a64(0xcd)]);
+    }
 });
