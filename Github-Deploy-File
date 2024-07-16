@@ -31,3 +31,4 @@ jobs:
 
     - name: Start application
       run: npm run franceking
+
