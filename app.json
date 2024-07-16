@@ -98,13 +98,13 @@
     {
       "desc": "Put yes to allow the bot to chat with people who text you or put no if you don't want the bot to chat with people",
       "required": false, 
-       "value": "no" 
+       "value": "off" 
     }, 
   "STARTING_MESSAGE":
   {
     "description": "if you don't want startting-bot-message put no else put yes",
     "required": true,
-    "value": "yes"
+    "value": "on"
   },
   "PRESENCE":{
     "description":"Put online to indicate that you are ever online even if you are not. Put typing to indicate that you are currently typing a message. Put recording to indicate that you are currently recording an audio. Or leave the field blank to indicate your real state.",
