@@ -16,41 +16,34 @@
         "PREFIX":
     {
       "description":"choose your prefix of bot",
-      "value":"+",
+      "value":".",
       "required":true
     },
     "AUTO_READ_MESSAGES":
     {
       "description":"Put yes if you want the bot to autoread people's messages or else put no", 
-      "value":"no", 
+      "value":"off", 
       "required":false 
     }, 
-    "AUTO_READ_STATUS":
+    "AUTO_VIEW_STATUS":
     {
       "description":"Your contact status will be read automatically(type yes to active or no to deactive  ; don't write in capital letter)",
-      "value":"yes",
+      "value":"on",
       "required":false
-    }, "AUTO_DOWNLOAD_STATUS":
+    }, "AUTO_SAVE_STATUS":
     {
       "description":"Your contact status will be download automatically and send to you(type yes to active or no to deactive ; don't write in capital letter)",
-      "value":"yes",
+      "value":"off",
       "required":false
     }
     ,
      "PM_PERMIT" :
      {
       "description":"Other user can't use your bot in pm (type yes to active or no to deactive ; don't write in capital letter)",
-      "value":"no",
+      "value":"off",
       "required":false
     }
     ,
-    "BOT_NAME" : {
-
-      "description":"put A name for your bot",
-      "value":"FLASH-MD",
-      "required":false
-
-    } ,
      "BOT_MENU_LINKS" : {
 
       "description":"add one or many link for your bot menu  ; eg : url1,url2,url3.....",
@@ -58,10 +51,10 @@
       "required":false
 
      },
-    "PUBLIC_MODE":
+    "BOT_MODE":
     {
       "description":"type yes to put your bot on public mode or no to put it on private mod",
-      "value":"yes",
+      "value":"private",
       "required":false
     }
         ,
@@ -76,7 +69,7 @@
           ,
     "SESSION_ID":
     {
-      "description":"put your session ID , make sure it starts with eyJub2I...",   
+      "description":"put your session ID , make sure it starts with FLASH-MD-WA-BOT...",   
       "value":"",
       "required": true
 
