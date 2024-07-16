@@ -13,54 +13,61 @@
 "stack":"container",
   
 "env":{
-    "PREFIX":
+        "PREFIX":
     {
-      "description":"insert a prefix for your bot, be it a letter, a number or a symbol",
-      "value":".",
+      "description":"choose your prefix of bot",
+      "value":"+",
       "required":true
     },
     "AUTO_READ_MESSAGES":
     {
-      "description":"Put on if you want the bot to autoread people's messages or else put off", 
-      "value":"off", 
+      "description":"Put yes if you want the bot to autoread people's messages or else put no", 
+      "value":"no", 
       "required":false 
     }, 
-    "AUTO_VIEW_STATUS":
+    "AUTO_READ_STATUS":
     {
-      "description":"Your contact status will be read automatically(type on to activate this feature or type off to deactivate it ; don't write in capital letter)",
-      "value":"on",
+      "description":"Your contact status will be read automatically(type yes to active or no to deactive  ; don't write in capital letter)",
+      "value":"yes",
       "required":false
-    }, "AUTO_SAVE_STATUS":
+    }, "AUTO_DOWNLOAD_STATUS":
     {
-      "description":"Your contact status will be download automatically and send to you(insert on to activate or no to deactivate ; don't write in capital letter)",
-      "value":"off",
+      "description":"Your contact status will be download automatically and send to you(type yes to active or no to deactive ; don't write in capital letter)",
+      "value":"yes",
       "required":false
     }
     ,
      "PM_PERMIT" :
      {
-      "description":"Other user can't use your bot in pm (type on to activate this feature or type off to deactivat it ; don't write in capital letter)",
-      "value":"off",
+      "description":"Other user can't use your bot in pm (type yes to active or no to deactive ; don't write in capital letter)",
+      "value":"no",
       "required":false
     }
     ,
+    "BOT_NAME" : {
+
+      "description":"put A name for your bot",
+      "value":"FLASH-MD",
+      "required":false
+
+    } ,
      "BOT_MENU_LINKS" : {
 
-      "description":"add one or many link for your bot menu  separate them with a comma ; eg : url1,url2,url3.....",
+      "description":"add one or many link for your bot menu  ; eg : url1,url2,url3.....",
       "value":"https://telegra.ph/file/dfccbf12397757c321ac4.jpg",
       "required":false
 
      },
-    "BOT_MODE":
+    "PUBLIC_MODE":
     {
-      "description":"type public to put your bot on public mode or private to put it on private mod",
-      "value":"private",
+      "description":"type yes to put your bot on public mode or no to put it on private mod",
+      "value":"yes",
       "required":false
     }
         ,
     "HEROKU_API_KEY": {
     "description": "insert your heroku api-key (this is optionnal)",
-     "required" : true 
+     "required" :false
     },
    "HEROKU_APP_NAME": {
     "description": "insert your heroku APP NAME (this is optionnal)",
@@ -96,15 +103,15 @@
   },
     "CHAT_BOT":
     {
-      "desc": "Type on to allow the bot to chat with people who text you or type off if you don't want the bot to chat with people",
+      "desc": "Put yes to allow the bot to chat with people who text you or put no if you don't want the bot to chat with people",
       "required": false, 
-       "value": "off" 
+       "value": "no" 
     }, 
-  "STARTING_MESSAGE":
+  "STARTING_BOT_MESSAGE":
   {
     "description": "if you don't want startting-bot-message put no else put yes",
     "required": true,
-    "value": "on"
+    "value": "yes"
   },
   "PRESENCE":{
     "description":"Put online to indicate that you are ever online even if you are not. Put typing to indicate that you are currently typing a message. Put recording to indicate that you are currently recording an audio. Or leave the field blank to indicate your real state.",
@@ -112,7 +119,7 @@
     "required": false
   }  
   },
-
+  
     "buildpacks": [
     {
       "url": "heroku/nodejs"
