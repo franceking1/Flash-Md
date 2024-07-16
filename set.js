@@ -26,7 +26,7 @@ CHATBOT: process.env.CHAT_BOT || "on",
     WARN_COUNT : process.env.WARN_COUNT || '3' ,
     PRESENCE : process.env.PRESENCE || '',
     //GPT : process.env.OPENAI_API_KEY || '',
-    DP : process.env.STARTING_BOT_MESSAGE || "on",
+    DP : process.env.STARTING_MESSAGE || "on",
     ADM : process.env.ANTI_DELETE_MESSAGE || 'off',
     DATABASE_URL,
     DATABASE: DATABASE_URL === databasePath
