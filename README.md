@@ -26,7 +26,7 @@
 
 i. [`SCANING QR 1`](https://scan-flash-md-ik5n.onrender.com) OR [`SCANNING QR 2 `](https://flash-md-qr.onrender.com)
 
-ii. [`PAIRING CODE 1 `](https://the-flash-md-sessions.onrender.com/pair) OR [`PAIRING CODE 2 `](https://flash-md-z6lm.onrender.com)
+ii. [`PAIRING CODE 1 `](https://the-flash-md-sessions.onrender.com/pair) OR [`PAIRING CODE 2 `](https://flash-md-z6lm.onrender.com/pair)
 
  
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
