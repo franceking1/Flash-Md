@@ -22,8 +22,10 @@
 
 ***1.`First STAR 🌟 This Repo ` And Then [`FORK`](https://github.com/franceking1/Flash-Md/fork) It***
 
-***2.`GET SESSION_ID BY` 
+***2.`GET SESSION_ID BY`***
+
 i. [`SCANING QR 1`](https://scan-flash-md-ik5n.onrender.com) OR [`SCANNING QR 2 `](https://flash-md-qr.onrender.com)
+
 ii. [`PAIRING CODE 1 `](https://the-flash-md-sessions.onrender.com/pair) OR OR [`PAIRING CODE 2 `](https://flash-md-z6lm.onrender.com)
 
  
