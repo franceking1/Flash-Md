@@ -19,15 +19,21 @@
       "value":".",
       "required":true
     },
+      "AUTO_REACTION":
+    {
+      "description":"Put on if you want the bot to react to people's messages.It won't react to your messages and those from creator France King.", 
+      "value":"off", 
+      "required":false 
+    }, 
     "AUTO_READ_MESSAGES":
     {
-      "description":"Put yes if you want the bot to autoread people's messages or else put no", 
+      "description":"Put on if you want the bot to autoread people's messages or else put no", 
       "value":"off", 
       "required":false 
     }, 
     "AUTO_VIEW_STATUS":
     {
-      "description":"Your contact status will be read automatically(type yes to active or no to deactive  ; don't write in capital letter)",
+      "description":"Your contact status will be read automatically(put on to activate or no to deactivate ; don't write in capital letter)",
       "value":"on",
       "required":false
     }, "AUTO_SAVE_STATUS":
@@ -39,7 +45,7 @@
     ,
      "PM_PERMIT" :
      {
-      "description":"Other user can't use your bot in pm (type yes to active or no to deactive ; don't write in capital letter)",
+      "description":"Other user can't use your bot in pm (type on to activate or off to deactivate ; don't write in capital letter)",
       "value":"off",
       "required":false
     }
@@ -53,7 +59,7 @@
      },
     "BOT_MODE":
     {
-      "description":"type yes to put your bot on public mode or no to put it on private mod",
+      "description":"put private  to put your bot on private mode or public to put it on public mod",
       "value":"private",
       "required":false
     }
@@ -84,25 +90,25 @@
     "OWNER_NUMBER":
   {
 
-    "desc": "Your number , dont put '+' and put you area code(exemple of togo '228')",
+    "desc": "Your number , dont put '+' and put you area code(exemple of kenya '254')",
     "required":false,
     "value": "254751284190"
   },
     "WARN_COUNT":
   {
-    "desc": "this is the limit of warn for warning commandes",
+    "desc": "this is the limit of warn for warning commands",
     "required": false,
     "value": "3"
   },
     "CHAT_BOT":
     {
-      "desc": "Put yes to allow the bot to chat with people who text you or put no if you don't want the bot to chat with people",
+      "desc": "Put on to allow the bot to chat with people who text you or put off if you don't want the bot to chat with people",
       "required": false, 
        "value": "off" 
     }, 
   "STARTING_MESSAGE":
   {
-    "description": "if you don't want startting-bot-message put no else put yes",
+    "description": "if you don't want startting-bot-message put off else put on",
     "required": true,
     "value": "on"
   },
