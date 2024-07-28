@@ -9,7 +9,7 @@ RUN apt-get update && \
   npm i pm2 -g && \
   rm -rf /var/lib/apt/lists/*
   
-RUN git clone https://github.com/France-King1/Flash-Md  /root/Flash_BOt
+RUN git clone https://github.com/franceking1/Flash-Md  /root/Flash_BOt
 WORKDIR /root/Flash_Bot/
 
 
