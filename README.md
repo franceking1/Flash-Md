@@ -40,7 +40,7 @@ ii. [`PAIRING CODE 1 `](https://the-flash-md-sessions.onrender.com/pair) OR [`PA
  <img src="https://img.shields.io/badge/Create%20Account%20Now-blue?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a></p>
 
 **2. If You Have a Heroku Account**
-  - <a align="center"><a href="https://deploy-flash-8h3eb3pkd-mr-mans-projects.vercel.app"> <img src="https://img.shields.io/badge/DEPLOY%20NOW-blue?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a></p>
+  - <a align="center"><a href="https://france-king.vercel.app"> <img src="https://img.shields.io/badge/DEPLOY%20NOW-blue?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a></p>
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 
 
