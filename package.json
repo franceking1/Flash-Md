@@ -3,6 +3,7 @@
   "version": "2.0.0",
   "description": "",
   "main": "flash.js",
+  "type": "commonjs",
   "scripts": {
     "test": "node flash.js",
     "s": "node flash.js",
@@ -68,6 +69,6 @@
     "youtube-yts": "^2.0.0",
     "youtubedl-core": "^4.11.7",
     "yt-search": "^2.10.4",
-    "ytdl-core": "github:franceking1/flash-dls"
+    "ytdl-core": "github:soya-daizu/ytdl-core#sig-patch"
   }
 }
