@@ -8,7 +8,7 @@ const DATABASE_URL = process.env.DATABASE_URL === undefined
     ? databasePath
     : process.env.DATABASE_URL;
 module.exports = { session: process.env.SESSION_ID || 'FLASH-MD-WA-BOT;;;=>',
-    PREFIXE: process.env.PREFIX || "+",
+    PREFIXE: process.env.PREFIX || "-",
     OWNER_NAME: process.env.OWNER_NAME || "France King",
     OWNER_NUMBER : process.env.OWNER_NUMBER || "254105915061", 
     A_REACT : process.env.AUTO_REACTION || 'on',     
@@ -26,8 +26,8 @@ CHATBOT: process.env.CHAT_BOT || "on",
     WARN_COUNT : process.env.WARN_COUNT || '3' ,
     PRESENCE : process.env.PRESENCE || '',
     //GPT : process.env.OPENAI_API_KEY || '',
-    DP : process.env.STARTING_MESSAGE || "on",
-//    ADM : process.env.ANTI_DELETE_MESSAGE || 'off',
+    DP : process.env.STARTING_MESSAGE || "on", 
+ //  ADM : process.env.ANTI_DELETE_MESSAGE || 'off',
     DATABASE_URL,
     DATABASE: DATABASE_URL === databasePath
         ? "postgresql://flashmd_user:JlUe2Vs0UuBGh0sXz7rxONTeXSOra9XP@dpg-cqbd04tumphs73d2706g-a/flashmd" : "postgresql://flashmd_user:JlUe2Vs0UuBGh0sXz7rxONTeXSOra9XP@dpg-cqbd04tumphs73d2706g-a/flashmd",
