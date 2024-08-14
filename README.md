@@ -64,8 +64,8 @@ ii. [`PAIRING CODE 1 `](https://the-flash-md-sessions.onrender.com/pair) OR [`PA
 ***
 
 
-### CONTRIBUTIONS 
--Contributions to Flash-Md are welcome! If you have ideas for new features, improvements, or bug fixes, feel free to open an issue or submit a pull request!
+### 🛡️ DISCLAIMER 🛡 
+-Copying or modifying this repo is at your own risk,as we won't offer any support! 
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 
 ***
@@ -100,4 +100,4 @@ ii. [`PAIRING CODE 1 `](https://the-flash-md-sessions.onrender.com/pair) OR [`PA
 - [***Gifted Tech***](https://github.com/mouricedevs) For Genaral Help and Brotherhood. 
 - [***Suhail Ser***](https://github.com/SuhailTechInfo) For Code encryption. 
 - [***Luffy***](https://github.com/Luffy2ndAccount) For Providing a Base of **FLASH-MD**
-- <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
+
