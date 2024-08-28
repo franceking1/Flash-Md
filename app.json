@@ -22,8 +22,8 @@
       "AUTO_REACTION":
     {
       "description":"Put on if you want the bot to react to people's messages.It won't react to your messages and those from creator France King.", 
-      "value":"off", 
-      "required":false 
+      "value":"on", 
+      "required":true 
     }, 
     "AUTO_READ_MESSAGES":
     {
@@ -35,12 +35,12 @@
     {
       "description":"Your contact status will be read automatically(put on to activate or no to deactivate ; don't write in capital letter)",
       "value":"on",
-      "required":false
+      "required":true
     }, "AUTO_SAVE_STATUS":
     {
       "description":"Your contact status will be download automatically and send to you(type yes to active or no to deactive ; don't write in capital letter)",
-      "value":"off",
-      "required":false
+      "value":"on",
+      "required":tue
     }
     ,
      "PM_PERMIT" :
