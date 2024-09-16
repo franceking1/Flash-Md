@@ -1,6 +1,5 @@
 build:
   docker:
-    web: Dockerfile
-
+      worker: Dockerfile
 run:
-  web: node france.js
+   worker:   npm run flash
