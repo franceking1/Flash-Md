@@ -22,9 +22,9 @@
 
 ***1.`First STAR 🌟 This Repo ` And Then [`FORK`](https://github.com/franceking1/Flash-Md/fork) It***
 
-***2.`Get Session ID` by [`SCANING QR`]((https://the-flash-scanner.onrender.com)) Or [`PAIRING CODE`](https://king-france.vercel.app)***
+***2.`Get Session ID` by [`SCANING QR`]((https://the-flash-scanner.onrender.com) Or [`PAIRING CODE`](https://king-france.vercel.app) or [`PAIR CODE 2`](https://the-flash-md-sessions.onrender.com/pair)***
 
-*-Copy The Session ID for it Will be needed during deployment*
+*- Copy The Session ID for it Will be needed during deployment*
 
 ***
 
@@ -43,11 +43,11 @@
 
 
 ### DISCLAIMER 🛡 
--Copying or modying this script is not allowed! For we shall not offer any help if any error occur!
+- Copying or modying this script is not allowed! For we shall not offer any help if any error occur!
 
 ***
 ### HELP :
-**IF you need any help **
+**IF you need any help**
 - [**CLICK HERE**](https://messages-snowy.vercel.app)
 
 
