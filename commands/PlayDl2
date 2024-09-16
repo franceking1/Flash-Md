@@ -1,0 +1,265 @@
+const pkg = require('@whiskeysockets/baileys');
+const { generateWAMessageFromContent, proto } = pkg;
+const { king } = require("../france/king");
+const ytSearch = require('yt-search');
+const ytdl = require("france-king");
+const fs = require('fs');
+
+king({
+  nomCom: "media",
+  categorie: "Search",
+  reaction: "💿"
+}, async (origineMessage, zk, commandeOptions) => {
+  const { ms, repondre, arg } = commandeOptions;
+
+  if (!arg[0]) {
+    return repondre("Please insert a media name.");
+  }
+
+  let selectedListId;
+  const selectedButtonId = ms?.message?.templateButtonReplyMessage?.selectedId;
+  const interactiveResponseMessage = ms?.message?.interactiveResponseMessage;
+
+  if (interactiveResponseMessage) {
+    const paramsJson = interactiveResponseMessage.nativeFlowResponseMessage?.paramsJson;
+    if (paramsJson) {
+      const params = JSON.parse(paramsJson);
+      selectedListId = params.id;
+    }
+  }
+
+  const selectedId = selectedListId || selectedButtonId;
+
+  try {
+    const searchResults = await ytSearch(arg.join(" "));
+    const videos = searchResults.videos.slice(0, 5);
+
+    if (videos.length === 0) {
+      repondre('No results found.');
+      await zk.sendMessage(origineMessage, { react: { text: "❌" } }, { quoted: ms });
+      return;
+    }
+
+    const searchResultsMap = new Map();
+    let searchIndex = 0;
+
+    videos.forEach((video, index) => {
+      searchResultsMap.set(searchIndex + index, video);
+    });
+
+    const currentResult = searchResultsMap.get(searchIndex);
+    const buttons = [
+      {
+        name: "quick_reply",
+        buttonParamsJson: JSON.stringify({
+          display_text: "🎧 ᴀᴜᴅɪᴏ",
+          id: `media_audio_${searchIndex}`
+        })
+      },
+      {
+        name: "quick_reply",
+        buttonParamsJson: JSON.stringify({
+          display_text: "🎵 ᴀᴜᴅɪᴏ ᴅᴏᴄᴜᴍᴇɴᴛ",
+          id: `media_audiodoc_${searchIndex}`
+        })
+      },
+      {
+        name: "quick_reply",
+        buttonParamsJson: JSON.stringify({
+          display_text: "⏩ sᴇᴀʀᴄʜ ɴᴇxᴛ",
+          id: `next_${searchIndex + 1}`
+        })
+      }
+    ];
+
+    const thumbnailUrl = currentResult.thumbnail;
+    const msg = generateWAMessageFromContent(origineMessage, {
+      viewOnceMessage: {
+        message: {
+          messageContextInfo: {
+            deviceListMetadata: {},
+            deviceListMetadataVersion: 2
+          },
+          interactiveMessage: proto.Message.InteractiveMessage.create({
+            body: proto.Message.InteractiveMessage.Body.create({
+              text: `*𝐅𝐋𝐀𝐒𝐇-𝐌𝐃 𝐕𝐈𝐃𝐄𝐎 𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃𝐄𝐑*\n\n*Tittle:* ${currentResult.title}\n*Artist:* ${currentResult.author.name}\n*Views:* ${currentResult.views}\n*Duration:* ${currentResult.timestamp}\n*User:* *_${origineMessage.pushName}_,*\n`
+            }),
+            footer: proto.Message.InteractiveMessage.Footer.create({
+              text: "> *©𝟐𝟎𝟐𝟒 𝐅𝐋𝐀𝐒𝐇-𝐌𝐃*"
+            }),
+            header: proto.Message.InteractiveMessage.Header.create({
+              ...(await zk.prepareWAMessageMedia({ image: { url: thumbnailUrl } }, { upload: zk.waUploadToServer })),
+              title: "",
+              gifPlayback: true,
+              subtitle: "",
+              hasMediaAttachment: false
+            }),
+            nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
+              buttons
+            }),
+            contextInfo: {
+              mentionedJid: [origineMessage],
+              forwardingScore: 9999,
+              isForwarded: false,
+            }
+          }),
+        }
+      }
+    }, {});
+
+    await zk.relayMessage(origineMessage, msg.message, { messageId: msg.key.id });
+    searchIndex += 1;
+
+    if (selectedId) {
+      if (selectedId.startsWith('next_')) {
+        const nextIndex = parseInt(selectedId.replace('next_', ''));
+        const nextResult = searchResultsMap.get(nextIndex);
+
+        if (!nextResult) {
+          return repondre('No more results.');
+        }
+
+        const nextButtons = [
+          {
+            name: "quick_reply",
+            buttonParamsJson: JSON.stringify({
+              display_text: "🎧 ᴀᴜᴅɪᴏ",
+              id: `media_audio_${nextIndex}`
+            })
+          },
+          {
+            name: "quick_reply",
+            buttonParamsJson: JSON.stringify({
+              display_text: "🎵 ᴀᴜᴅɪᴏ ᴅᴏᴄᴜᴍᴇɴᴛ",
+              id: `media_audiodoc_${nextIndex}`
+            })
+          },
+          {
+            name: "quick_reply",
+            buttonParamsJson: JSON.stringify({
+              display_text: "⏩ sᴇᴀʀᴄʜ ɴᴇxᴛ",
+              id: `next_${nextIndex + 1}`
+            })
+          }
+        ];
+
+        const nextThumbnailUrl = nextResult.thumbnail;
+        const nextMsg = generateWAMessageFromContent(origineMessage, {
+          viewOnceMessage: {
+            message: {
+              messageContextInfo: {
+                deviceListMetadata: {},
+                deviceListMetadataVersion: 2
+              },
+              interactiveMessage: proto.Message.InteractiveMessage.create({
+                body: proto.Message.InteractiveMessage.Body.create({
+                  text: `*𝐅𝐋𝐀𝐒𝐇-𝐌𝐃 𝐕𝐈𝐃𝐄𝐎 𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃𝐄𝐑*\n\n*Tittle:* ${nextResult.title}\n*Artist:* ${nextResult.author.name}\n*Views:* ${nextResult.views}\n*Duration:* ${nextResult.timestamp}\n*User:* *_${origineMessage.pushName}_,*\n`
+                }),
+                footer: proto.Message.InteractiveMessage.Footer.create({
+                  text: "> *©𝟐𝟎𝟐𝟒 𝐅𝐋𝐀𝐒𝐇-𝐌𝐃*"
+                }),
+                header: proto.Message.InteractiveMessage.Header.create({
+                  ...(await zk.prepareWAMessageMedia({ image: { url: nextThumbnailUrl } }, { upload: zk.waUploadToServer })),
+                  title: "",
+                  gifPlayback: true,
+                  subtitle: "",
+                  hasMediaAttachment: false
+                }),
+                nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
+                  buttons: nextButtons
+                }),
+                contextInfo: {
+                  mentionedJid: [origineMessage.key.remoteJid],
+                  forwardingScore: 9999,
+                  isForwarded: false,
+                }
+              }),
+            }
+          }
+        }, {});
+
+        await zk.relayMessage(origineMessage, nextMsg.message, { messageId: nextMsg.key.id });
+      } else if (selectedId.startsWith('media_')) {
+        const [_, type, key] = selectedId.split('_');
+        const selectedMedia = searchResultsMap.get(parseInt(key));
+
+        if (selectedMedia) {
+          try {
+            const videoUrl = selectedMedia.url;
+            let finalMediaBuffer, mimeType, content;
+
+            const stream = ytdl(videoUrl, { filter: type === 'audio' || type === 'audiodoc' ? 'audioonly' : 'videoandaudio' });
+
+            finalMediaBuffer = await getStreamBuffer(stream);
+            mimeType = type === 'audio' || type === 'audiodoc' ? 'audio/mpeg' : 'video/mp4';
+
+            if (type === 'audio') {
+              content = {
+                audio: finalMediaBuffer,
+                mimetype: 'audio/mpeg',
+                ptt: false,
+                waveform: [100, 0, 100, 0, 100, 0, 100],
+                fileName: `${selectedMedia.title}.mp3`,
+                contextInfo: {
+                  mentionedJid: [origineMessage.key.remoteJid],
+                  externalAdReply: {
+                    title: "𝐅𝐋𝐀𝐒𝐇-𝐌𝐃 𝐒𝐎𝐍𝐆 𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃𝐄𝐑",
+                    body: `Song Tittle: ${selectedMedia.title}`,
+                    thumbnailUrl: 'https://telegra.ph/file/6531d8f6cbe03f08e9d4b.jpg',
+                    sourceUrl: 'https://whatsapp.com/channel/0029VaYauR9ISTkHTj4xvi1l',
+                    mediaType: 1,
+                    renderLargerThumbnail: true
+                  }
+                }
+              };
+              await zk.sendMessage(origineMessage, content, { quoted: ms });
+            } else if (type === 'video') {
+              content = {
+                video: finalMediaBuffer,
+                mimetype: mimeType,
+                caption: `*Tittle:*: ${selectedMedia.title}\n\n> *©𝟐𝟎𝟐𝟒 𝐆𝐈𝐅𝐓𝐄𝐃 𝐌𝐃 𝐕𝟓*`
+              };
+              await zk.sendMessage(origineMessage, content, { quoted: ms });
+            } else if (type === 'audiodoc' || type === 'videodoc') {
+              content = {
+                document: finalMediaBuffer,
+                mimetype: mimeType,
+                fileName: `${selectedMedia.title}.${type === 'audiodoc' ? 'mp3' : 'mp4'}`,
+                caption: `> *©𝟐𝟎𝟐𝟒 𝐅𝐋𝐀𝐒𝐇-𝐌𝐃*`,
+                contextInfo: {
+                  externalAdReply: {
+                    showAdAttribution: true,
+                    title: selectedMedia.title,
+                    body: 'Gifted-Md',
+                    thumbnailUrl: 'https://telegra.ph/file/6531d8f6cbe03f08e9d4b.jpg',
+                    sourceUrl: 'https://whatsapp.com/channel/0029VaYauR9ISTkHTj4xvi1l',
+                    mediaType: 1,
+                    renderLargerThumbnail: true
+                  }
+                }
+              };
+              await zk.sendMessage(origineMessage, content, { quoted: ms });
+            }
+          } catch (error) {
+            console.error("Error processing your request:", error);
+            repondre('Error processing your request.');
+            await zk.sendMessage(origineMessage, { react: { text: "❌" } }, { quoted: ms });
+          }
+        }
+      }
+    }
+  } catch (error) {
+    console.error("Error processing your request:", error);
+    repondre('Error processing your request.');
+    await zk.sendMessage(origineMessage, { react: { text: "❌" } }, { quoted: ms });
+  }
+});
+
+const getStreamBuffer = async (stream) => {
+  const chunks = [];
+  return new Promise((resolve, reject) => {
+    stream.on('data', chunk => chunks.push(chunk));
+    stream.on('end', () => resolve(Buffer.concat(chunks)));
+    stream.on('error', err => reject(err));
+  });
+};
