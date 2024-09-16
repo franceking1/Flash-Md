@@ -1,14 +1,14 @@
-{
+ {
   "name": "FLASH-MD",
   "version": "2.0.0",
-  "description": "Flash-MD WhatsApp Bot",
-  "main": "france.js",
-  "engines": { "npm": "v10.8.3" },
+  "description": "",
+  "main": "flash.js",
   "scripts": {
-    "start": "pm2 start france.js --deep-monitoring --attach --name flash",
-    "stop": "pm2 stop flash",
-    "restart": "pm2 restart flash"
-  },
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "s": "node flash.js",
+    "flash": "pm2 start flash.js --attach",
+    "c": "tsc"
+    },
   "keywords": [
     "bot",
     "Baileys",
@@ -78,9 +78,6 @@
     "franceking": "github:HyHamza/TalkDrove-yt-dl-core",
     "yt-search": "^2.10.4",
     "france-king": "npm:@distube/ytdl-core@latest"
-  },
-  "devDependencies": {
-    "typescript": "^5.1.6",
-    "@types/node": "^18.0.6"
+
   }
 }
