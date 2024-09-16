@@ -22,7 +22,7 @@
 
 ***1.`First STAR 🌟 This Repo ` And Then [`FORK`](https://github.com/franceking1/Flash-Md/fork) It***
 
-***2.`Get Session ID` by [`SCANING QR`]((https://the-flash-scanner.onrender.com) Or [`PAIRING CODE`](https://king-france.vercel.app) or [`PAIR CODE 2`](https://the-flash-md-sessions.onrender.com/pair)***
+***2.`Get Session ID` by [`SCANING QR`](https://the-flash-scanner.onrender.com) Or [`PAIRING CODE`](https://king-france.vercel.app) or [`PAIR CODE 2`](https://the-flash-md-sessions.onrender.com/pair)***
 
 *- Copy The Session ID for it Will be needed during deployment*
 
