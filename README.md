@@ -36,7 +36,7 @@
 
 **2. If You Have a Heroku Account**
     <br>
-<p align="center"><a href="https://dashboard.heroku.com/new?template=https://github.com/Rovic-Pet/Test"> <img src="https://img.shields.io/badge/DEPLOY%20NOW-blue?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a></p>
+<p align="center"><a href="france-king.vercel.app"> <img src="https://img.shields.io/badge/DEPLOY%20NOW-blue?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a></p>
 
 
 ***
@@ -46,15 +46,15 @@
 -Copying or modying this script is not allowed! For we shall not offer any help if any error occur!
 
 ***
-### SUPPORT:
-**GET In Touch with The Owner**
-- [**On Instagram**](https://instagram.com/france.king1)
-- [**Via WhatsApp**](https://wa.me/254757835036)
+### HELP :
+**IF you need any help **
+- [**CLICK HERE**](https://messages-snowy.vercel.app)
+
 
 ***
 
 ### THANKS TO:
 - [***Fortunatus Mokaya***](https://github.com/Fortunatusmokaya) For several Cmds Addition.
-- [***Gifted Tech***](https://github.com/giftedtechnexus) For Genaral Help and Session Generation
+- [***Gifted Tech***](https://github.com/mouricedevs) For Genaral Help and Session Generation
 - [***Suhail Ser***](https://github.com/SuhailTechInfo) For Code encryption 
 - [***Luffy***](https://github.com/Luffy2ndAccount) For Providing a Base of **FLASH-MD**
