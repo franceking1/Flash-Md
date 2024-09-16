@@ -24,7 +24,7 @@
 
 ***2.`Get Session ID` by [`SCANING QR`](https://the-flash-scanner.onrender.com) Or [`PAIRING CODE`](https://king-france.vercel.app) or [`PAIR CODE 2`](https://the-flash-md-sessions.onrender.com/pair)***
 
-*- Copy The Session ID for it Will be needed during deployment*
+* - Copy The Session ID for it Will be needed during deployment*
 
 ***
 
@@ -36,7 +36,7 @@
 
 **2. If You Have a Heroku Account**
     <br>
-<p align="center"><a href="france-king.vercel.app"> <img src="https://img.shields.io/badge/DEPLOY%20NOW-blue?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a></p>
+<p align="center"><a href="https://france-king.vercel.app"> <img src="https://img.shields.io/badge/DEPLOY%20NOW-blue?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a></p>
 
 
 ***
