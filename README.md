@@ -1,11 +1,11 @@
-<h1 align="center"> UNDER UPDATE ⚡ </h1>
+<h1 align="center"> THE FLASH MULTI DEVICE </h1>
 <p align="center">  
 
 ***
   
 <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Black+Ops+One&size=50&pause=1000&color=1BAFBAFF&center=true&width=910&height=100&lines=THANKS FOR CHOOSING +FLASH-MD;MULTI+DEVICE+WHATSAPP+BOT;CREATED+BY+FRANCE+KING;RELEASED+22.2.2024" alt="Typing SVG" /></a>
   </p>
-    <img alt="FLASH-MD" width="700" height="300" src="https://telegra.ph/file/3f985014b51b3cf335bfe.jpg">
+    <img alt="FLASH-MD" width="700" height="300" src="https://files.catbox.moe/tvo4g6.jpg">
 <p align="center">
 <p align="center">
 <a href="https://github.com/franceking1/Flash-Md"><img title="Author" src="https://img.shields.io/badge/FLASH_MD-black?style=for-the-badge&logo=github"></a>
@@ -22,9 +22,9 @@
 
 ***1.`First STAR 🌟 This Repo ` And Then [`FORK`](https://github.com/franceking1/Flash-Md/fork) It***
 
-***2.`Get Session ID` by [`SCANING QR`](https://telegra.ph/file/9d83809cca15a6c48c741.jpg) Or [`PAIRING CODE`](https://flash-md-pair-85cef2fd8430.herokuapp.com/pair)***
+***2.`Get Session ID` by [`SCANING QR`]((https://the-flash-scanner.onrender.com)) Or [`PAIRING CODE`](https://king-france.vercel.app)***
 
-*-Copy The Session ID to paste it in Heroku*
+*-Copy The Session ID for it Will be needed during deployment*
 
 ***
 
@@ -42,18 +42,11 @@
 ***
 
 
-### CONTRIBUTIONS 
--Contributions to Flash-Md are welcome! If you have ideas for new features, improvements, or bug fixes, feel free to open an issue or submit a pull request.
+### DISCLAIMER 🛡 
+-Copying or modying this script is not allowed! For we shall not offer any help if any error occur!
 
 ***
-
-### LICENSE 
--The FLASH-MD is released under the [MIT License](https://opensource.org/licenses/MIT).
-
--Enjoy the diverse features of the Flash-Md  to enhance your conversations and make your WhatsApp experience more interesting!
-
-***
-### DEVELOPER:
+### SUPPORT:
 **GET In Touch with The Owner**
 - [**On Instagram**](https://instagram.com/france.king1)
 - [**Via WhatsApp**](https://wa.me/254757835036)
