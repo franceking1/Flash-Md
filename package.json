@@ -77,7 +77,7 @@
     "youtubedl-core": "^4.11.7",
     "franceking": "github:HyHamza/TalkDrove-yt-dl-core",
     "yt-search": "^2.10.4",
-    "franceking": "npm:@distube/ytdl-core@latest"
+    "france-king": "npm:@distube/ytdl-core@latest"
 
   }
 }
