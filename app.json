@@ -16,7 +16,7 @@
     "AUTO_READ_MESSAGES": {
       "description": "Turn this 'on' if you want the bot to automatically read incoming messages. Use 'off' to disable it.",
       "value": "off",
-      "required": false
+      "required": true
     },
     "BLOCK_ALL": {
       "description": "Turn this 'on' if you want the bot to automatically block ANYONE WHO SENDS YOU A MESSAGE. Use 'off' to disable it.",
@@ -26,12 +26,12 @@
     "AUTO_VIEW_STATUS": {
       "description": "Automatically view your contacts' status updates. Type 'on' to activate or 'off' to deactivate.",
       "value": "on",
-      "required": false
+      "required": true
     },
     "AUTO_SAVE_STATUS": {
       "description": "Automatically download and send status updates from your contacts. Type 'yes' to enable or 'no' to disable.",
       "value": "off",
-      "required": false
+      "required": true
     },
     "PM_PERMIT": {
       "description": "Restrict the bot's use in private messages. Type 'on' to allow or 'no' to block usage in private messages.",
@@ -41,7 +41,7 @@
     "AUTO_REACTION": {
       "description": "Automatically react to received messages. Set to 'on' to enable or 'off' to disable.",
       "value": "off",
-      "required": false
+      "required": true
     },
     "ANTI_DELETE": {
       "description": "Prevent others from deleting their messages in a chat. Set to 'on' to enable or 'off' to disable.",
@@ -83,7 +83,7 @@
     },
     "OWNER_NUMBER": {
       "description": "Enter your phone number without the '+' sign. Use your country code (e.g., '254' for Kenya).",
-      "value": "254751284190",
+      "value": "0752902163",
       "required": false
     },
     "WARN_COUNT": {
@@ -94,7 +94,7 @@
     "CHAT_BOT": {
       "description": "Set to 'on' if you want the bot to respond to user messages automatically. Use 'off' to disable auto-chatting.",
       "value": "off",
-      "required": false
+      "required": true
     },
     "STARTING_MESSAGE": {
       "description": "Show a starting message when the bot is activated. Set to 'on' to show or 'off' to hide.",
