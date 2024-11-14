@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "commonjs",
   "scripts": {
-    "postinstall": "npm install pm2 -g",
+  
     "test": "node index.js",
     "start": "pm2 start flash.js --attach",
     "ftance": "pm2 start index.js --attach",
