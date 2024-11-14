@@ -5,9 +5,8 @@
   "main": "index.js",
   "type": "commonjs",
   "scripts": {
-  
     "test": "node index.js",
-    "start": "pm2 start flash.js --attach",
+    "s": " node index.js",
     "ftance": "pm2 start index.js --attach",
     "flash": "pm2 start flash.js --attach",
     "c": "tsc"
