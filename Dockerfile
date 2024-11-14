@@ -1,6 +1,6 @@
-FROMnode:lts-buster
+FROM node:lts-buster
 
-RUNapt-get update && \
+RUN apt-get update && \
   apt-get install -y \
   ffmpeg \
   imagemagick \
@@ -8,16 +8,15 @@ RUNapt-get update && \
   apt-get upgrade -y && \
   rm -rf /var/lib/apt/lists/*
   
-RUNgit clone https://github.com/franceking1/Flash-Md  /root/Flash_BOt
-WORKDIR/root/Flash_Bot/
+RUN git clone https://github.com/franceking1/Flash-Md /root/Flash_Bot
+WORKDIR /root/Flash_Bot/
 
-
-COPYpackage.json .
-RUNnpm install pm2 -g
-RUNnpm install
+COPY package.json .
+RUN npm install pm2 -g
+RUN npm install
 
 COPY . .
 
-EXPOSED8000
+EXPOSE 8000
 
-CMD["npm", "run" , "flash"]
+CMD ["npm", "run", "flash"]
