@@ -1,7 +1,7 @@
- {
+{
   "name": "FLASH-MD",
   "version": "2.0.0",
-  "description": "",
+  "description": "A WhatsApp bot created by France King.",
   "main": "index.js",
   "type": "commonjs",
   "scripts": {
@@ -40,7 +40,6 @@
     "chalk": "^5.3.0",
     "cheerio": "^1.0.0-rc.12",
     "dotenv": "^16.3.1",
-    "ffmpeg": "^0.0.4",
     "nayan-media-downloader": "2.4.8",
     "wikipedia": "^2.1.1",
     "file-type": "16.5.3",
@@ -63,7 +62,7 @@
     "mumaker": "^2.0.0",
     "node-cron": "^3.0.3",
     "node-fetch": "^3.2.6",
-    "node-catbox": "3.2.0", 
+    "node-catbox": "3.2.0",
     "node-id3": "^0.2.6",
     "acrcloud": "^1.4.0",
     "pg": "^8.11.2",
@@ -74,13 +73,9 @@
     "simple-git": "latest",
     "sqlite3": "^5.1.6",
     "translatte": "^3.0.1",
-    "types": "^0.1.1",
     "wa-sticker-formatter": "^4.4.4",
     "youtube-yts": "^2.0.0",
     "youtubedl-core": "^4.11.7",
-    "franceking": "github:HyHamza/TalkDrove-yt-dl-core",
-    "yt-search": "^2.10.4",
-    "france-king": "npm:@distube/ytdl-core@latest"
-
+    "yt-search": "^2.10.4"
   }
 }
