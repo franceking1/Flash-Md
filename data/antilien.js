@@ -1,140 +1,104 @@
 require("dotenv").config();
 const { Pool } = require("pg");
-const dbUrl = "postgresql://giftedtech_ke:9BzoUeUQO2owLEsMjz5Vhshva91bxF2X@dpg-crice468ii6s73f1nkt0-a.oregon-postgres.render.com/api_gifted_tech";
+
+const dbUrl = process.env.DATABASE_URL;
 
 const proConfig = {
-  connectionString:dbUrl ,
-  ssl: {
-    rejectUnauthorized: false,
-  },
+  connectionString: dbUrl,
+  ssl: process.env.NODE_ENV === "production" ? { rejectUnauthorized: true } : false,
 };
 
 const pool = new Pool(proConfig);
 
+async function findJid(jid) {
+  const result = await pool.query("SELECT * FROM antilien WHERE jid = $1", [jid]);
+  return result.rows[0] || null;
+}
 
-// Fonction pour créer la table "antilien"
 async function createAntilienTable() {
-  const client = await pool.connect();
   try {
-    // Exécutez une requête SQL pour créer la table "antilien" si elle n'existe pas déjà
-    await client.query(`
+    await pool.query(`
       CREATE TABLE IF NOT EXISTS antilien (
-        jid text PRIMARY KEY,
-        etat text,
-        action text
+        jid TEXT PRIMARY KEY,
+        etat TEXT,
+        action TEXT
       );
     `);
-    console.log("La table 'antilien' a été créée avec succès.");
+    console.log("The 'antilien' table was successfully created.");
   } catch (error) {
-    console.error("Une erreur est survenue lors de la création de la table 'antilien':", error);
-  } finally {
-    client.release();
+    console.error("Error creating the 'antilien' table:", error);
   }
 }
 
-// Appelez la méthode pour créer la table "antilien"
-createAntilienTable();
-
-
-
 async function ajouterOuMettreAJourJid(jid, etat) {
-  const client = await pool.connect();
-  
   try {
-    // Vérifiez si le jid existe déjà dans la table 'antilien'
-    const result = await client.query('SELECT * FROM antilien WHERE jid = $1', [jid]);
-    const jidExiste = result.rows.length > 0;
+    const jidData = await findJid(jid);
 
-    if (jidExiste) {
-      // Si le jid existe, mettez à jour l'état avec la valeur passée en argument
-      await client.query('UPDATE antilien SET etat = $1 WHERE jid = $2', [etat, jid]);
+    if (jidData) {
+      await pool.query("UPDATE antilien SET etat = $1 WHERE jid = $2", [etat, jid]);
     } else {
-      // Si le jid n'existe pas, ajoutez-le avec l'état passé en argument et l'action 'supp' par défaut
-      await client.query('INSERT INTO antilien (jid, etat, action) VALUES ($1, $2, $3)', [jid, etat, 'supp']);
+      await pool.query(
+        "INSERT INTO antilien (jid, etat, action) VALUES ($1, $2, $3)",
+        [jid, etat, "supp"]
+      );
     }
-    
-    console.log(`JID ${jid} ajouté ou mis à jour avec succès dans la table 'antilien'.`);
+    console.log(`JID ${jid} was successfully added or updated.`);
   } catch (error) {
-    console.error('Erreur lors de l\'ajout ou de la mise à jour du JID dans la table ,', error);
-  } finally {
-    client.release();
+    console.error("Error adding or updating JID:", error);
   }
-};
-
+}
 
 async function mettreAJourAction(jid, action) {
-  const client = await pool.connect();
-  
   try {
-    // Vérifiez si le jid existe déjà dans la table 'antilien'
-    const result = await client.query('SELECT * FROM antilien WHERE jid = $1', [jid]);
-    const jidExiste = result.rows.length > 0;
+    const jidData = await findJid(jid);
 
-    if (jidExiste) {
-      // Si le jid existe, mettez à jour l'action avec la valeur fournie (et laissez l'état inchangé)
-      await client.query('UPDATE antilien SET action = $1 WHERE jid = $2', [action, jid]);
+    if (jidData) {
+      await pool.query("UPDATE antilien SET action = $1 WHERE jid = $2", [action, jid]);
     } else {
-      // Si le jid n'existe pas, ajoutez-le avec l'état 'non' par défaut et l'action fournie
-      await client.query('INSERT INTO antilien (jid, etat, action) VALUES ($1, $2, $3)', [jid, 'non', action]);
+      await pool.query(
+        "INSERT INTO antilien (jid, etat, action) VALUES ($1, $2, $3)",
+        [jid, "non", action]
+      );
     }
-    
-    console.log(`Action mise à jour avec succès pour le JID ${jid} dans la table 'antilien'.`);
+    console.log(`Action successfully updated for JID ${jid}.`);
   } catch (error) {
-    console.error('Erreur lors de la mise à jour de l\'action pour le JID dans la table  :', error);
-  } finally {
-    client.release();
+    console.error("Error updating action for JID:", error);
   }
-};
-  
-
+}
 
 async function verifierEtatJid(jid) {
-  const client = await pool.connect();
-
   try {
-    // Recherchez le JID dans la table 'antilien' et récupérez son état
-    const result = await client.query('SELECT etat FROM antilien WHERE jid = $1', [jid]);
-    
+    const result = await pool.query("SELECT etat FROM antilien WHERE jid = $1", [jid]);
     if (result.rows.length > 0) {
-      const etat = result.rows[0].etat;
-      return etat === 'oui';
-    } else {
-      // Si le JID n'existe pas dans la table, il n'est pas enregistré comme "oui"
-      return false;
+      return result.rows[0].etat === "oui";
     }
-  } catch (error) {
-    console.error('Erreur lors de la vérification de l\'état du JID dans la table ', error);
     return false;
-  } finally {
-    client.release();
+  } catch (error) {
+    console.error("Error verifying JID state:", error);
+    return false;
   }
-};
+}
 
 async function recupererActionJid(jid) {
-  const client = await pool.connect();
-
   try {
-    // Recherchez le JID dans la table 'antilien' et récupérez son action
-    const result = await client.query('SELECT action FROM antilien WHERE jid = $1', [jid]);
-    
+    const result = await pool.query("SELECT action FROM antilien WHERE jid = $1", [jid]);
     if (result.rows.length > 0) {
-      const action = result.rows[0].action;
-      return action;
-    } else {
-      // Si le JID n'existe pas dans la table, retournez une valeur par défaut (par exemple, 'supp')
-      return 'supp';
+      return result.rows[0].action;
     }
+    return "supp";
   } catch (error) {
-    console.error('Erreur lors de la récupération de l\'action du JID dans la table :', error);
-    return 'supp'; // Gestion de l'erreur en retournant une valeur par défaut
-  } finally {
-    client.release();
+    console.error("Error retrieving action for JID:", error);
+    return "supp";
   }
-};
+}
 
+createAntilienTable();
 
-
-
+process.on("SIGINT", async () => {
+  await pool.end();
+  console.log("Database connection pool closed.");
+  process.exit(0);
+});
 
 module.exports = {
   mettreAJourAction,
@@ -142,10 +106,3 @@ module.exports = {
   verifierEtatJid,
   recupererActionJid,
 };
-
-
-
-
-
-
-
