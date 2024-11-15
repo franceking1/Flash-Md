@@ -3,10 +3,10 @@
   "version": "2.0.0",
   "description": "A WhatsApp bot created by France King.",
   "main": "index.js",
-  "type": "commonjs",
   "scripts": {
-    "start":"node index.js"
-  },
+        "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node flash.js",
+    "c": "tsc"
   "keywords": [
     "bot",
     "Baileys",
