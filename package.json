@@ -5,11 +5,6 @@
   "main": "index.js",
   "type": "commonjs",
   "scripts": {
-    "test": "node index.js",
-    "s": " node index.js",
-    "france": "pm2 start index.js --attach",
-    "flash": "pm2 start flash.js --attach",
-    "c": "tsc",
     "start":"node index.js"
   },
   "keywords": [
@@ -73,5 +68,17 @@
     "youtube-yts": "^2.0.0",
     "youtubedl-core": "^4.11.7",
     "yt-search": "^2.10.4"
-  }
+  }, 
+  "directories": {
+    "lib": "lib",
+    "src": "src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/franceking1/Flash-Md.git"
+  },
+  "bugs": {
+    "url": "https://github.com/franceking1/Flash-Md/issues"
+  },
+  "homepage": "https://github.com/franceking1/Flash-Md#readme"
 }
