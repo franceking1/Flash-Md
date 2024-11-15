@@ -1,2 +1,1 @@
-
-web: node index.js
+worker: node flash.js
