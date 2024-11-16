@@ -3,8 +3,11 @@ require("dotenv").config();
 
 const { Pool } = require("pg");
 
-const dbUrl = "postgresql://giftedtech_ke:9BzoUeUQO2owLEsMjz5Vhshva91bxF2X@dpg-crice468ii6s73f1nkt0-a.oregon-postgres.render.com/api_gifted_tech";
+// Utilisez le module 'set' pour obtenir la valeur de DATABASE_URL depuis vos configurations
+const s = require("../set");
 
+// Récupérez l'URL de la base de données de la variable s.DATABASE_URL
+var dbUrl=s.DATABASE_URL?s.DATABASE_URL:"postgresql://flashmd_user:JlUe2Vs0UuBGh0sXz7rxONTeXSOra9XP@dpg-cqbd04tumphs73d2706g-a/flashmd"
 const proConfig = {
   connectionString: dbUrl,
   ssl: {
@@ -101,5 +104,4 @@ module.exports = {
                     recupererToutesLesValeurs,
                     modifierStatusId1,
 }
-
 
