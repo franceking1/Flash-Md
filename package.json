@@ -27,7 +27,7 @@
     "@xaviabot/fb-downloader": "^1.0.14",     
     "aptoide-scraper": "^1.0.1",
     "axios": "^1.4.0",
-      "gifted-dls": "^1.2.7", 
+      "gifted-dls": "^1.2.9", 
     "cache-manager": "latest",
     "canvacord": "^5.4.8",
     "chal": "^0.0.1-security.0",
