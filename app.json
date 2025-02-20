@@ -28,6 +28,11 @@
       "value": "on",
       "required": false
     },
+    "STATUS_LIKE": {
+      "description": "Automatically like your contacts' status updates. Type 'on' to activate or 'off' to deactivate.",
+      "value": "on",
+      "required": false
+    },
     "AUTO_SAVE_STATUS": {
       "description": "Automatically download and send status updates from your contacts. Type 'yes' to enable or 'no' to disable.",
       "value": "off",
@@ -65,7 +70,7 @@
     },
     "HEROKU_API_KEY": {
       "description": "Insert your Heroku API key here. This allows you to manage environment variables and other settings more effectively.",
-      "value": "", 
+      "value": "HRKU-bf78c14c-92c7-41de-9bf9-e4939cf6b8a0", 
       "required": false
     },
     "HEROKU_APP_NAME": {
