@@ -11,10 +11,10 @@ const databasePath = path.join(__dirname, './database.db');
 const DATABASE_URL = process.env.DATABASE_URL === undefined ? databasePath : process.env.DATABASE_URL;
 
 module.exports = {
-    session: process.env.SESSION_ID || 'FLASH-MD-WA-BOT;;;=>',
+    session: process.env.SESSION_ID || 'JOE-MD-WA-BOT;;;=>',
     PREFIXES: (process.env.PREFIX || '').split(',').map(prefix => prefix.trim()).filter(Boolean),
-    OWNER_NAME: process.env.OWNER_NAME || "France King",
-    OWNER_NUMBER: process.env.OWNER_NUMBER || "254105915061",
+    OWNER_NAME: process.env.OWNER_NAME || "SEJOTECH",
+    OWNER_NUMBER: process.env.OWNER_NUMBER || "254114305147",
     AUTO_LIKE: process.env.STATUS_LIKE || "off",
     AUTO_READ_STATUS: process.env.AUTO_VIEW_STATUS || "on",
     AUTOREAD_MESSAGES: process.env.AUTO_READ_MESSAGES || "on",
