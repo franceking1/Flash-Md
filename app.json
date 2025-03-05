@@ -1,9 +1,9 @@
 {
-  "name": "FLASH-MD",
-  "description": "An easy and simple WhatsApp bot developed by France King",
+  "name": "SEJOTECH-MD",
+  "description": "An easy and simple WhatsApp bot developed by JOSEPH MWANGI",
   "keywords": ["bot", "node", "baileys", "whatsapp"],
-  "logo": "https://telegra.ph/file/dfccbf12397757c321ac4.jpg",
-  "repository": "https://github.com/franceking1/Flash-Md",
+  "logo": "https://i.imgur.com/esRaIUy.jpeg",
+  "repository": "https://github.com/Joseph806/Flash-Md",
   "succes_url": "/",
   "stack": "heroku-24",
 
@@ -84,12 +84,12 @@
     },
     "OWNER_NAME": {
       "description": "Enter the name of the bot owner. This name will be displayed when required.",
-      "value": "France King",
+      "value": "JOSEPH MWANGI",
       "required": false
     },
     "OWNER_NUMBER": {
       "description": "Enter your phone number without the '+' sign. Use your country code (e.g., '254' for Kenya).",
-      "value": "254751284190",
+      "value": "254114305147",
       "required": false
     },
     "WARN_COUNT": {
