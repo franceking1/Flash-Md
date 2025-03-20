@@ -39,7 +39,7 @@
    - **[Star](https://github.com/franceking1/Flash-Md)** & **[Fork](https://github.com/franceking1/Flash-Md/fork)** this repository to your GitHub account.
 
 2. **Get Your Session ID Using**:
-   - **[QR SCANNER](https://the-flash-scanner.onrender.com)**
+   - **[QR SCANNER](https://the-flash-scanner.onrender.com/)**
    - **[Pairing Code 1](https://king-france.vercel.app/)**
    - **[Pairing Code 2](https://the-flash-md-sessions.onrender.com/pair)**
 
