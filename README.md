@@ -40,7 +40,7 @@
 
 2. **Get Your Session ID Using**:
    - **[QR SCANNER](https://the-flash-scanner.onrender.com)**
-   - **[Pairing Code 1](https://king-france.vercel.app)**
+   - **[Pairing Code 1](https://king-france.vercel.app/)**
    - **[Pairing Code 2](https://the-flash-md-sessions.onrender.com/pair)**
 
    > **⚠️ Important**: Copy your Session ID – you will need it for deployment.
