@@ -39,7 +39,7 @@
    - **[Star](https://github.com/franceking1/Flash-Md)** & **[Fork](https://github.com/franceking1/Flash-Md/fork)** this repository to your GitHub account.
 
 2. **Get Your Session ID Using**:
-   - **[Pairing Code 1](https://tinyurl.com/af7xcjh)**
+   - **[Pairing Code 1](https://tinyurl.com/af7xcjh7)**
    - **[Pairing Code 2](https://newflash-sessions.onrender.com/)**
    
 
