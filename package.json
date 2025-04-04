@@ -22,7 +22,7 @@
     "@adiwajshing/keyed-db": "^0.2.4",
     "@hapi/boom": "^10.0.1",
     "@types/node": "^18.0.6",
-    "@whiskeysockets/baileys": "github:franceking1/Baileys",
+    "@whiskeysockets/baileys": "github:franceking1/Baileys-",
     "@distube/ytdl-core": "4.14.3",
     "@xaviabot/fb-downloader": "^1.0.14",  
       "@google/generative-ai": "^0.1.3",
