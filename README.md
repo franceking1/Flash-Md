@@ -42,7 +42,7 @@ npm start
 
 | **Contributor** | **Role** |
 |------------------|----------|
-| [Baileys](https://github.com/adiwajshing/Baileys) | Core WhatsApp Web API Library |
+| [Baileys](https://github.com/WhiskeySockets/Baileys) | Core WhatsApp Web API Library |
 | [FranceKing1](https://github.com/franceking1) | Developer & Maintainer of FLASH-MD-V2 |
 
 ---
