@@ -55,3 +55,10 @@ npm start
 - Any misuse or abuse of this bot is **strictly prohibited**.
 
 ---
+***
+### HELP :
+**IF you need any help**
+- [**CLICK HERE**](https://messages-snowy.vercel.app)
+
+
+***
