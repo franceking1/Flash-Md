@@ -1,0 +1,92 @@
+{
+  "name": "flash-md",
+  "description": "A Node.js WhatsApp bot.",
+  "repository": "https://github.com/franceking1/Flash-Md",
+  "stack": "heroku-24",
+  "scripts": {
+    "postdeploy": "echo 'Deployment complete!'"
+  },
+  "env": {
+    "AUTO_READ_STATUS": {
+      "description": "Enable to automatically mark viewed WhatsApp statuses as read (on/off)",
+      "value": "on",
+      "required": false
+    },
+    "AUTO_LIKE": {
+      "description": "Enable to automatically like statuses (on/off)",
+      "value": "on",
+      "required": false
+    },
+    "AUTO_READ_DM": {
+      "description": "Enable to auto-read private DMs sent to the bot (on/off)",
+      "value": "off",
+      "required": false
+    },
+    "AUTO_DOWNLOAD_STATUS": {
+      "description": "Enable to auto-download viewed statuses in your private chat (on/off)",
+      "value": "off",
+      "required": false
+    },
+    "OWNER_NAME": {
+      "description": "Your name (used for bot credits and messages)",
+      "value": "Flash",
+      "required": false
+    },
+    "ANTICALL": {
+      "description": "decline calls to the bot. If on, bot auto-declines  call spammers (on/off)",
+      "value": "off",
+      "required": false
+    },
+    "DM_PRESENCE": {
+      "description": "Bot's presence in DMs (e.g. typing, paused, recording)",
+      "value": "paused",
+      "required": false
+    },
+    "GROUP_PRESENCE": {
+      "description": "Bot's presence in groups (e.g. typing, paused, recording)",
+      "value": "paused",
+      "required": false
+    },
+    "MODE": {
+      "description": "Bot mode: private (only owner) or public (everyone)",
+      "value": "private",
+      "required": false
+    },
+    "PREFIX": {
+      "description": "Command prefix(es), separated by commas (e.g. !,.,#)",
+      "value": "!",
+      "required": false
+    },
+    "SESSION": {
+      "description": "Paste your WhatsApp session string here (Must start with FLASH-MD-WA-BOT;;;=> and got from our session generator)",
+      "value": "",
+      "required": false
+    },
+    "OWNER_NUMBER": {
+      "description": "Your WhatsApp number in international format (e.g. 254742063630)",
+      "value": "",
+      "required": true
+    },
+    "HEROKU_API_KEY": {
+      "description": "Your Heroku account API key (found in account settings)",
+      "value": "",
+      "required": true
+    },
+    "HEROKU_APP_NAME": {
+      "description": "The name of your app on Heroku (must match your dashboard app name)",
+      "value": "",
+      "required": true
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "Basic"
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}
