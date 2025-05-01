@@ -4,7 +4,7 @@
 
 ## CONNECT TO WHATSAPP:
 - **STAR REPO AND THEN** [FORK IT](https://github.com/franceking1/Flash-Md-V2/fork) 
-- **GET SESSION ID USING** [THIS PAIRING CODE 1](https://flash-sessions-2025.onrender.com/pair) or [PAIRING CODE 2](https://flash-pair.vercel.app)
+- **GET SESSION ID USING** [THIS PAIRING CODE 1](https://flash-sessions-2025.onrender.com/pair) or [PAIRING CODE 2](https://flashv2session-5ac4efffd090.herokuapp.com/pair)
 
 ---
 
