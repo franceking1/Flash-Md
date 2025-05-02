@@ -62,3 +62,14 @@ npm start
 
 
 ***
+
+### ⭐ Support This Project
+
+| **Action** | **Purpose** |
+|------------|-------------|
+| [Use This Template](https://github.com/franceking1/FLASH-MD-V2/generate) | Create your own working bot easily. Eg, for hosting on render ‼️ |
+| [Fork This Repo](https://github.com/franceking1/FLASH-MD-V2/fork) | Show your support and boost visibility |
+
+> Every ⭐ star and fork makes a big difference — thank you for supporting **FLASH-MD-V2**!
+
+---
