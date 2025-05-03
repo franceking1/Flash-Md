@@ -71,5 +71,6 @@ npm start
 | [Fork This Repo](https://github.com/franceking1/FLASH-MD-V2/fork) | Show your support and boost visibility |
 
 > Every ⭐ star and fork makes a big difference — thank you for supporting **FLASH-MD-V2**!
-> Powered bu France King 
+
+> Powered by France King 
 ---
