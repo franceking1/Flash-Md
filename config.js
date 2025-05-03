@@ -1,5 +1,6 @@
 import dotenv from "dotenv";
 dotenv.config();
+
 const conf = {
   AUTO_READ_STATUS: process.env.AUTO_READ_STATUS || "on",
   AUTO_LIKE: process.env.AUTO_LIKE || "on",
@@ -10,6 +11,8 @@ const conf = {
   ANTICALL: process.env.ANTICALL || "off",
   ANTIPROMOTE: process.env.ANTIPROMOTE || "off",
   ANTIDEMOTE: process.env.ANTIDEMOTE || "off",
+  ANTILINK: process.env.ANTILINK || "off",
+  ANTILINK_ACTION: process.env.ANTILINK_ACTION || "delete",
   timezone: process.env.TIME_ZONE || "Africa/Nairobi",
   PRESENCE_DM: process.env.DM_PRESENCE || "typing",
   PRESENCE_GROUP: process.env.GROUP_PRESENCE || "paused",
@@ -21,4 +24,5 @@ const conf = {
   HEROKU_API_KEY: process.env.HEROKU_API_KEY || "",
   HEROKU_APP_NAME: process.env.HEROKU_APP_NAME || ""
 };
+
 export default conf;
