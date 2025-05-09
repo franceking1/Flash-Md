@@ -4,7 +4,7 @@
 
 ## CONNECT TO WHATSAPP:
 - **STAR REPO AND THEN** [FORK IT](https://github.com/franceking1/Flash-Md-V2/fork) 
-- **GET SESSION ID USING** [THIS PAIRING CODE 1](https://my-sessions.onrender.com/pair) or [PAIRING CODE 2](https://flashv2session-5ac4efffd090.herokuapp.com/pair)
+- **GET SESSION ID USING** [THIS PAIRING CODE](https://my-sessions.onrender.com/pair) 
 
 ---
 
@@ -59,6 +59,7 @@ npm start
 ### HELP :
 **IF you need any help**
 - [**CLICK HERE**](https://messages-snowy.vercel.app)
+- [**Click here to send suggestions or queries**](https://suggestions-phi.vercel.app) 
 
 
 ***
