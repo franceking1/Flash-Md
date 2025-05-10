@@ -29,7 +29,7 @@
     },
     "OWNER_NAME": {
       "description": "Your name (used for bot credits and messages)",
-      "value": "Flash",
+      "value": "FLASH-MD",
       "required": false
     },
     "ANTICALL": {
