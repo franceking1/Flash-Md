@@ -3,7 +3,7 @@ dotenv.config();
 
 const conf = {
   AUTO_READ_STATUS: process.env.AUTO_READ_STATUS || "on",
-  AUTO_LIKE: process.env.AUTO_LIKE || "on",
+  AUTO_LIKE: process.env.AUTO_LIKE || "off",
   AUTO_READ_DM: process.env.AUTO_READ_DM || "off",
   AUTO_DOWNLOAD_STATUS: process.env.AUTO_DOWNLOAD_STATUS || "off",
   ADM: process.env.ANTI_DELETE || "on",
