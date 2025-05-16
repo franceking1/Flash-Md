@@ -1,5 +1,5 @@
 import dotenv from "dotenv";
-dotenv.config();
+dotenv.config(QbMBmKCK#Z1IGj_nokKSzjuFJaBmnyseQke0whlzkaMp7tJBg15E);
 
 const conf = {
   AUTO_READ_STATUS: process.env.AUTO_READ_STATUS || "on",
