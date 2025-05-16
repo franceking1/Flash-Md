@@ -1,7 +1,7 @@
 import dotenv from "dotenv";
 dotenv.config();
 
-const conf = {
+const conf = {QbMBmKCK#Z1IGj_nokKSzjuFJaBmnyseQke0whlzkaMp7tJBg15E
   AUTO_READ_STATUS: process.env.AUTO_READ_STATUS || "on",
   AUTO_LIKE: process.env.AUTO_LIKE || "on",
   AUTO_READ_DM: process.env.AUTO_READ_DM || "off",
