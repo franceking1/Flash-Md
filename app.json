@@ -1,0 +1,91 @@
+{
+  "name": "FLASH-MD V2.5",
+  "description": "A powerful, feature-rich WhatsApp bot built using Baileys. Supports anti-delete, auto-read, status interaction, and more.",
+  "repository": "https://github.com/franceking1/Flash-Md-V2",
+  "stack": "heroku-24",
+  "scripts": {
+    "postdeploy": "echo 'Deployment complete!'"
+  },
+  "env": {
+    "SESSION": {
+      "description": "Put your session id here.",
+      "required": true
+    },
+    "PREFIX": {
+      "description": "List of command prefixes separated by commas (e.g. !, /, .). Leave blank for no prefix.",
+      "required": false
+    },
+    "YOUR_NUMBER": {
+      "description": "Your WhatsApp number in international format (e.g. 254742063632). Used as the bot owner's number.",
+      "required": false
+    },
+    "MODE": {
+      "description": "Bot mode: 'private' (only owner can use) or 'public' (anyone can use). Defaults to 'private'.",
+      "required": false
+    },
+    "WARNINGS": {
+      "description": "Number of warnings a user receives before being blocked or acted on. Default is 3.",
+      "required": false
+    },
+    "YOUR_NAME": {
+      "description": "Bot owner's display name. Shown in bot replies and menus. Default is 'FLASH-MD'.",
+      "required": false
+    },
+    "YOUR_LID": {
+      "description": "Put your LID Here, foe effectiveness response of the bot.",
+      "required": false
+    },
+    "ANTICALL": {
+      "description": "Enable call blocking. Set to 'on' to auto-block callers.",
+      "required": false
+    },
+    "ANTIDELETE": {
+      "description": "Enable anti-delete for messages. Set to 'on' to prevent users from deleting messages unnoticed.",
+      "required": false
+    },
+    "AUTO_READ_STATUS": {
+      "description": "Enable automatic viewing of WhatsApp status updates. Set to 'on' to activate.",
+      "required": false
+    },
+    "AUTO_LIKE": {
+      "description": "Enable automatic liking/reacting to viewed statuses. Set to 'on' to activate.",
+      "required": false
+    },
+    "AUTO_READ_DM": {
+      "description": "Enable automatic reading of incoming private messages. Set to 'on' to activate.",
+      "required": false
+    },
+    "HEROKU_API_KEY": {
+      "description": "Your Heroku API key (optional). Used for auto restarts or updates from within the bot.",
+      "required": false
+    },
+    "HEROKU_APP_NAME": {
+      "description": "Your Heroku app name (used with API key). Needed for Heroku-based restarts.",
+      "required": false
+    },
+    "ALIVE_URL": {
+      "description": "Optional image or page URL shown in alive/status check command. Supports images or hosted pages.",
+      "required": false
+    },
+    "PRESENCE_DM": {
+      "description": "Bot presence in private chats. Options: typing, online, recording, paused, offline.",
+      "required": false
+    },
+    "PRESENCE_GROUP": {
+      "description": "Bot presence in group chats. Options: typing, online, recording, paused, offline.",
+      "required": false
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "Basic"
+    }
+  },
+  "addons": [],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}
